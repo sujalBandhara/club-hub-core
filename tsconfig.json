@@ -1,0 +1,37 @@
+{
+	"compilerOptions": {
+		"pretty": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"preserveConstEnums": true,
+		"removeComments": true,
+		"sourceMap": false,
+		"target": "es6",
+		"outDir": "./dist",
+		"declaration": true,
+		"lib": [
+			"dom",
+			"es6",
+			"esnext.asynciterable",
+			"es2015"
+		],
+		"baseUrl": "./",
+		"paths": {
+			"@clubhub/*": ["./"]
+		}
+	},
+	"exclude": [
+		"node_modules",
+		".vscode",
+		".git",
+		"**/*.spec.ts",
+		"dist"
+	],
+	"include": [
+		"./",
+		"tests/"
+	]
+}
