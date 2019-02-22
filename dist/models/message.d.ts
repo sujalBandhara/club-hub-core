@@ -13,10 +13,11 @@ export declare namespace Message {
         title?: string;
         deliveryDate?: Date;
         deliveryType?: DeliveryType;
-        recipients?: Types.ObjectId[] | User.Model[];
         link?: string;
         type?: Types.ObjectId;
         richContent?: RichContent.Model;
+        recipients?: Types.ObjectId[] | User.Model[];
+        userGroupIDs?: Types.ObjectId[];
     }
     enum SubjectType {
         Post = "POST",
