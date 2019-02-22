@@ -24,7 +24,9 @@ export declare namespace IShared {
     enum PublicationStatus {
         Draft = "DRAFT",
         Pending = "PENDING",
-        Published = "PUBLISHED"
+        Published = "PUBLISHED",
+        Scheduled = "SCHEDULED",
+        Delivered = "DELIVERED"
     }
 }
 export default IShared;
