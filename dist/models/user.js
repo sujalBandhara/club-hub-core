@@ -2,6 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var User;
 (function (User) {
+    var DefaultUserGroups;
+    (function (DefaultUserGroups) {
+        DefaultUserGroups["AllAdmins"] = "All Admins";
+        DefaultUserGroups["AllMembers"] = "All Members";
+    })(DefaultUserGroups = User.DefaultUserGroups || (User.DefaultUserGroups = {}));
     var MaritalStatus;
     (function (MaritalStatus) {
         MaritalStatus["Single"] = "SINGLE";

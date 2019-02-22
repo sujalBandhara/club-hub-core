@@ -30,6 +30,10 @@ export declare namespace User {
         memberStatus?: MemberStatus;
         meta?: UserMeta;
     }
+    enum DefaultUserGroups {
+        AllAdmins = "All Admins",
+        AllMembers = "All Members"
+    }
     interface UserGroup {
         _id?: Types.ObjectId;
         name: string;

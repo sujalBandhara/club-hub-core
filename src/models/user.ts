@@ -44,6 +44,11 @@ export namespace User {
 	// Supporting Interfaces and Types
 	// --------------------------------
 
+	export enum DefaultUserGroups {
+		AllAdmins = 'All Admins',
+		AllMembers = 'All Members'
+	}
+
 	export interface UserGroup {
 		_id?: Types.ObjectId
 		name: string
