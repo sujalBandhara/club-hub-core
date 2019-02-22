@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Club;
 (function (Club) {
-    let Type;
+    var Type;
     (function (Type) {
         Type["Car"] = "CAR";
         Type["Golf"] = "GOLF";

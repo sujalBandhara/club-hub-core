@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Message;
 (function (Message) {
-    let SubjectType;
+    var SubjectType;
     (function (SubjectType) {
         SubjectType["Post"] = "POST";
         SubjectType["Event"] = "EVENT";
     })(SubjectType = Message.SubjectType || (Message.SubjectType = {}));
-    let DeliveryType;
+    var DeliveryType;
     (function (DeliveryType) {
         DeliveryType["Push"] = "PUSH";
         DeliveryType["Email"] = "EMAIL";

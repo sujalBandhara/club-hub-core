@@ -2,14 +2,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Calendar;
 (function (Calendar) {
-    let CalendarGroupType;
+    var CalendarGroupType;
     (function (CalendarGroupType) {
         CalendarGroupType["Recreation"] = "RECREATION";
         CalendarGroupType["Social"] = "SOCIAL";
         CalendarGroupType["Dining"] = "DINING";
         CalendarGroupType["ServiceProvider"] = "SERVICE_PROVIDER";
     })(CalendarGroupType = Calendar.CalendarGroupType || (Calendar.CalendarGroupType = {}));
-    let CalendarGroupName;
+    var CalendarGroupName;
     (function (CalendarGroupName) {
         CalendarGroupName["Club"] = "Club";
         CalendarGroupName["Golf"] = "Golf";
