@@ -30,6 +30,7 @@ export namespace Message {
 		richContent?: RichContent.Model
 		recipients?: Types.ObjectId[] | User.Model[]
 		userGroupIDs?: Types.ObjectId[]
+		individualUserIDs?: Types.ObjectId[]
 	}
 
 	// --------------------------------
