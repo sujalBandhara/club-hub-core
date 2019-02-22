@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Post;
 (function (Post) {
-    let AttachmentType;
+    var AttachmentType;
     (function (AttachmentType) {
         AttachmentType["PDF"] = "PDF";
         AttachmentType["JPG"] = "JPG";

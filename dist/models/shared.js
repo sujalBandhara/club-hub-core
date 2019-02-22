@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var IShared;
 (function (IShared) {
-    let PublicationStatus;
+    var PublicationStatus;
     (function (PublicationStatus) {
         PublicationStatus["Draft"] = "DRAFT";
         PublicationStatus["Pending"] = "PENDING";

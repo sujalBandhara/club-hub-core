@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Order;
 (function (Order) {
-    let Status;
+    var Status;
     (function (Status) {
         Status["Completed"] = "COMPLETED";
         Status["Accepted"] = "ACCEPTED";

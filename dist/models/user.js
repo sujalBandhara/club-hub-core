@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var User;
 (function (User) {
-    let MaritalStatus;
+    var MaritalStatus;
     (function (MaritalStatus) {
         MaritalStatus["Single"] = "SINGLE";
         MaritalStatus["InRelationship"] = "IN_RELATIONSHIP";
@@ -10,7 +10,7 @@ var User;
         MaritalStatus["Divorced"] = "DIVORCED";
         MaritalStatus["Widowed"] = "WIDOWED";
     })(MaritalStatus = User.MaritalStatus || (User.MaritalStatus = {}));
-    let MemberStatus;
+    var MemberStatus;
     (function (MemberStatus) {
         MemberStatus["Prospect"] = "PROSPECT";
         MemberStatus["Active"] = "ACTIVE";
