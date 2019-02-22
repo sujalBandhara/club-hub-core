@@ -7,6 +7,8 @@ var IShared;
         PublicationStatus["Draft"] = "DRAFT";
         PublicationStatus["Pending"] = "PENDING";
         PublicationStatus["Published"] = "PUBLISHED";
+        PublicationStatus["Scheduled"] = "SCHEDULED";
+        PublicationStatus["Delivered"] = "DELIVERED";
     })(PublicationStatus = IShared.PublicationStatus || (IShared.PublicationStatus = {}));
 })(IShared = exports.IShared || (exports.IShared = {}));
 exports.default = IShared;
