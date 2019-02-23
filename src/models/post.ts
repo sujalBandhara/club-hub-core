@@ -15,6 +15,7 @@ namespace Post {
 	// ---------------------------------
 	
 	export interface Model {
+        _id?: Types.ObjectId
 		clubID?: Types.ObjectId
 		title?: string
 		description?: string
