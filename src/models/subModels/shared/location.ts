@@ -1,7 +1,7 @@
 // External Dependencies
 import { Types } from 'mongoose'
 
-namespace Location {
+export namespace Location {
 
 	// --------------------------------
 	// Main Interface
