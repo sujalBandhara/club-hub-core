@@ -3,6 +3,7 @@ import User from './user';
 import RichContent from './subModels/shared/richContent';
 declare namespace Post {
     interface Model {
+        _id?: Types.ObjectId;
         clubID?: Types.ObjectId;
         title?: string;
         description?: string;
