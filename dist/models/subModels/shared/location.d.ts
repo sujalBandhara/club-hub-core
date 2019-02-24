@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-declare namespace Location {
+export declare namespace Location {
     interface Model {
         _id?: Types.ObjectId;
         name?: string;
