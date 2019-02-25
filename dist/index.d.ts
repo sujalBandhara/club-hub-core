@@ -9,6 +9,7 @@ import Order from './models/order';
 import Post from './models/post';
 import Restaurant from './models/restaurant';
 import Section from './models/section';
+import Form from './models/form';
 import * as SubModels from './models/subModels';
 import IShared from './models/shared';
-export { User, Club, Calendar, Device, Event, Message, Notification, Order, Post, Restaurant, Section, SubModels, IShared };
+export { User, Club, Calendar, Device, Event, Message, Notification, Order, Post, Restaurant, Form, Section, SubModels, IShared };
