@@ -9,6 +9,7 @@ import Notification from './models/notification'
 import Order from './models/order'
 import Post from './models/post'
 import Restaurant from './models/restaurant'
+import Section from './models/section'
 
 // Sub Models.
 import * as SubModels from './models/subModels'
@@ -27,7 +28,8 @@ export {
 	Notification,
 	Order,
 	Post,
-	Restaurant,
+    Restaurant,
+    Section,
 	
 	// Sub Models.
 	SubModels,

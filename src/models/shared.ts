@@ -7,6 +7,11 @@ import { Types } from 'mongoose'
 
 export namespace IShared {
 
+    export interface Timestamps {
+        createdAt: Date
+        updatedAt: Date
+    }
+
 	/**
 	 * Used to define an object that would otherwise be set to 'any'.
 	 */
