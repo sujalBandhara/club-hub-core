@@ -1,7 +1,7 @@
 export declare namespace IShared {
     interface Timestamps {
-        createdAt: Date;
-        updatedAt: Date;
+        createdAt?: Date;
+        updatedAt?: Date;
     }
     interface GeneralMap<T> {
         [key: string]: T;

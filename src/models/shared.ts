@@ -8,8 +8,8 @@ import { Types } from 'mongoose'
 export namespace IShared {
 
     export interface Timestamps {
-        createdAt: Date
-        updatedAt: Date
+        createdAt?: Date
+        updatedAt?: Date
     }
 
 	/**
