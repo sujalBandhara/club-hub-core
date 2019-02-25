@@ -90,4 +90,5 @@ export default class ClubHubClient {
     private errorHandler = async (error: any): Promise<any> => {
         return error
     }
+
 }

@@ -3,7 +3,6 @@ import { Types } from 'mongoose'
 
 // Models.
 import User from './user'
-import IShared from './shared'
 
 // Sub Models.
 import RichContent from './subModels/shared/richContent'
@@ -11,11 +10,20 @@ import RichContent from './subModels/shared/richContent'
 namespace Post {
 
 	// --------------------------------
+	// Server Response
+	// ---------------------------------
+
+	export interface Response {
+		count: number
+  	calendars: Model[]
+	}
+
+	// --------------------------------
 	// Main Interface
 	// ---------------------------------
 	
 	export interface Model {
-        _id?: Types.ObjectId
+  	_id?: Types.ObjectId
 		clubID?: Types.ObjectId
 		title?: string
 		description?: string

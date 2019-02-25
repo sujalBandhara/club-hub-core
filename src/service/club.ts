@@ -2,6 +2,7 @@ import * as axios from 'axios'
 
 // Client
 import ClubHubClient from '../client'
+import Club from 'src/models/club'
 
 /**
  * Interface to the ClubHub `Clubs` API.
@@ -20,7 +21,7 @@ export default class ClubService {
     /**
      * Fetches all clubs. 
      */
-    public getClubs = async (): Promise<any[]> => {
+    public getClubs = async (): Promise<Club.UnprotectedModel[]> => {
         return this.client.get('clubs').then((response: axios.AxiosResponse) => {
             return response.data
         })

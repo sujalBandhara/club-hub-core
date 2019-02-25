@@ -32,6 +32,20 @@ export namespace Club {
 		resources?: Resources
 	}
 
+	/**
+	 * This is returned from the unprotected club endpoint
+	 * that is used to populate the club selection screen
+	 * on the Login Component.
+	 */
+	export interface UnprotectedModel {
+		_id: string
+		name: string
+		city: string
+		state: string
+		zip: string
+		photoURL: string
+	}
+
 	// --------------------------------
 	// Supporting Interfaces and Types
 	// --------------------------------
