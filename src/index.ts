@@ -31,7 +31,7 @@ export {
 	Post,
 	Restaurant,
 	Form,
-	Section
+	Section,
 	
 	// Sub Models.
 	SubModels,
