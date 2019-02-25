@@ -24,9 +24,9 @@ export namespace Form {
 	// --------------------------------
 
 	export interface Response {
-		_id: Types.ObjectId
+		_id?: Types.ObjectId
 		userID: Types.ObjectId // The ID of the user who submitted the form.
-		values: ResponseValues[]
+		answers: ResponseValues[]
 	}
 
 	export interface ResponseValues {
@@ -38,21 +38,22 @@ export namespace Form {
 	// --------------------------------
 
 	export interface Input {
-		title: string,
-		property: string,
-		type: InputType,
-		placeholder?: string,
+		_id?: Types.ObjectId
+		title: string
+		property: string
+		type: InputType
+		placeholder?: string
 		defaultValue?: any
-		selectItems?: InputSelectionItem[] | SelectItem[],
-		size?: number,
-		class?: string,
-		required?: boolean,
-		file_accept?: string,
-		file_multipleFiles?: boolean,
-		select_isClearable?: boolean,
-		select_selectAll?: boolean,
-		number_min?: number,
-		number_max?: number,
+		selectItems?: InputSelectionItem[] | SelectItem[]
+		size?: number
+		class?: string
+		required?: boolean
+		file_accept?: string
+		file_multipleFiles?: boolean
+		select_isClearable?: boolean
+		select_selectAll?: boolean
+		number_min?: number
+		number_max?: number
 	}
 
 	export enum InputType {
@@ -87,9 +88,9 @@ export namespace Form {
 	}	
 
 	export interface InputSelectionItem {
-		label: string,
-		value: string,
-		icon?: any,
+		label: string
+		value: string
+		icon?: any
 	}
 }
 

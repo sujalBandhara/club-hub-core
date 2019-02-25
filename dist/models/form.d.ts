@@ -8,14 +8,15 @@ export declare namespace Form {
         responses?: Response[];
     }
     interface Response {
-        _id: Types.ObjectId;
+        _id?: Types.ObjectId;
         userID: Types.ObjectId;
-        values: ResponseValues[];
+        answers: ResponseValues[];
     }
     interface ResponseValues {
         [key: string]: string;
     }
     interface Input {
+        _id?: Types.ObjectId;
         title: string;
         property: string;
         type: InputType;
