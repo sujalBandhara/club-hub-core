@@ -46,7 +46,7 @@ export default class CalendarService {
         calendarIDs: calendarIDs
       }
     }
-    return this.client.get('calendar/available', query).then((response: axios.AxiosResponse) => {
+    return this.client.get('calendars/available', query).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }
@@ -61,7 +61,7 @@ export default class CalendarService {
       reservation: reservation,
       endTime: endTime
     }
-    return this.client.post(`calendar/${calendarId}/reserve`, postBody).then((response: axios.AxiosResponse) => {
+    return this.client.post(`calendars/${calendarId}/reserve`, postBody).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }

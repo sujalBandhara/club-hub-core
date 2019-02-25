@@ -15,7 +15,7 @@ namespace Post {
 
 	export interface Response {
 		count: number
-  	calendars: Model[]
+  	posts: Model[]
 	}
 
 	// --------------------------------

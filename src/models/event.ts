@@ -19,7 +19,7 @@ namespace Event {
 
 	export interface Response {
 		count: number
-  	calendars: Model[]
+  	events: Model[]
 	}
 
 	// --------------------------------

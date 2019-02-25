@@ -8,6 +8,15 @@ import GolfMeta from './subModels/golf'
 export namespace User {
 
 	// --------------------------------
+	// Server Response
+	// ---------------------------------
+
+	export interface Response {
+		count: number
+  	users: Model[]
+	}
+
+	// --------------------------------
 	// Main Interface
 	// ---------------------------------
 

@@ -3,7 +3,10 @@ import * as axios from 'axios'
 
 // Client
 import ClubHubClient from '../client'
+
+// Local Namespace.
 import Event from 'src/models/event'
+import User from 'src/models/user'
 
 /**
  * Interface to the ClubHub `Event` API.
@@ -65,8 +68,7 @@ export default class EventService {
    * `POST` a new event.
    */
   public postEvent = async (event: Event.Model): Promise<void> => {
-    const url: string = `/events`
-    return this.client.post(url, event).then((response: axios.AxiosResponse) => {
+    return this.client.post('events', event).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }
@@ -85,6 +87,34 @@ export default class EventService {
    */
   public deleteEvent = (Id: string): Promise<void> => {
     return this.client.delete(`events/${Id}`).then((response: axios.AxiosResponse) => {
+      return response.data
+    })
+  }
+
+  /**
+   * `POST` an RSVP for an event.
+   */
+  public postRSVP = async (eventId: string, user: User.Model): Promise<void> => {
+    const postBody = {
+      reservation: {
+        creator: user._id,
+        participants: [{
+          userID: user._id,
+          name: `${user.firstName} ${user.lastName}`,
+          rsvp: true
+        }]
+      }
+    }
+    return this.client.post(`events/${eventId}/rsvp`, postBody).then((response: axios.AxiosResponse) => {
+      return response.data
+    })
+  }
+
+  /**
+   * `DELETE` an existing RSVP.
+   */
+  public deleteRSVP = async (eventId: string, reservationId: string): Promise<void> => {
+    return this.client.delete(`events/${eventId}/rsvp/${reservationId}`).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }

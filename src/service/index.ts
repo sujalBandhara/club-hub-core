@@ -7,6 +7,7 @@ import CalendarService from './calendar'
 import EventService from './event'
 import MenuService from './menu'
 import PostService from './post'
+import MemberService from './member'
 
 /**
  * TypeScript interface to the ClubHub REST API.
@@ -22,6 +23,11 @@ export default class ClubHubService {
      * Interface to the Users API.
      */
     public users: UserService
+
+    /**
+     * Interface to the Members API.
+     */
+    public members: MemberService
 
     /**
      * Interface to the Clubs API.
@@ -54,6 +60,7 @@ export default class ClubHubService {
         // Service Setup
         this.users = new UserService(this.client)
         this.clubs = new ClubService(this.client)
+        this.members = new MemberService(this.client)
         this.calendars = new CalendarService(this.client)
         this.events = new EventService(this.client)
         this.menus = new MenuService(this.client)
