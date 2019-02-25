@@ -23,7 +23,9 @@
     "index.js"
   ],
   "homepage": "https://github.com/meshhq/club-hub-core#readme",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
   "devDependencies": {
     "@types/mongoose": "^5.3.5",
     "typescript": "^3.3.3"
