@@ -8,6 +8,7 @@ import Notification from './models/notification';
 import Order from './models/order';
 import Post from './models/post';
 import Restaurant from './models/restaurant';
+import Section from './models/section';
 import * as SubModels from './models/subModels';
 import IShared from './models/shared';
-export { User, Club, Calendar, Device, Event, Message, Notification, Order, Post, Restaurant, SubModels, IShared };
+export { User, Club, Calendar, Device, Event, Message, Notification, Order, Post, Restaurant, Section, SubModels, IShared };
