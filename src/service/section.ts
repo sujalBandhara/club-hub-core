@@ -3,6 +3,7 @@ import * as axios from 'axios'
 
 import ClubHubClient from 'src/client'
 import Section from 'src/models/section'
+import Response from 'src/models/response'
 
 export default class SectionService {
 
@@ -19,7 +20,7 @@ export default class SectionService {
    * `GET` all of the sections for the Club of the
    * currently authenticated User
    */
-  public getSections = async (): Promise<Section.Model[]> => {
+  public getSections = async (): Promise<Response.Section> => {
     return this.client.get('content/sections').then((response: axios.AxiosResponse) => {
       return response.data
     })

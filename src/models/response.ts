@@ -1,5 +1,7 @@
 // Internal Namespaces
 import Calendar from './calendar'
+import Message from './message'
+import Section from './section'
 import Event from './event'
 import User from './user'
 import Post from './post'
@@ -28,6 +30,14 @@ namespace Response {
 
   export interface Calendar extends PaginatedResponse {
     calendars: Calendar.Model[]
+  }
+
+  export interface Message extends PaginatedResponse {
+    messages: Message.Model[]
+  }
+
+  export interface Section extends PaginatedResponse {
+    sections: Section.Model[]
   }
 
 }

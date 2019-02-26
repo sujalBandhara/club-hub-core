@@ -24,18 +24,6 @@ export default class MemberService {
   }
 
   /**
-   * `GET` all the Members for a given club Id.
-   */
-  public getMembers = async (memberQuery: Request.Member): Promise<Response.User> => {
-    const query: axios.AxiosRequestConfig = {
-      params: memberQuery
-    }
-    return this.client.get('users', query).then((response: axios.AxiosResponse) => {
-      return response.data
-    })
-  }
-
-  /**
    * `GET` a single member for the given Id.
    */
   public getMemberById = async (Id: string): Promise<User.Model> => {
