@@ -18,7 +18,6 @@ describe('Club Service', async function () {
       // No token needed for unprotected route.
       const service: ClubHubService = new ClubHubService(testUrl, '')
       const clubs: Club.UnprotectedModel[] = await service.clubs.getClubs()
-
       expect(clubs).to.exist
       expect(clubs.length).to.be.greaterThan(0)
 
