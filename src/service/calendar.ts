@@ -7,8 +7,7 @@ import ClubHubClient from '../client'
 // Local Namespace
 import Response from 'src/models/response'
 import Calendar from 'src/models/calendar'
-import Event from 'src/models/event'
-import Request from 'src/models/request';
+import Request from 'src/models/request'
 
 /**
  * Interface to the ClubHub `Calendar` API.

@@ -7,7 +7,6 @@ import ClubHubClient from '../client'
 // Local Namespace
 import Session from 'src/models/session'
 import User from 'src/models/user'
-import Request from 'src/models/request'
 
 /**
  * Interface to the ClubHub `User` API.
@@ -21,23 +20,6 @@ export default class UserService {
 
 	constructor(client: ClubHubClient) {
 		this.client = client
-	}
-
-	/**
-	 * `POST` an email, password, and ClubName to authenticate a User. This
-	 * will return the `Login` response.
-	 * @param {string} email
-	 * @param {string} password
-	 */
-	public login = async (email: string, password: string, clubName: string): Promise<Session.Login> => {
-		const request: Request.LoginPost = {
-			email: email,
-			password: password,
-			club: clubName
-		}
-		return this.client.post('login', request).then((response: axios.AxiosResponse) => {
-			return response.data
-		})
 	}
 
 	/**
