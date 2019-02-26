@@ -5,9 +5,9 @@ import * as axios from 'axios'
 import ClubHubClient from '../client'
 
 // Local Namespace
-import Response from 'src/models/response'
-import Calendar from 'src/models/calendar'
-import Request from 'src/models/request'
+import Response from '../models/response'
+import Calendar from '../models/calendar'
+import Request from '../models/request'
 
 /**
  * Interface to the ClubHub `Calendar` API.

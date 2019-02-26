@@ -11,10 +11,10 @@ import EventService from './event'
 import MenuService from './menu'
 import PostService from './post'
 import MemberService from './member'
-import Request from 'src/models/request'
-import Session from 'src/models/session'
+import Request from '../models/request'
+import Session from '../models/session'
 import MessageService from './message'
-import SectionService from './section';
+import SectionService from './section'
 
 /**
  * TypeScript interface to the ClubHub REST API.

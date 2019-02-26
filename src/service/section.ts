@@ -1,9 +1,9 @@
 // External Dependencies
 import * as axios from 'axios'
 
-import ClubHubClient from 'src/client'
-import Section from 'src/models/section'
-import Response from 'src/models/response'
+import ClubHubClient from '../client'
+import Section from '../models/section'
+import Response from '../models/response'
 
 export default class SectionService {
 

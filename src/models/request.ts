@@ -1,5 +1,5 @@
-import Message from 'src/models/message'
-import Event from 'src/models/event'
+import Message from './message'
+import Event from './event'
 import { Types } from 'mongoose'
 
 namespace Request {
