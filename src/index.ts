@@ -18,10 +18,16 @@ import * as Constants from './constants'
 // Sub Models.
 import * as SubModels from './models/subModels'
 
+// ClubHubService Services
+import ClubHubService from './service'
+
 // Shared Interfaces.
 import IShared from './models/shared'
 
 export {
+	// ClubHubService Services
+	ClubHubService,
+
 	// First Class Models.
 	User,
 	Club,

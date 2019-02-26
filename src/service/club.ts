@@ -3,7 +3,7 @@ import * as axios from 'axios'
 
 // Client
 import ClubHubClient from '../client'
-import Club from 'src/models/club'
+import Club from '../models/club'
 
 /**
  * Interface to the ClubHub `Clubs` API.

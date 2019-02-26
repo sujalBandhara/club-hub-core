@@ -5,10 +5,10 @@ import * as axios from 'axios'
 import ClubHubClient from '../client'
 
 // Local Namespace.
-import Event from 'src/models/event'
-import User from 'src/models/user'
-import Response from 'src/models/response'
-import Request from 'src/models/request'
+import Event from '../models/event'
+import User from '../models/user'
+import Response from '../models/response'
+import Request from '../models/request'
 
 /**
  * Interface to the ClubHub `Event` API.
