@@ -10,5 +10,5 @@ var IShared;
         PublicationStatus["Scheduled"] = "SCHEDULED";
         PublicationStatus["Delivered"] = "DELIVERED";
     })(PublicationStatus = IShared.PublicationStatus || (IShared.PublicationStatus = {}));
-})(IShared = exports.IShared || (exports.IShared = {}));
+})(IShared || (IShared = {}));
 exports.default = IShared;

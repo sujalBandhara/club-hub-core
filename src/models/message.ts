@@ -38,14 +38,18 @@ namespace Message {
 	
 	export enum SubjectType {
 		Post = 'POST',
-		Event = 'EVENT',
-		Confirmation = 'CONFIRMATION'
+		Event = 'EVENT'
 	}
 	
 	export enum DeliveryType {
 		Push = 'PUSH',
 		Email = 'EMAIL',
 		Text = 'TEXT'
+	}
+
+	export enum ConfirmationTypes {
+		EventRSVP = 'Event RSVP',
+		ServiceRequest = 'Service Request'
 	}
 }
 

@@ -6,7 +6,6 @@ var Message;
     (function (SubjectType) {
         SubjectType["Post"] = "POST";
         SubjectType["Event"] = "EVENT";
-        SubjectType["Confirmation"] = "CONFIRMATION";
     })(SubjectType = Message.SubjectType || (Message.SubjectType = {}));
     var DeliveryType;
     (function (DeliveryType) {
@@ -14,5 +13,10 @@ var Message;
         DeliveryType["Email"] = "EMAIL";
         DeliveryType["Text"] = "TEXT";
     })(DeliveryType = Message.DeliveryType || (Message.DeliveryType = {}));
-})(Message = exports.Message || (exports.Message = {}));
+    var ConfirmationTypes;
+    (function (ConfirmationTypes) {
+        ConfirmationTypes["EventRSVP"] = "Event RSVP";
+        ConfirmationTypes["ServiceRequest"] = "Service Request";
+    })(ConfirmationTypes = Message.ConfirmationTypes || (Message.ConfirmationTypes = {}));
+})(Message || (Message = {}));
 exports.default = Message;

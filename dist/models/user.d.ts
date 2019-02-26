@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
 import CarMeta from './subModels/car';
 import GolfMeta from './subModels/golf';
-export declare namespace User {
+declare namespace User {
     interface Model {
         _id?: Types.ObjectId;
         address?: string;

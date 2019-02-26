@@ -2,7 +2,7 @@ import { Types } from 'mongoose';
 import User from './user';
 import Club from './club';
 import RichContent from './subModels/shared/richContent';
-export declare namespace Message {
+declare namespace Message {
     interface Model {
         _id?: Types.ObjectId;
         text?: string;
@@ -22,13 +22,16 @@ export declare namespace Message {
     }
     enum SubjectType {
         Post = "POST",
-        Event = "EVENT",
-        Confirmation = "CONFIRMATION"
+        Event = "EVENT"
     }
     enum DeliveryType {
         Push = "PUSH",
         Email = "EMAIL",
         Text = "TEXT"
+    }
+    enum ConfirmationTypes {
+        EventRSVP = "Event RSVP",
+        ServiceRequest = "Service Request"
     }
 }
 export default Message;

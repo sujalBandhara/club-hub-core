@@ -1,4 +1,4 @@
-export declare namespace IShared {
+declare namespace IShared {
     interface Timestamps {
         createdAt?: Date;
         updatedAt?: Date;
