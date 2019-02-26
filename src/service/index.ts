@@ -13,6 +13,8 @@ import PostService from './post'
 import MemberService from './member'
 import Request from 'src/models/request'
 import Session from 'src/models/session'
+import MessageService from './message'
+import SectionService from './section';
 
 /**
  * TypeScript interface to the ClubHub REST API.
@@ -50,6 +52,12 @@ export default class ClubHubService {
 	public members: MemberService
 
 	/**
+	 * Interface to the Message API.
+	 */
+	public messages: MessageService
+
+
+	/**
 	 * Interface to the Clubs API.
 	 */
 	public clubs: ClubService
@@ -70,6 +78,11 @@ export default class ClubHubService {
 	public menus: MenuService
 
 	/**
+	 * Interface to the Section API.
+	 */
+	public sections: SectionService
+
+	/**
 	 * Interface to the Posts API.
 	 */
 	public post: PostService
@@ -81,9 +94,11 @@ export default class ClubHubService {
 		this.users = new UserService(this.client)
 		this.clubs = new ClubService(this.client)
 		this.members = new MemberService(this.client)
+		this.messages = new MessageService(this.client)
 		this.calendars = new CalendarService(this.client)
 		this.events = new EventService(this.client)
 		this.menus = new MenuService(this.client)
+		this.sections = new SectionService(this.client)
 		this.post = new PostService(this.client)
 	}
 
