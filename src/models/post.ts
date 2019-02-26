@@ -41,6 +41,7 @@ namespace Post {
 		JPG = 'JPG',
 		PNG = 'PNG'
 	}
+
 }
 
 export default Post

@@ -13,6 +13,7 @@ export namespace RichContent {
 		status?: IShared.PublicationStatus
 		slateJSON?: string
 	}
+
 }
 
 export default RichContent

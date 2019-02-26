@@ -1,4 +1,5 @@
 import Message from 'src/models/message'
+import Event from 'src/models/event'
 
 namespace Request {
 
@@ -10,7 +11,7 @@ namespace Request {
   }
 
   export interface Event extends GetQuery {
-    groupID: string
+    groupID?: string
   }
 
   export interface Member extends GetQuery {
@@ -18,7 +19,24 @@ namespace Request {
   }
 
   export interface Message extends GetQuery {
-    type: Message.DeliveryType
+    type?: Message.DeliveryType
+  }
+
+  export interface LoginPost {
+    email: string
+    password: string
+    club: string
+  }
+
+  export interface ReservationPost {
+    calendarID: string
+    reservation: Event.Reservation
+    startTime: string
+    endTime?: string
+  }
+
+  export interface RSVPPost {
+    reservation: Event.Reservation
   }
 
 }

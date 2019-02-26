@@ -57,9 +57,9 @@ namespace IShared {
 	export enum PublicationStatus {
 		Draft = 'DRAFT',
 		Pending = 'PENDING',
-        Published = 'PUBLISHED',
-        Scheduled = 'SCHEDULED',
-        Delivered = 'DELIVERED',
+		Published = 'PUBLISHED',
+		Scheduled = 'SCHEDULED',
+		Delivered = 'DELIVERED'
 	}
 }
 

@@ -89,18 +89,18 @@ export default class EventService {
   /**
    * `POST` an RSVP for an event.
    */
-  public postRSVP = async (eventId: string, user: User.Model): Promise<void> => {
-    const postBody = {
+  public postRSVP = async (eventID: string, user: User.Model): Promise<void> => {
+    const postBody: Request.RSVPPost = {
       reservation: {
-        creator: user._id,
+        creator: user._id!,
         participants: [{
-          userID: user._id,
+          userID: user._id!,
           name: `${user.firstName} ${user.lastName}`,
           rsvp: true
         }]
       }
     }
-    return this.client.post(`events/${eventId}/rsvp`, postBody).then((response: axios.AxiosResponse) => {
+    return this.client.post(`events/${eventID}/rsvp`, postBody).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }
@@ -108,8 +108,8 @@ export default class EventService {
   /**
    * `DELETE` an existing RSVP.
    */
-  public deleteRSVP = async (eventId: string, reservationId: string): Promise<void> => {
-    return this.client.delete(`events/${eventId}/rsvp/${reservationId}`).then((response: axios.AxiosResponse) => {
+  public deleteRSVP = async (eventID: string, reservationID: string): Promise<void> => {
+    return this.client.delete(`events/${eventID}/rsvp/${reservationID}`).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }

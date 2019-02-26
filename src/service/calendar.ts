@@ -8,6 +8,7 @@ import ClubHubClient from '../client'
 import Response from 'src/models/response'
 import Calendar from 'src/models/calendar'
 import Event from 'src/models/event'
+import Request from 'src/models/request';
 
 /**
  * Interface to the ClubHub `Calendar` API.
@@ -55,14 +56,8 @@ export default class CalendarService {
   /**
    * `POST` data needed to make a reservation.
    */
-  public postBookableSlot = async (calendarId: string, reservation: Event.Reservation, startTime: string, endTime?: string): Promise<void> => {
-    const postBody = {
-      startTime: startTime,
-      calendarID: calendarId,
-      reservation: reservation,
-      endTime: endTime
-    }
-    return this.client.post(`calendars/${calendarId}/reserve`, postBody).then((response: axios.AxiosResponse) => {
+  public postBookableSlot = async (body: Request.ReservationPost): Promise<void> => {
+    return this.client.post(`calendars/${body.calendarID}/reserve`, body).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }

@@ -7,6 +7,7 @@ import ClubHubClient from '../client'
 // Local Namespace
 import Session from 'src/models/session'
 import User from 'src/models/user'
+import Request from 'src/models/request'
 
 /**
  * Interface to the ClubHub `User` API.
@@ -29,12 +30,12 @@ export default class UserService {
    * @param {string} password
    */
     public login = async (email: string, password: string, clubName: string): Promise<Session.Login> => {
-        const json = {
+        const request: Request.LoginPost = {
             email: email,
             password: password,
             club: clubName
         }
-        return this.client.post('login', json).then((response: axios.AxiosResponse) => {
+        return this.client.post('login', request).then((response: axios.AxiosResponse) => {
             return response.data
         })
     }
@@ -54,8 +55,7 @@ export default class UserService {
      * User Model.
      */
     public postSubDocument = async (userId: string, path: string, data: object): Promise<User.Model> => {
-        const postPath: string = `users/${userId}/meta/${path}`
-        return this.client.post(postPath, data).then((response: axios.AxiosResponse) => {
+        return this.client.post(`users/${userId}/meta/${path}`, data).then((response: axios.AxiosResponse) => {
             return response.data
         })
     }
