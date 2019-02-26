@@ -6,6 +6,7 @@ var Message;
     (function (SubjectType) {
         SubjectType["Post"] = "POST";
         SubjectType["Event"] = "EVENT";
+        SubjectType["Confirmation"] = "CONFIRMATION";
     })(SubjectType = Message.SubjectType || (Message.SubjectType = {}));
     var DeliveryType;
     (function (DeliveryType) {

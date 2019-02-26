@@ -22,7 +22,8 @@ export declare namespace Message {
     }
     enum SubjectType {
         Post = "POST",
-        Event = "EVENT"
+        Event = "EVENT",
+        Confirmation = "CONFIRMATION"
     }
     enum DeliveryType {
         Push = "PUSH",
