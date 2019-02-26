@@ -27,9 +27,8 @@ export default class ClubHubClient {
 	public baseURL: string
 
 	constructor(baseURL: string, token: string) {
-		this.token = token
 		this.shouldRetry = true
-
+		this.baseURL = baseURL
 		const headers = {
 			withCredentials: true,
 			headers: {
@@ -37,6 +36,7 @@ export default class ClubHubClient {
 			}
 		}
 		this.axios = Axios.create({ url: baseURL, headers: headers })
+		this.setToken(token)
 		this.axios.interceptors.response.use(this.responseHandler, this.errorHandler)
 	}
 
@@ -52,7 +52,7 @@ export default class ClubHubClient {
 	 * Get Requests
 	 */
 	public get = (url: string, config?: axios.AxiosRequestConfig) => {
-		return this.axios.get(url, config)
+		return this.axios.get(`${this.baseURL}${url}`, config)
 	}
 
 	/**
