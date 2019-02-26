@@ -4,7 +4,16 @@ import { Types } from 'mongoose'
 // Sub Models.
 import Location from './subModels/shared/location'
 
+// Required local Namespace.
+import Event from './event'
+
 namespace Calendar {
+
+	export interface BookableResponse {
+		calendarID: string
+		allTimes: string[]
+		eventInfo: AvailableEvent[]
+	}
 
 	// --------------------------------
 	// Main Interface
@@ -50,6 +59,19 @@ namespace Calendar {
 		Club = 'Club',
 		Golf = 'Golf'
 	}
+
+	export interface AvailableEvent {
+		time: string
+		openSpots: number | null
+		totalSpots: number | null
+		existingEvent?: {
+				_id: string
+				start: string
+				end: string
+				reservations?: Event.Reservation[]
+		}
+	}
+
 }
 
 export default Calendar

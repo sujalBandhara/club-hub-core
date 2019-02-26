@@ -5,7 +5,7 @@ import { Types } from 'mongoose'
 import CarMeta from './subModels/car'
 import GolfMeta from './subModels/golf'
 
-export namespace User {
+namespace User {
 
 	// --------------------------------
 	// Main Interface

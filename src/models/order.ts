@@ -29,6 +29,13 @@ namespace Order {
 	// Supporting Interfaces and Types
 	// --------------------------------
 	
+	export interface ProposedOrder {
+		clubID: string
+		userID: string
+		restaurantID: string
+		items: ProposedItem[]
+	}
+
 	export interface Item {
 		menuItem: Restaurant.MenuItem,
 		notes?: string
@@ -51,6 +58,7 @@ namespace Order {
 		quantity: number
 		notes: string
 	}
+
 }
 
 export default Order

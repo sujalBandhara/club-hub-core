@@ -4,12 +4,11 @@ import { Types } from 'mongoose'
 // Models.
 import User from './user'
 import Club from './club'
-import IShared from './shared'
 
 // Sub Models.
 import RichContent from './subModels/shared/richContent'
 
-export namespace Message {
+namespace Message {
 
 	// --------------------------------
 	// Main Interface

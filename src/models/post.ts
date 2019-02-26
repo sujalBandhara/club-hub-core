@@ -3,7 +3,6 @@ import { Types } from 'mongoose'
 
 // Models.
 import User from './user'
-import IShared from './shared'
 
 // Sub Models.
 import RichContent from './subModels/shared/richContent'
@@ -15,7 +14,7 @@ namespace Post {
 	// ---------------------------------
 	
 	export interface Model {
-        _id?: Types.ObjectId
+  	_id?: Types.ObjectId
 		clubID?: Types.ObjectId
 		title?: string
 		description?: string
@@ -42,6 +41,7 @@ namespace Post {
 		JPG = 'JPG',
 		PNG = 'PNG'
 	}
+
 }
 
 export default Post

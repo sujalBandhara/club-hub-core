@@ -72,6 +72,20 @@ namespace Event {
 	export interface CarReservationMeta extends ReservationBaseMeta {
 		vehicleID: Types.ObjectId
 	}
+
+	/**
+	 * This is used for the `timeField` query param in
+	 * `getEvents`. 'start' means we will fetch all events
+	 * that start at or after the time string provided.
+	 * 'createdAt' means we will fetch all events created on
+	 * or after the time string provided. Fetch will default to 'createdAt' 
+	 * if no time field is passed in with a start / end query.
+	 */
+	export enum TimeFieldType {
+		Start = 'start',
+		CreatedAt = 'createdAt'
+	}
+
 }
 
 export default Event

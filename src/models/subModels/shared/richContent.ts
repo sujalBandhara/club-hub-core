@@ -1,6 +1,3 @@
-// External Dependencies
-import { Schema } from 'mongoose'
-
 // Internal Dependencies
 import IShared from '../../shared'
 
@@ -16,6 +13,7 @@ export namespace RichContent {
 		status?: IShared.PublicationStatus
 		slateJSON?: string
 	}
+
 }
 
 export default RichContent
