@@ -5,8 +5,8 @@ import * as axios from 'axios'
 import ClubHubClient from '../client'
 
 // Local Namespace
-import Session from 'src/models/session'
-import User from 'src/models/user'
+import Session from '../models/session'
+import User from '../models/user'
 
 /**
  * Interface to the ClubHub `User` API.
