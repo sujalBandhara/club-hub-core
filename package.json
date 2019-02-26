@@ -24,10 +24,15 @@
   ],
   "homepage": "https://github.com/meshhq/club-hub-core#readme",
   "dependencies": {
+    "mongoose": "^5.4.12",
     "axios": "^0.18.0"
   },
   "devDependencies": {
     "@types/mongoose": "^5.3.5",
-    "typescript": "^3.3.3"
+    "@types/mocha": "^2.2.40",
+    "@types/chai": "^3.5.0",
+    "typescript": "^3.3.3",
+    "mocha": "^5.2.0",
+    "chai": "^3.5.0"
   }
 }

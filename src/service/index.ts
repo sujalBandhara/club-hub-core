@@ -1,6 +1,9 @@
+// External Dependencies
+import * as axios from 'axios'
+
 import ClubHubClient from '../client'
 
-// Services 
+// Services
 import UserService from './user'
 import ClubService from './club'
 import CalendarService from './calendar'
@@ -8,11 +11,28 @@ import EventService from './event'
 import MenuService from './menu'
 import PostService from './post'
 import MemberService from './member'
+import Request from 'src/models/request'
+import Session from 'src/models/session'
 
 /**
  * TypeScript interface to the ClubHub REST API.
  */
 export default class ClubHubService {
+
+	/**
+	 * `POST` an email, password, and ClubName to authenticate a User. This
+	 * will return the `Login` response.
+	 */
+	public static login = async (url: string, email: string, password: string, clubName: string): Promise<Session.Login> => {
+		const request: Request.LoginPost = {
+			email: email,
+			password: password,
+			club: clubName
+		}
+		return axios.default.post(`${url}login`, request).then((response: axios.AxiosResponse) => {
+			return response.data
+		})
+	}
 
 	/**
 	 * The `ClubHubClient` instance for the service. 
