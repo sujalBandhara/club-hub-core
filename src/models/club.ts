@@ -11,7 +11,7 @@ import Location from './subModels/shared/location'
 // Shared Interfaces.
 import IShared from './shared'
 
-export namespace Club {
+namespace Club {
 	
 	// --------------------------------
 	// Main Interface

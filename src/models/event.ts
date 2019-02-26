@@ -14,15 +14,6 @@ import IShared from './shared'
 namespace Event {
 
 	// --------------------------------
-	// Server Responses
-	// ---------------------------------
-
-	export interface Response {
-		count: number
-  	events: Model[]
-	}
-
-	// --------------------------------
 	// Main Interface
 	// ---------------------------------
 

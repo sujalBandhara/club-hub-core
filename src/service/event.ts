@@ -7,6 +7,8 @@ import ClubHubClient from '../client'
 // Local Namespace.
 import Event from 'src/models/event'
 import User from 'src/models/user'
+import Response from 'src/models/response'
+import Request from 'src/models/request'
 
 /**
  * Interface to the ClubHub `Event` API.
@@ -25,16 +27,9 @@ export default class EventService {
   /**
    * `GET` all the Events for the given calendar groupID.
    */
-  public getEvents = async (groupID?: string, limit?: string, offset?: string, start?: string, end?: string): Promise<Event.Response> => {
+  public getEvents = async (eventRequest: Request.Event): Promise<Response.Event> => {
     const query: axios.AxiosRequestConfig = {
-      params: {
-        groupID: groupID ? groupID : null,
-        limit: limit ? limit : 0,
-        offset: offset,
-        start: start,
-        timeField: Event.TimeFieldType.Start,
-        end: end
-      }
+      params: eventRequest
     }
     return this.client.get('events', query).then((response: axios.AxiosResponse) => {
       return response.data
@@ -44,7 +39,7 @@ export default class EventService {
   /**
    * `GET` all the events the current user is attending.
    */
-  public getEventsAttending = async (groupID: string): Promise<Event.Response> => {
+  public getEventsAttending = async (groupID: string): Promise<Response.Event> => {
     const query: axios.AxiosRequestConfig = {
       params: {
         groupID: groupID ? groupID : null

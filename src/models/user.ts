@@ -5,16 +5,7 @@ import { Types } from 'mongoose'
 import CarMeta from './subModels/car'
 import GolfMeta from './subModels/golf'
 
-export namespace User {
-
-	// --------------------------------
-	// Server Response
-	// ---------------------------------
-
-	export interface Response {
-		count: number
-  	users: Model[]
-	}
+namespace User {
 
 	// --------------------------------
 	// Main Interface

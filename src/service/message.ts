@@ -4,6 +4,7 @@ import * as axios from 'axios'
 // Client
 import ClubHubClient from '../client'
 import Message from 'src/models/message'
+import Request from 'src/models/request'
 
 /**
  * Interface to the ClubHub `Message` API.
@@ -22,15 +23,9 @@ export default class MessageService {
   /**
    * `GET` all the Messages for a given delivery type.
    */
-  public getMessages = async (type?: Message.DeliveryType, limit?: string, offset?: string, start?: string, end?: string): Promise<Message.Model> => {
+  public getMessages = async (messageRequest: Request.Message): Promise<Message.Model> => {
     const query: axios.AxiosRequestConfig = {
-      params: {
-        deliveryType: type,
-        limit: limit ? limit : 0,
-        offset: offset,
-        start: start,
-        end: end
-      }
+      params: messageRequest
     }
     return this.client.get('messages', query).then((response: axios.AxiosResponse) => {
       return response.data

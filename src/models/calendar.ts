@@ -9,15 +9,6 @@ import Event from './event'
 
 namespace Calendar {
 
-	// --------------------------------
-	// Server Responses
-	// ---------------------------------
-
-	export interface Response {
-		count: number
-  	calendars: Model[]
-	}
-
 	export interface BookableResponse {
 		calendarID: string
 		allTimes: string[]

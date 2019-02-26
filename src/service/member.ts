@@ -5,7 +5,9 @@ import * as axios from 'axios'
 import ClubHubClient from 'src/client'
 
 // Local Namespace
-import { User } from 'src'
+import User from 'src/models/user'
+import Response from 'src/models/response'
+import Request from 'src/models/request'
 
 /**
  * Interface to the ClubHub `Member` API.
@@ -24,15 +26,9 @@ export default class MemberService {
   /**
    * `GET` all the Members for a given club Id.
    */
-  public getMembers = async (clubID: string, limit?: string, offset?: string, start?: string, end?: string): Promise<User.Response> => {
+  public getMembers = async (memberQuery: Request.Member): Promise<Response.User> => {
     const query: axios.AxiosRequestConfig = {
-      params: {
-        clubID: clubID ? clubID : null,
-        limit: limit ? limit : 0,
-        offset: offset,
-        start: start,
-        end: end
-      }
+      params: memberQuery
     }
     return this.client.get('users', query).then((response: axios.AxiosResponse) => {
       return response.data

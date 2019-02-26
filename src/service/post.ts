@@ -2,8 +2,9 @@
 import * as axios from 'axios'
 
 // Client
+import Response from 'src/models/response'
+import Request from 'src/models/request'
 import ClubHubClient from '../client'
-import Post from 'src/models/post'
 
 /**
  * Interface to the ClubHub `Post` API.
@@ -22,14 +23,9 @@ export default class PostService {
   /**
    * `GET` posts for the given parameters.
    */
-  public getPosts = async (limit?: string, offset?: string, start?: string, end?: string): Promise<Post.Response> => {
+  public getPosts = async (postRequest: Request.GetQuery): Promise<Response.Post> => {
     const query: axios.AxiosRequestConfig = {
-      params: {
-        limit: limit ? limit : 0,
-        offset: offset,
-        start: start,
-        end: end
-      }
+      params: postRequest
     }
     return this.client.get('posts', query).then((response: axios.AxiosResponse) => {
       return response.data
@@ -39,7 +35,7 @@ export default class PostService {
   /**
    * `GET` posts for the given parameters.
    */
-  public getPost = async (Id: string): Promise<Post.Response> => {
+  public getPost = async (Id: string): Promise<Response.Post> => {
     return this.client.get(`posts/${Id}`).then((response: axios.AxiosResponse) => {
       return response.data
     })

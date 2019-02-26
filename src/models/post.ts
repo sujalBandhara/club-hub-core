@@ -10,15 +10,6 @@ import RichContent from './subModels/shared/richContent'
 namespace Post {
 
 	// --------------------------------
-	// Server Response
-	// ---------------------------------
-
-	export interface Response {
-		count: number
-  	posts: Model[]
-	}
-
-	// --------------------------------
 	// Main Interface
 	// ---------------------------------
 	

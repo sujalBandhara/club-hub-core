@@ -1,6 +1,3 @@
-// External Dependencies
-import { Schema } from 'mongoose'
-
 // Internal Dependencies
 import IShared from '../../shared'
 

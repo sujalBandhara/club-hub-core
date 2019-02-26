@@ -3,7 +3,7 @@ import User from './user'
 import Club from './club'
 import Restaurant from './restaurant'
 
-export namespace Session {
+namespace Session {
 
   // --------------------------------
 	// Login Response
@@ -27,3 +27,5 @@ export namespace Session {
   }
 
 }
+
+export default Session

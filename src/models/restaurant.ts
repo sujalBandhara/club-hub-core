@@ -46,6 +46,7 @@ namespace Restaurant {
 		displayGroup?: string
 		description?: string
 	}
+	
 }
 
 export default Restaurant

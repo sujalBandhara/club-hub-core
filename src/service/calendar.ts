@@ -5,6 +5,7 @@ import * as axios from 'axios'
 import ClubHubClient from '../client'
 
 // Local Namespace
+import Response from 'src/models/response'
 import Calendar from 'src/models/calendar'
 import Event from 'src/models/event'
 
@@ -25,7 +26,7 @@ export default class CalendarService {
   /**
    * `GET` all the calendars for a given calendar group.
    */
-  public getCalendars = async (groupID?: string): Promise<Calendar.Response> => {
+  public getCalendars = async (groupID?: string): Promise<Response.Calendar> => {
     const query: axios.AxiosRequestConfig = {
       params: {
         groupID: groupID

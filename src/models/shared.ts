@@ -1,11 +1,8 @@
-// External Dependencies.
-import { Types } from 'mongoose'
-
 // ------------------------------------
 // Storage for general interfaces
 // ------------------------------------
 
-export namespace IShared {
+namespace IShared {
 
 	/**
 	 * Used to define an object that would otherwise be set to 'any'.
