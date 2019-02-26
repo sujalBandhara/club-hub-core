@@ -40,20 +40,19 @@ var ClubHubClient = (function () {
     function ClubHubClient(baseURL, token) {
         var _this = this;
         this.setToken = function (token) {
-            _this.token = token;
             _this.axios.defaults.headers.common['Authorization'] = token;
         };
         this.get = function (url, config) {
-            return _this.axios.get(url, config);
+            return _this.axios.get("" + _this.baseURL + url, config);
         };
         this.post = function (url, data, config) {
-            return _this.axios.post(url, data, config);
+            return _this.axios.post("" + _this.baseURL + url, data, config);
         };
         this.put = function (url, data, config) {
-            return _this.axios.put(url, data, config);
+            return _this.axios.put("" + _this.baseURL + url, data, config);
         };
         this.delete = function (url, config) {
-            return _this.axios.delete(url, config);
+            return _this.axios.delete("" + _this.baseURL + url, config);
         };
         this.responseHandler = function (response) {
             return response;
@@ -63,8 +62,8 @@ var ClubHubClient = (function () {
                 return [2, error];
             });
         }); };
-        this.token = token;
         this.shouldRetry = true;
+        this.baseURL = baseURL;
         var headers = {
             withCredentials: true,
             headers: {
@@ -72,6 +71,7 @@ var ClubHubClient = (function () {
             }
         };
         this.axios = axios_1.default.create({ url: baseURL, headers: headers });
+        this.setToken(token);
         this.axios.interceptors.response.use(this.responseHandler, this.errorHandler);
     }
     return ClubHubClient;

@@ -40,14 +40,14 @@ var SectionService = (function () {
         var _this = this;
         this.getSections = function () { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2, this.client.get('sections').then(function (response) {
+                return [2, this.client.get('content/sections').then(function (response) {
                         return response.data;
                     })];
             });
         }); };
         this.createSection = function (section) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2, this.client.post('sections', section).then(function (response) {
+                return [2, this.client.post('content/sections', section).then(function (response) {
                         return response.data;
                     })];
             });
@@ -60,7 +60,7 @@ var SectionService = (function () {
                         section_id: section._id
                     }
                 };
-                return [2, this.client.put('sections', section, query).then(function (response) {
+                return [2, this.client.put('content/sections', section, query).then(function (response) {
                         return response.data;
                     })];
             });
@@ -73,7 +73,7 @@ var SectionService = (function () {
                         section_id: sectionID
                     }
                 };
-                return [2, this.client.delete('sections', query).then(function () {
+                return [2, this.client.delete('content/sections', query).then(function () {
                         return;
                     })];
             });

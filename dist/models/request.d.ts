@@ -1,8 +1,9 @@
-import Message from 'src/models/message';
-import Event from 'src/models/event';
+import Message from './message';
+import Event from './event';
+import { Types } from 'mongoose';
 declare namespace Request {
     interface GetQuery {
-        limit?: string;
+        limit: string;
         offset?: string;
         start?: string;
         end?: string;
@@ -11,7 +12,7 @@ declare namespace Request {
         groupID?: string;
     }
     interface Member extends GetQuery {
-        clubID: string;
+        clubID: Types.ObjectId;
     }
     interface Message extends GetQuery {
         type?: Message.DeliveryType;

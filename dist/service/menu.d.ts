@@ -1,5 +1,5 @@
 import ClubHubClient from '../client';
-import Order from 'src/models/order';
+import Order from '../models/order';
 export default class MenuService {
     client: ClubHubClient;
     constructor(client: ClubHubClient);

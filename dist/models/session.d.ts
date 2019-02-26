@@ -11,7 +11,6 @@ declare namespace Session {
         restaurants: Restaurant.Model[];
         users: User.Model[];
         club: Club.Model;
-        members: User.Model[];
     }
 }
 export default Session;

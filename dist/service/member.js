@@ -38,17 +38,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var MemberService = (function () {
     function MemberService(client) {
         var _this = this;
-        this.getMembers = function (memberQuery) { return __awaiter(_this, void 0, void 0, function () {
-            var query;
-            return __generator(this, function (_a) {
-                query = {
-                    params: memberQuery
-                };
-                return [2, this.client.get('users', query).then(function (response) {
-                        return response.data;
-                    })];
-            });
-        }); };
         this.getMemberById = function (Id) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2, this.client.get("users/" + Id).then(function (response) {

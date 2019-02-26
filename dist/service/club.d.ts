@@ -1,5 +1,5 @@
 import ClubHubClient from '../client';
-import Club from 'src/models/club';
+import Club from '../models/club';
 export default class ClubService {
     client: ClubHubClient;
     constructor(client: ClubHubClient);

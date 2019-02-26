@@ -1,7 +1,6 @@
 import * as axios from 'axios';
 export default class ClubHubClient {
     axios: axios.AxiosInstance;
-    token: string;
     shouldRetry: boolean;
     baseURL: string;
     constructor(baseURL: string, token: string);

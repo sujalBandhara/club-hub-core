@@ -6,6 +6,3 @@ node_modules
 
 # Ignoring the package lock until the diff'ing gets resolved
 package-lock.json
-
-# Ignore dist
-dist

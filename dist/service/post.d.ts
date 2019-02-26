@@ -1,5 +1,5 @@
-import Response from 'src/models/response';
-import Request from 'src/models/request';
+import Response from '../models/response';
+import Request from '../models/request';
 import ClubHubClient from '../client';
 export default class PostService {
     client: ClubHubClient;

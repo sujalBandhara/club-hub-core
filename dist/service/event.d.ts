@@ -1,8 +1,8 @@
 import ClubHubClient from '../client';
-import Event from 'src/models/event';
-import User from 'src/models/user';
-import Response from 'src/models/response';
-import Request from 'src/models/request';
+import Event from '../models/event';
+import User from '../models/user';
+import Response from '../models/response';
+import Request from '../models/request';
 export default class EventService {
     client: ClubHubClient;
     constructor(client: ClubHubClient);
