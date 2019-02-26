@@ -11,11 +11,6 @@ export default class ClubHubClient {
 	 */
 	public axios: axios.AxiosInstance
 
-	/**
-	 * The authentication token for the instance. 
-	 */
-	public token: string
-
 	/** 
 	 * Boolean value that determines if the client should retry requests. 
 	 */
@@ -44,7 +39,6 @@ export default class ClubHubClient {
 	 * Sets the underlying authentication token.
 	 */
 	public setToken = (token: string) => {
-		this.token = token
 		this.axios.defaults.headers.common['Authorization'] = token;
 	}
 
@@ -59,21 +53,21 @@ export default class ClubHubClient {
 	 * Post Requests
 	 */
 	public post = (url: string, data?: any, config?: axios.AxiosRequestConfig) => {
-		return this.axios.post(url, data, config)
+		return this.axios.post(`${this.baseURL}${url}`, data, config)
 	}
 
 	/**
 	 * Post Requests
 	 */
 	public put = (url: string, data?: any, config?: axios.AxiosRequestConfig) => {
-		return this.axios.put(url, data, config)
+		return this.axios.put(`${this.baseURL}${url}`, data, config)
 	}
 
 	/**
 	 * Post Requests
 	 */
 	public delete = (url: string, config?: axios.AxiosRequestConfig) => {
-		return this.axios.delete(url, config)
+		return this.axios.delete(`${this.baseURL}${url}`, config)
 	}
 
 	/**

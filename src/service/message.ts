@@ -5,6 +5,7 @@ import * as axios from 'axios'
 import ClubHubClient from '../client'
 import Message from 'src/models/message'
 import Request from 'src/models/request'
+import Response from 'src/models/response'
 
 /**
  * Interface to the ClubHub `Message` API.
@@ -23,7 +24,7 @@ export default class MessageService {
   /**
    * `GET` all the Messages for a given delivery type.
    */
-  public getMessages = async (messageRequest: Request.Message): Promise<Message.Model> => {
+  public getMessages = async (messageRequest: Request.Message): Promise<Response.Message> => {
     const query: axios.AxiosRequestConfig = {
       params: messageRequest
     }

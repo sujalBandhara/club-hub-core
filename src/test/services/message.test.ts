@@ -4,31 +4,31 @@ import { expect } from 'chai'
 
 // Core Service
 import ClubHubService from '../../service'
-import Session from 'src/models/session'
-import Request from 'src/models/request'
 
 // Constants
 import { USERNAME, PASSWORD, CLUB } from '../constants'
+import Session from 'src/models/session'
+import Request from 'src/models/request'
 
-describe('Event Service', async function () {
+describe('Message Service', async function () {
 
   this.timeout(5000)
 
-  describe('should get the events', async function () {
+  describe('should get all messages', async function () {
 
-    it('should return 200 with an array of Events', async function () {
+    it('should return 200 and all messages', async function () {
       const testUrl: string = 'http://localhost:8080/v1/'
       const login: Session.Login = await ClubHubService.login(testUrl, USERNAME, PASSWORD, CLUB)
       const service: ClubHubService = new ClubHubService(testUrl, login.token)
 
-      // Blank Query returns all events for the club
-      const eventQuery: Request.Event = {
+      const request: Request.Message = {
         limit: '0'
       }
 
-      const events = await service.events.getEvents(eventQuery)
-      expect(events).to.exist
-      expect(events.events.length).to.be.greaterThan(0)
+      const message = await service.messages.getMessages(request)
+      expect(message).to.exist
+      expect(message.count).to.exist
+      expect(message.messages).to.exist
     })
 
   })

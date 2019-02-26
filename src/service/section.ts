@@ -3,6 +3,7 @@ import * as axios from 'axios'
 
 import ClubHubClient from 'src/client'
 import Section from 'src/models/section'
+import Response from 'src/models/response'
 
 export default class SectionService {
 
