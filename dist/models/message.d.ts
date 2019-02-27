@@ -15,6 +15,7 @@ declare namespace Message {
         deliveryType?: DeliveryType;
         link?: string;
         type?: Types.ObjectId;
+        templateID?: string;
         richContent?: RichContent.Model;
         recipients?: Types.ObjectId[] | User.Model[];
         userGroupIDs?: Types.ObjectId[];
@@ -22,7 +23,8 @@ declare namespace Message {
     }
     enum SubjectType {
         Post = "POST",
-        Event = "EVENT"
+        Event = "EVENT",
+        Reservation = "RESERVATION"
     }
     enum DeliveryType {
         Push = "PUSH",

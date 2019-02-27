@@ -26,6 +26,7 @@ namespace Message {
 		deliveryType?: DeliveryType
 		link?: string
 		type?: Types.ObjectId
+		templateID?: string
 		richContent?: RichContent.Model
 		recipients?: Types.ObjectId[] | User.Model[]
 		userGroupIDs?: Types.ObjectId[]
@@ -38,7 +39,8 @@ namespace Message {
 	
 	export enum SubjectType {
 		Post = 'POST',
-		Event = 'EVENT'
+		Event = 'EVENT',
+		Reservation = 'RESERVATION'
 	}
 	
 	export enum DeliveryType {
