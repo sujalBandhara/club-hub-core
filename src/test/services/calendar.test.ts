@@ -4,7 +4,7 @@ import { expect } from 'chai'
 
 // Core Service
 import ClubHubService from '../../service'
-import Session from 'src/models/session'
+import Session from '../../models/session'
 
 // Constants
 import { USERNAME, PASSWORD, CLUB } from '../constants'
