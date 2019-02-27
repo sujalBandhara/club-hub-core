@@ -15,6 +15,7 @@ namespace Section {
         _id?: Types.ObjectId
         clubID: Types.ObjectId
         name: string
+        status: IShared.PublicationStatus
         pages: Page[]
         createdBy: Types.ObjectId
         updatedBy: Types.ObjectId
