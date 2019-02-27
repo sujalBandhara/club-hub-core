@@ -21,5 +21,5 @@ var User;
         MemberStatus["Active"] = "ACTIVE";
         MemberStatus["Lapsed"] = "LAPSED";
     })(MemberStatus = User.MemberStatus || (User.MemberStatus = {}));
-})(User = exports.User || (exports.User = {}));
+})(User || (User = {}));
 exports.default = User;

@@ -15,6 +15,12 @@ declare namespace Order {
         fees?: number;
         totalPrice?: number;
     }
+    interface ProposedOrder {
+        clubID: string;
+        userID: string;
+        restaurantID: string;
+        items: ProposedItem[];
+    }
     interface Item {
         menuItem: Restaurant.MenuItem;
         notes?: string;
