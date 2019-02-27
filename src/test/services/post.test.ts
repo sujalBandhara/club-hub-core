@@ -7,8 +7,8 @@ import ClubHubService from '../../service'
 
 // Constants
 import { USERNAME, PASSWORD, CLUB } from '../constants'
-import Session from 'src/models/session'
-import Request from 'src/models/request'
+import Session from '../../models/session'
+import Request from '../../models/request'
 
 describe('Post Service', async function () {
 

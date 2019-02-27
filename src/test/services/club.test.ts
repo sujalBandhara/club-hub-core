@@ -4,7 +4,7 @@ import { expect } from 'chai'
 
 // Core Service
 import ClubHubService from '../../service'
-import Club from 'src/models/club'
+import Club from '../../models/club'
 
 describe('Club Service', async function () {
 

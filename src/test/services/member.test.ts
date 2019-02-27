@@ -7,7 +7,7 @@ import ClubHubService from '../../service'
 
 // Constants
 import { USERNAME, PASSWORD, CLUB } from '../constants'
-import Session from 'src/models/session'
+import Session from '../../models/session'
 
 describe('Member Service', async function () {
 
