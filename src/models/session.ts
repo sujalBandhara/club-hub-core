@@ -22,7 +22,8 @@ namespace Session {
   export interface State {
     restaurants: Restaurant.Model[]
     users: User.Model[]
-    club: Club.Model
+	club: Club.Model
+	user: User.Model
   }
 
 }

@@ -25,6 +25,7 @@ declare namespace Club {
         state: string;
         zip: string;
         photoURL: string;
+        domain: string;
     }
     enum Type {
         Car = "CAR",
