@@ -44,6 +44,7 @@ namespace Club {
 		state: string
 		zip: string
 		photoURL: string
+		domain: string
 	}
 
 	// --------------------------------

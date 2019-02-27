@@ -30,7 +30,7 @@ export default class ClubHubClient {
 				'Content-Type': 'application/json'
 			}
 		}
-		this.axios = Axios.create({ url: baseURL, headers: headers })
+		this.axios = Axios.create({ baseURL: baseURL, headers: headers })
 		this.setToken(token)
 		this.axios.interceptors.response.use(this.responseHandler, this.errorHandler)
 	}
