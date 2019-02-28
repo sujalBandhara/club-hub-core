@@ -31,5 +31,16 @@ declare namespace Message {
         Email = "EMAIL",
         Text = "TEXT"
     }
+    enum MessageType {
+        memberInquiry = "MembershipInquiry",
+        memberApplication = "MemberApplication",
+        memberInquiryRes = "MemberInquiryRes",
+        welcomeEmail = "WelcomeEmail",
+        createRSVP = "CreateRSVP",
+        publicRSVP = "PublicRSVP",
+        unRSVP = "unRSVP",
+        serviceRequest = "ServiceRequest",
+        serviceProviderRequest = "ServiceProviderRequest"
+    }
 }
 export default Message;

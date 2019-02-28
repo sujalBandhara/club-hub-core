@@ -48,6 +48,21 @@ namespace Message {
 		Email = 'EMAIL',
 		Text = 'TEXT'
 	}
+
+	export enum MessageType {
+		// FORMS.
+		memberInquiry = 'MembershipInquiry',
+		memberApplication = 'MemberApplication',
+		memberInquiryRes = 'MemberInquiryRes',
+		welcomeEmail = 'WelcomeEmail',
+		// RSVP.
+		createRSVP = 'CreateRSVP',
+		publicRSVP = 'PublicRSVP',
+		unRSVP = 'unRSVP',
+		// SERVICE.
+		serviceRequest = 'ServiceRequest',
+		serviceProviderRequest = 'ServiceProviderRequest'
+	}
 }
 
 export default Message
