@@ -20,7 +20,7 @@ export default class SectionService {
    * currently authenticated User
    */
   public getSections = async (): Promise<Section.Model[]> => {
-    return this.client.get('content/sections').then((response: axios.AxiosResponse) => {
+    return this.client.get('sections').then((response: axios.AxiosResponse) => {
       return response.data
     })
   }
@@ -30,7 +30,7 @@ export default class SectionService {
    * authenticated User.
    */
   public createSection = async (section: Section.Model): Promise<Section.Model> => {
-    return this.client.post('content/sections', section).then((response: axios.AxiosResponse) => {
+    return this.client.post('sections', section).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }
@@ -45,7 +45,7 @@ export default class SectionService {
         section_id: section._id
       }
     }
-    return this.client.put('content/sections', section, query).then((response: axios.AxiosResponse) => {
+    return this.client.put('sections', section, query).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }
@@ -59,7 +59,7 @@ export default class SectionService {
         section_id: sectionID
       }
     }
-    return this.client.delete('content/sections', query).then(() => {
+    return this.client.delete('sections', query).then(() => {
       return
     })
   }

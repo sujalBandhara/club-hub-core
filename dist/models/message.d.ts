@@ -2,7 +2,7 @@ import { Types } from 'mongoose';
 import User from './user';
 import Club from './club';
 import RichContent from './subModels/shared/richContent';
-export declare namespace Message {
+declare namespace Message {
     interface Model {
         _id?: Types.ObjectId;
         text?: string;

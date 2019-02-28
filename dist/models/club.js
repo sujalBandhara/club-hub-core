@@ -9,5 +9,5 @@ var Club;
     })(Type = Club.Type || (Club.Type = {}));
     Club.defaultMembershipTypes = ['EQUITY', 'SPOUSE', 'PARENT'];
     Club.defaultEventTypes = ['Member', 'Outside', 'Club'];
-})(Club = exports.Club || (exports.Club = {}));
+})(Club || (Club = {}));
 exports.default = Club;

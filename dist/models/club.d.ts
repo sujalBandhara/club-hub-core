@@ -3,7 +3,7 @@ import User from './user';
 import Calendar from './calendar';
 import Location from './subModels/shared/location';
 import IShared from './shared';
-export declare namespace Club {
+declare namespace Club {
     interface Model {
         _id?: Types.ObjectId;
         name: string;
@@ -17,6 +17,14 @@ export declare namespace Club {
         photoURL?: string;
         domain?: string;
         resources?: Resources;
+    }
+    interface UnprotectedModel {
+        _id: string;
+        name: string;
+        city: string;
+        state: string;
+        zip: string;
+        photoURL: string;
     }
     enum Type {
         Car = "CAR",

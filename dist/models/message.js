@@ -13,5 +13,5 @@ var Message;
         DeliveryType["Email"] = "EMAIL";
         DeliveryType["Text"] = "TEXT";
     })(DeliveryType = Message.DeliveryType || (Message.DeliveryType = {}));
-})(Message = exports.Message || (exports.Message = {}));
+})(Message || (Message = {}));
 exports.default = Message;

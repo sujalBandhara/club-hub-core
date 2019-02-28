@@ -1,6 +1,12 @@
 import { Types } from 'mongoose';
 import Location from './subModels/shared/location';
+import Event from './event';
 declare namespace Calendar {
+    interface BookableResponse {
+        calendarID: string;
+        allTimes: string[];
+        eventInfo: AvailableEvent[];
+    }
     interface Model {
         _id?: Types.ObjectId;
         name?: string;
@@ -32,6 +38,17 @@ declare namespace Calendar {
     enum CalendarGroupName {
         Club = "Club",
         Golf = "Golf"
+    }
+    interface AvailableEvent {
+        time: string;
+        openSpots: number | null;
+        totalSpots: number | null;
+        existingEvent?: {
+            _id: string;
+            start: string;
+            end: string;
+            reservations?: Event.Reservation[];
+        };
     }
 }
 export default Calendar;
