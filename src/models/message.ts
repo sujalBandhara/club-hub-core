@@ -31,6 +31,8 @@ namespace Message {
 		recipients?: Types.ObjectId[] | User.Model[]
 		userGroupIDs?: Types.ObjectId[]
 		individualUserIDs?: Types.ObjectId[]
+		// Newly added key to define the type of message.
+		messageType?: MessageType
 	}
 
 	// --------------------------------
@@ -49,20 +51,28 @@ namespace Message {
 		Text = 'TEXT'
 	}
 
-	export enum MessageType {
-		// FORMS.
-		memberInquiry = 'MembershipInquiry',
-		memberApplication = 'MemberApplication',
-		memberInquiryRes = 'MemberInquiryRes',
-		welcomeEmail = 'WelcomeEmail',
-		// RSVP.
-		createRSVP = 'CreateRSVP',
-		publicRSVP = 'PublicRSVP',
-		unRSVP = 'unRSVP',
-		// SERVICE.
-		serviceRequest = 'ServiceRequest',
-		serviceProviderRequest = 'ServiceProviderRequest'
+	// --------------------------------
+	// Message Type Interfaces
+	// --------------------------------
+
+	type MessageType = Rsvp | UnRsvp
+	
+	enum MessageTemplateID {
+		Rsvp = 'Rsvp',
+		UnRsvp = 'UnRsvp'
 	}
+	
+	// ------------------------------
+	// Events
+	// ------------------------------
+
+	interface Rsvp {
+		templateID: MessageTemplateID.Rsvp | MessageTemplateID.UnRsvp
+		eventID: Types.ObjectId
+		reservationID: Types.ObjectId
+	}
+
+	interface UnRsvp extends Rsvp {}
 }
 
 export default Message

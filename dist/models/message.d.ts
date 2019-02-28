@@ -20,6 +20,7 @@ declare namespace Message {
         recipients?: Types.ObjectId[] | User.Model[];
         userGroupIDs?: Types.ObjectId[];
         individualUserIDs?: Types.ObjectId[];
+        messageType?: MessageType;
     }
     enum SubjectType {
         Post = "POST",
@@ -31,16 +32,17 @@ declare namespace Message {
         Email = "EMAIL",
         Text = "TEXT"
     }
-    enum MessageType {
-        memberInquiry = "MembershipInquiry",
-        memberApplication = "MemberApplication",
-        memberInquiryRes = "MemberInquiryRes",
-        welcomeEmail = "WelcomeEmail",
-        createRSVP = "CreateRSVP",
-        publicRSVP = "PublicRSVP",
-        unRSVP = "unRSVP",
-        serviceRequest = "ServiceRequest",
-        serviceProviderRequest = "ServiceProviderRequest"
+    type MessageType = Rsvp | UnRsvp;
+    enum MessageTemplateID {
+        Rsvp = "Rsvp",
+        UnRsvp = "UnRsvp"
+    }
+    interface Rsvp {
+        templateID: MessageTemplateID.Rsvp | MessageTemplateID.UnRsvp;
+        eventID: Types.ObjectId;
+        reservationID: Types.ObjectId;
+    }
+    interface UnRsvp extends Rsvp {
     }
 }
 export default Message;
