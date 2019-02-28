@@ -59,7 +59,7 @@ var ClubHubClient = (function () {
         };
         this.errorHandler = function (error) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2, error];
+                throw error;
             });
         }); };
         this.shouldRetry = true;

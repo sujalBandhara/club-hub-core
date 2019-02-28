@@ -57,9 +57,9 @@ export default class UserService {
 	 * `DELETE` a sub document for the given user. Returns the full updated
 	 * User Model.
 	 */
-	public deleteSubDocument = async (userId: string, path: string, data: object): Promise<User.Model> => {
-		const postPath: string = `users/${userId}/meta/${path}`
-		return this.client.delete(postPath, data).then((response: axios.AxiosResponse) => {
+	public deleteSubDocument = async (userId: string, path: string, dataId: string): Promise<User.Model> => {
+		const deletePath: string = `users/${userId}/meta/${path}/${dataId}`
+		return this.client.delete(deletePath).then((response: axios.AxiosResponse) => {
 			return response.data
 		})
 	}

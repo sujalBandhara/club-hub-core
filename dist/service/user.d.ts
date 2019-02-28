@@ -7,5 +7,5 @@ export default class UserService {
     getState: () => Promise<Session.State>;
     postSubDocument: (userId: string, path: string, data: object) => Promise<User.Model>;
     putSubDocument: (userId: string, path: string, data: object) => Promise<User.Model>;
-    deleteSubDocument: (userId: string, path: string, data: object) => Promise<User.Model>;
+    deleteSubDocument: (userId: string, path: string, dataId: string) => Promise<User.Model>;
 }
