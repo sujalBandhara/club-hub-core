@@ -34,47 +34,23 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
-var axios = require("axios");
-var client_1 = require("../client");
-var user_1 = require("./user");
-var club_1 = require("./club");
-var calendar_1 = require("./calendar");
-var event_1 = require("./event");
-var menu_1 = require("./menu");
-var post_1 = require("./post");
-var member_1 = require("./member");
-var message_1 = require("./message");
-var section_1 = require("./section");
-var device_1 = require("./device");
-var ClubHubService = (function () {
-    function ClubHubService(baseURL, token) {
-        this.client = new client_1.default(baseURL, token);
-        this.users = new user_1.default(this.client);
-        this.clubs = new club_1.default(this.client);
-        this.members = new member_1.default(this.client);
-        this.messages = new message_1.default(this.client);
-        this.calendars = new calendar_1.default(this.client);
-        this.events = new event_1.default(this.client);
-        this.menus = new menu_1.default(this.client);
-        this.sections = new section_1.default(this.client);
-        this.post = new post_1.default(this.client);
-        this.device = new device_1.default(this.client);
+var DeviceService = (function () {
+    function DeviceService(client) {
+        var _this = this;
+        this.postDevice = function (oneSignalID) { return __awaiter(_this, void 0, void 0, function () {
+            var postBody;
+            return __generator(this, function (_a) {
+                postBody = {
+                    oneSignalID: oneSignalID
+                };
+                return [2, this.client.post('device', postBody).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.client = client;
     }
-    ClubHubService.login = function (url, email, password, clubName) { return __awaiter(_this, void 0, void 0, function () {
-        var request;
-        return __generator(this, function (_a) {
-            request = {
-                email: email,
-                password: password,
-                club: clubName
-            };
-            return [2, axios.default.post(url + "login", request).then(function (response) {
-                    return response.data;
-                })];
-        });
-    }); };
-    return ClubHubService;
+    return DeviceService;
 }());
-exports.default = ClubHubService;
+exports.default = DeviceService;

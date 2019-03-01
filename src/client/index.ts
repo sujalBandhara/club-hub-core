@@ -21,17 +21,20 @@ export default class ClubHubClient {
 	 */
 	public baseURL: string
 
+	public headers: axios.AxiosRequestConfig
+
 	constructor(baseURL: string, token: string) {
 		this.shouldRetry = true
 		this.baseURL = baseURL
-		const headers = {
+		this.headers = {
 			withCredentials: true,
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
+				'Authorization': token
 			}
 		}
-		this.axios = Axios.create({ baseURL: baseURL, headers: headers })
-		this.setToken(token)
+		this.axios = Axios.create({ baseURL: baseURL })
+		// this.setToken(token)
 		this.axios.interceptors.response.use(this.responseHandler, this.errorHandler)
 	}
 
@@ -39,35 +42,40 @@ export default class ClubHubClient {
 	 * Sets the underlying authentication token.
 	 */
 	public setToken = (token: string) => {
-		this.axios.defaults.headers.common['Authorization'] = token;
+		this.axios.defaults.headers.common['Authorization'] = token
 	}
 
 	/**
 	 * Get Requests
 	 */
 	public get = (url: string, config?: axios.AxiosRequestConfig) => {
-		return this.axios.get(`${this.baseURL}${url}`, config)
+		const headerCopy: axios.AxiosRequestConfig = {
+			...this.headers,
+			params: config ? config!.params : {}
+		}
+		console.log('The headers? ', this.headers)
+		return this.axios.get(`${this.baseURL}${url}`, headerCopy)
 	}
 
 	/**
 	 * Post Requests
 	 */
 	public post = (url: string, data?: any, config?: axios.AxiosRequestConfig) => {
-		return this.axios.post(`${this.baseURL}${url}`, data, config)
+		return this.axios.post(`${this.baseURL}${url}`, data, this.headers)
 	}
 
 	/**
 	 * Post Requests
 	 */
 	public put = (url: string, data?: any, config?: axios.AxiosRequestConfig) => {
-		return this.axios.put(`${this.baseURL}${url}`, data, config)
+		return this.axios.put(`${this.baseURL}${url}`, data, this.headers)
 	}
 
 	/**
 	 * Post Requests
 	 */
 	public delete = (url: string, config?: axios.AxiosRequestConfig) => {
-		return this.axios.delete(`${this.baseURL}${url}`, config)
+		return this.axios.delete(`${this.baseURL}${url}`, this.headers)
 	}
 
 	/**

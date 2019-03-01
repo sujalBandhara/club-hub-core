@@ -51,6 +51,13 @@ var CalendarService = (function () {
                     })];
             });
         }); };
+        this.getCalendarById = function (Id) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.get("calendars/" + Id).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
         this.getBookableSlots = function (date, calendarIDs) { return __awaiter(_this, void 0, void 0, function () {
             var query;
             return __generator(this, function (_a) {
@@ -60,14 +67,14 @@ var CalendarService = (function () {
                         calendarIDs: calendarIDs
                     }
                 };
-                return [2, this.client.get('calendars/available', query).then(function (response) {
+                return [2, this.client.get('calendar/available', query).then(function (response) {
                         return response.data;
                     })];
             });
         }); };
         this.postBookableSlot = function (body) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2, this.client.post("calendars/" + body.calendarID + "/reserve", body).then(function (response) {
+                return [2, this.client.post("calendar/" + body.calendarID + "/reserve", body).then(function (response) {
                         return response.data;
                     })];
             });

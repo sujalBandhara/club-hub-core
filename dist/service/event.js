@@ -71,7 +71,7 @@ var EventService = (function () {
         }); };
         this.postEvent = function (event) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2, this.client.post('events', event).then(function (response) {
+                return [2, this.client.post("events/" + event.calendarID, event).then(function (response) {
                         return response.data;
                     })];
             });
@@ -88,6 +88,21 @@ var EventService = (function () {
                 return response.data;
             });
         };
+        this.getSubDocument = function (request) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.get("events/" + request.modelID + "/sub/" + request.path + "/" + request.subDocumentID)
+                        .then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.getWithShortLink = function (shortLink) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.get("events/shortLink/" + shortLink).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
         this.postRSVP = function (eventID, user) { return __awaiter(_this, void 0, void 0, function () {
             var postBody;
             return __generator(this, function (_a) {
@@ -102,6 +117,17 @@ var EventService = (function () {
                     }
                 };
                 return [2, this.client.post("events/" + eventID + "/rsvp", postBody).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.putRSVP = function (eventID, reservation) { return __awaiter(_this, void 0, void 0, function () {
+            var body;
+            return __generator(this, function (_a) {
+                body = {
+                    reservation: reservation
+                };
+                return [2, this.client.put("events/" + eventID + "/rsvp/" + reservation._id, body).then(function (response) {
                         return response.data;
                     })];
             });

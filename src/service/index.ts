@@ -15,6 +15,7 @@ import Request from '../models/request'
 import Session from '../models/session'
 import MessageService from './message'
 import SectionService from './section'
+import DeviceService from './device'
 
 /**
  * TypeScript interface to the ClubHub REST API.
@@ -87,6 +88,11 @@ export default class ClubHubService {
 	 */
 	public post: PostService
 
+	/**
+	 * Interface to the Device API.
+	 */
+	public device: DeviceService
+
 	constructor(baseURL: string, token: string) {
 		this.client = new ClubHubClient(baseURL, token)
 
@@ -100,6 +106,7 @@ export default class ClubHubService {
 		this.menus = new MenuService(this.client)
 		this.sections = new SectionService(this.client)
 		this.post = new PostService(this.client)
+		this.device = new DeviceService(this.client)
 	}
 
 }

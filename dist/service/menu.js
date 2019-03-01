@@ -38,6 +38,27 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var MenuService = (function () {
     function MenuService(client) {
         var _this = this;
+        this.getRestaurants = function () { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.get('restaurants').then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.getOrders = function () { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.get('orders').then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.getOrderWithId = function (Id) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.get("orders/" + Id).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
         this.postOrder = function (order) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2, this.client.post('orders', order).then(function (response) {

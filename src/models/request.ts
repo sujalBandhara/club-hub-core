@@ -4,6 +4,12 @@ import { Types } from 'mongoose'
 
 namespace Request {
 
+  export interface GetSubDocument {
+    modelID: string
+    path: string
+    subDocumentID: string
+  }
+
   export interface GetQuery {
     limit: string
     offset?: string
@@ -12,7 +18,7 @@ namespace Request {
   }
 
   export interface Event extends GetQuery {
-    groupID?: string
+    calendarIDs?: string[]
   }
 
   export interface Member extends GetQuery {

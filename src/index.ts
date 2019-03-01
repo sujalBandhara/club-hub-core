@@ -12,6 +12,8 @@ import Restaurant from './models/restaurant'
 import Section from './models/section'
 import Form from './models/form'
 import Session from './models/session'
+import Responses from './models/response'
+import Requests from './models/request'
 
 // Constants
 import * as Constants from './constants'
@@ -45,6 +47,8 @@ export {
 	Restaurant,
 	Form,
 	Section,
+	Responses,
+	Requests,
 	
 	// Sub Models.
 	SubModels,

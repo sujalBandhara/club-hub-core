@@ -4,6 +4,7 @@ import * as axios from 'axios'
 // Client
 import ClubHubClient from '../client'
 import Order from '../models/order'
+import Restaurant from '../models/restaurant'
 
 /**
  * Interface to the ClubHub `Menu` API.
@@ -17,6 +18,34 @@ export default class MenuService {
 
   constructor(client: ClubHubClient) {
     this.client = client
+  }
+
+  /**
+   * `GET` all the restaurants for the logged in User's
+   * club.
+   */
+  public getRestaurants = async (): Promise<Restaurant.Model[]> => {
+    return this.client.get('restaurants').then((response: axios.AxiosResponse) => {
+      return response.data
+    })
+  }
+
+  /**
+   * `GET` all the orders for the logged in user. 
+   */
+  public getOrders = async (): Promise<Order.Model[]> => {
+    return this.client.get('orders').then((response: axios.AxiosResponse) => {
+      return response.data
+    })
+  }
+
+  /**
+   * `GET` a single order based on the given Id.
+   */
+  public getOrderWithId = async (Id: string): Promise<Order.Model> => {
+    return this.client.get(`orders/${Id}`).then((response: axios.AxiosResponse) => {
+      return response.data
+    })
   }
 
   /**

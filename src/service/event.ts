@@ -39,7 +39,7 @@ export default class EventService {
   /**
    * `GET` all the events the current user is attending.
    */
-  public getEventsAttending = async (groupID: string): Promise<Response.Event> => {
+  public getEventsAttending = async (groupID?: string): Promise<Response.Event> => {
     const query: axios.AxiosRequestConfig = {
       params: {
         groupID: groupID ? groupID : null
@@ -62,8 +62,8 @@ export default class EventService {
   /**
    * `POST` a new event.
    */
-  public postEvent = async (event: Event.Model): Promise<void> => {
-    return this.client.post('events', event).then((response: axios.AxiosResponse) => {
+  public postEvent = async (event: Event.Model): Promise<Event.Model> => {
+    return this.client.post(`events/${event.calendarID}`, event).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }
@@ -87,9 +87,29 @@ export default class EventService {
   }
 
   /**
+   * `GET` event sub document for and Event. The response is `any`
+   * since the model returned is based on the path supplied.
+   */
+  public getSubDocument = async (request: Request.GetSubDocument): Promise<any> => {
+    return this.client.get(`events/${request.modelID}/sub/${request.path}/${request.subDocumentID}`)
+      .then((response: axios.AxiosResponse) => {
+        return response.data
+      })
+  }
+
+  /**
+   * `GET` event sub document for and Event.
+   */
+  public getWithShortLink = async (shortLink: string): Promise<Event.Model> => {
+    return this.client.get(`events/shortLink/${shortLink}`).then((response: axios.AxiosResponse) => {
+      return response.data
+    })
+  }
+
+  /**
    * `POST` an RSVP for an event.
    */
-  public postRSVP = async (eventID: string, user: User.Model): Promise<void> => {
+  public postRSVP = async (eventID: string, user: User.Model): Promise<Event.Model> => {
     const postBody: Request.RSVPPost = {
       reservation: {
         creator: user._id!,
@@ -101,6 +121,18 @@ export default class EventService {
       }
     }
     return this.client.post(`events/${eventID}/rsvp`, postBody).then((response: axios.AxiosResponse) => {
+      return response.data
+    })
+  }
+
+  /**
+   * `PUT` an RSVP for an event.
+   */
+  public putRSVP = async (eventID: string, reservation: Event.Reservation): Promise<Event.Model> => {
+    const body = {
+      reservation: reservation
+    }
+    return this.client.put(`events/${eventID}/rsvp/${reservation._id}`, body).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }
