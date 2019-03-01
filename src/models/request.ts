@@ -18,6 +18,7 @@ namespace Request {
   }
 
   export interface Event extends GetQuery {
+    groupID?: string
     calendarIDs?: string[]
   }
 

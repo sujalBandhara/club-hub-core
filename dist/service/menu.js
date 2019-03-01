@@ -66,6 +66,13 @@ var MenuService = (function () {
                     })];
             });
         }); };
+        this.putOrder = function (order) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.put("orders/" + order._id, order).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
         this.postConfirm = function (orderID, order) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2, this.client.post("orders/" + orderID + "/confirm", order).then(function (response) {

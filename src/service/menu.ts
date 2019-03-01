@@ -60,6 +60,15 @@ export default class MenuService {
   }
 
   /**
+   * `PUT` an update to an existing order.
+   */
+  public putOrder = async (order: Order.Model): Promise<any> => {
+    return this.client.put(`orders/${order._id}`, order).then((response: axios.AxiosResponse) => {
+      return response.data
+    })
+  }
+
+  /**
    * `POST` an `Order.Model` to confirm the order.
    */
   public postConfirm = async (orderID: string, order: Order.Model): Promise<void> => {

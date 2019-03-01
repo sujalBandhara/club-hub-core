@@ -14,6 +14,7 @@ declare namespace Request {
         end?: string;
     }
     interface Event extends GetQuery {
+        groupID?: string;
         calendarIDs?: string[];
     }
     interface Member extends GetQuery {
