@@ -18,6 +18,7 @@ var Message;
     (function (MessageTemplateID) {
         MessageTemplateID["Rsvp"] = "Rsvp";
         MessageTemplateID["UnRsvp"] = "UnRsvp";
-    })(MessageTemplateID || (MessageTemplateID = {}));
+        MessageTemplateID["Welcome"] = "Welcome";
+    })(MessageTemplateID = Message.MessageTemplateID || (Message.MessageTemplateID = {}));
 })(Message || (Message = {}));
 exports.default = Message;

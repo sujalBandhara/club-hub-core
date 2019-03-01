@@ -55,24 +55,41 @@ namespace Message {
 	// Message Type Interfaces
 	// --------------------------------
 
-	type MessageType = Rsvp | UnRsvp
+	export type MessageType = Rsvp | UnRsvp | Welcome
 	
-	enum MessageTemplateID {
+	export enum MessageTemplateID {
+		// Events.
 		Rsvp = 'Rsvp',
-		UnRsvp = 'UnRsvp'
+		UnRsvp = 'UnRsvp',
+
+		// Onboarding.
+		Welcome = 'Welcome'
+	}
+
+	export interface BaseMessageType {
+		templateID: MessageTemplateID
 	}
 	
 	// ------------------------------
 	// Events
 	// ------------------------------
 
-	interface Rsvp {
+	export interface Rsvp extends BaseMessageType {
 		templateID: MessageTemplateID.Rsvp | MessageTemplateID.UnRsvp
 		eventID: Types.ObjectId
+		userID: Types.ObjectId
 		reservationID: Types.ObjectId
 	}
 
-	interface UnRsvp extends Rsvp {}
+	export interface UnRsvp extends Rsvp {}
+
+	// ------------------------------
+	// Onboarding
+	// ------------------------------
+
+	export interface Welcome extends BaseMessageType {
+		templateID: MessageTemplateID.Welcome
+	}
 }
 
 export default Message

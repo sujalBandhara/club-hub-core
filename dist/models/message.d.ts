@@ -32,17 +32,25 @@ declare namespace Message {
         Email = "EMAIL",
         Text = "TEXT"
     }
-    type MessageType = Rsvp | UnRsvp;
+    type MessageType = Rsvp | UnRsvp | Welcome;
     enum MessageTemplateID {
         Rsvp = "Rsvp",
-        UnRsvp = "UnRsvp"
+        UnRsvp = "UnRsvp",
+        Welcome = "Welcome"
     }
-    interface Rsvp {
+    interface BaseMessageType {
+        templateID: MessageTemplateID;
+    }
+    interface Rsvp extends BaseMessageType {
         templateID: MessageTemplateID.Rsvp | MessageTemplateID.UnRsvp;
         eventID: Types.ObjectId;
+        userID: Types.ObjectId;
         reservationID: Types.ObjectId;
     }
     interface UnRsvp extends Rsvp {
+    }
+    interface Welcome extends BaseMessageType {
+        templateID: MessageTemplateID.Welcome;
     }
 }
 export default Message;
