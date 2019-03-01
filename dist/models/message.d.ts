@@ -20,7 +20,7 @@ declare namespace Message {
         recipients?: Types.ObjectId[] | User.Model[];
         userGroupIDs?: Types.ObjectId[];
         individualUserIDs?: Types.ObjectId[];
-        messageType?: MessageType;
+        content?: Content;
     }
     enum SubjectType {
         Post = "POST",
@@ -32,25 +32,59 @@ declare namespace Message {
         Email = "EMAIL",
         Text = "TEXT"
     }
-    type MessageType = Rsvp | UnRsvp | Welcome;
-    enum MessageTemplateID {
+    type Content = Rsvp | UnRsvp | Welcome | Application | MembershipInquiry | MembershipInquiryRes | PublicRsvp | ServiceRequest | NewProviderRequest;
+    enum Type {
         Rsvp = "Rsvp",
         UnRsvp = "UnRsvp",
-        Welcome = "Welcome"
+        Welcome = "Welcome",
+        Application = "Application",
+        MembershipInquiry = "MembershipInquiry",
+        MembershipInquiryRes = "MembershipInquiryRes",
+        PublicRsvp = "PublicRsvp",
+        ServiceRequest = "ServiceRequest",
+        NewProviderRequest = "NewProviderRequest"
     }
     interface BaseMessageType {
-        templateID: MessageTemplateID;
+        type: Type;
     }
     interface Rsvp extends BaseMessageType {
-        templateID: MessageTemplateID.Rsvp | MessageTemplateID.UnRsvp;
+        type: Type.Rsvp | Type.UnRsvp;
         eventID: Types.ObjectId;
         userID: Types.ObjectId;
         reservationID: Types.ObjectId;
     }
     interface UnRsvp extends Rsvp {
     }
+    interface ServiceRequest extends BaseMessageType {
+        type: Type.ServiceRequest;
+        calendarID: Types.ObjectId;
+        eventID: Types.ObjectId;
+        userID: Types.ObjectId;
+        reservationID: Types.ObjectId;
+    }
+    interface NewProviderRequest extends BaseMessageType {
+        type: Type.NewProviderRequest;
+        calendarID: Types.ObjectId;
+    }
     interface Welcome extends BaseMessageType {
-        templateID: MessageTemplateID.Welcome;
+        type: Type.Welcome;
+        userID: Types.ObjectId;
+        password: string;
+    }
+    interface Form extends BaseMessageType {
+        form: any;
+    }
+    interface Application extends Form {
+        type: Type.Application;
+    }
+    interface MembershipInquiry extends Form {
+        type: Type.MembershipInquiry;
+    }
+    interface MembershipInquiryRes extends Form {
+        type: Type.MembershipInquiryRes;
+    }
+    interface PublicRsvp extends Form {
+        type: Type.PublicRsvp;
     }
 }
 export default Message;

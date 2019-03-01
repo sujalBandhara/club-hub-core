@@ -14,11 +14,17 @@ var Message;
         DeliveryType["Email"] = "EMAIL";
         DeliveryType["Text"] = "TEXT";
     })(DeliveryType = Message.DeliveryType || (Message.DeliveryType = {}));
-    var MessageTemplateID;
-    (function (MessageTemplateID) {
-        MessageTemplateID["Rsvp"] = "Rsvp";
-        MessageTemplateID["UnRsvp"] = "UnRsvp";
-        MessageTemplateID["Welcome"] = "Welcome";
-    })(MessageTemplateID = Message.MessageTemplateID || (Message.MessageTemplateID = {}));
+    var Type;
+    (function (Type) {
+        Type["Rsvp"] = "Rsvp";
+        Type["UnRsvp"] = "UnRsvp";
+        Type["Welcome"] = "Welcome";
+        Type["Application"] = "Application";
+        Type["MembershipInquiry"] = "MembershipInquiry";
+        Type["MembershipInquiryRes"] = "MembershipInquiryRes";
+        Type["PublicRsvp"] = "PublicRsvp";
+        Type["ServiceRequest"] = "ServiceRequest";
+        Type["NewProviderRequest"] = "NewProviderRequest";
+    })(Type = Message.Type || (Message.Type = {}));
 })(Message || (Message = {}));
 exports.default = Message;
