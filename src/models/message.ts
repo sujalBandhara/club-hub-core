@@ -157,6 +157,7 @@ namespace Message {
 	
 	export interface PublicRsvp extends Form {
 		type: Type.PublicRsvp
+		eventID: Types.ObjectId
 	}
 }
 
