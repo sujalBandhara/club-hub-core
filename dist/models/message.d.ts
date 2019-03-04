@@ -32,7 +32,7 @@ declare namespace Message {
         Email = "EMAIL",
         Text = "TEXT"
     }
-    type Content = Rsvp | UnRsvp | Welcome | Application | MembershipInquiry | MembershipInquiryRes | PublicRsvp | ServiceRequest | NewProviderRequest;
+    type Content = EventMessage | Welcome | FormMessage | NewProviderRequest;
     enum Type {
         Rsvp = "Rsvp",
         UnRsvp = "UnRsvp",
@@ -44,48 +44,26 @@ declare namespace Message {
         ServiceRequest = "ServiceRequest",
         NewProviderRequest = "NewProviderRequest"
     }
-    interface BaseMessageType {
-        type: Type;
-    }
-    interface Rsvp extends BaseMessageType {
-        type: Type.Rsvp | Type.UnRsvp;
+    interface EventMessage {
+        type: Type.Rsvp | Type.UnRsvp | Type.ServiceRequest;
         eventID: Types.ObjectId;
-        userID: Types.ObjectId;
+        userID?: Types.ObjectId;
         reservationID: Types.ObjectId;
-    }
-    interface UnRsvp extends Rsvp {
-    }
-    interface ServiceRequest extends BaseMessageType {
-        type: Type.ServiceRequest;
         calendarID: Types.ObjectId;
-        eventID: Types.ObjectId;
-        userID: Types.ObjectId;
-        reservationID: Types.ObjectId;
     }
-    interface NewProviderRequest extends BaseMessageType {
+    interface FormMessage {
+        type: Type.Application | Type.MembershipInquiry | Type.PublicRsvp;
+        form: any;
+        eventID?: Types.ObjectId;
+    }
+    interface NewProviderRequest {
         type: Type.NewProviderRequest;
         calendarID: Types.ObjectId;
     }
-    interface Welcome extends BaseMessageType {
+    interface Welcome {
         type: Type.Welcome;
         userID: Types.ObjectId;
         password: string;
-    }
-    interface Form extends BaseMessageType {
-        form: any;
-    }
-    interface Application extends Form {
-        type: Type.Application;
-    }
-    interface MembershipInquiry extends Form {
-        type: Type.MembershipInquiry;
-    }
-    interface MembershipInquiryRes extends Form {
-        type: Type.MembershipInquiryRes;
-    }
-    interface PublicRsvp extends Form {
-        type: Type.PublicRsvp;
-        eventID: Types.ObjectId;
     }
 }
 export default Message;

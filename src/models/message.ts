@@ -56,17 +56,15 @@ namespace Message {
 
 	export type Content = 
 	// Events.
-	Rsvp | 
-	UnRsvp | 
+	EventMessage |
+
 	// Onboarding.
 	Welcome | 
+
 	// Forms.
-	Application |
-	MembershipInquiry |
-	MembershipInquiryRes | 
-	PublicRsvp |
-	// Services
-	ServiceRequest |
+	FormMessage |
+
+	// Services.
 	NewProviderRequest
 	
 	/** 
@@ -91,36 +89,31 @@ namespace Message {
 		NewProviderRequest = 'NewProviderRequest'
 	}
 
-	export interface BaseMessageType {
-		type: Type
-	}
-	
-	// ------------------------------
-	// Events
-	// ------------------------------
-
-	export interface Rsvp extends BaseMessageType {
-		type: Type.Rsvp | Type.UnRsvp
+	/** 
+	 * Event message's content field.
+	 */
+	export interface EventMessage {
+		type: Type.Rsvp | Type.UnRsvp | Type.ServiceRequest
 		eventID: Types.ObjectId
-		userID: Types.ObjectId
+		userID?: Types.ObjectId
 		reservationID: Types.ObjectId
+		calendarID: Types.ObjectId
 	}
 
-	export interface UnRsvp extends Rsvp {}
+	/** 
+	 * Form message's content field.
+	 */
+	export interface FormMessage {
+		type: Type.Application | Type.MembershipInquiry | Type.PublicRsvp,
+		form: any,
+		eventID?: Types.ObjectId
+	}
 
 	// ------------------------------
 	// Services
 	// ------------------------------
-	
-	export interface ServiceRequest extends BaseMessageType {
-		type: Type.ServiceRequest
-		calendarID: Types.ObjectId
-		eventID: Types.ObjectId
-		userID: Types.ObjectId
-		reservationID: Types.ObjectId
-	}
 
-	export interface NewProviderRequest extends BaseMessageType {
+	export interface NewProviderRequest {
 		type: Type.NewProviderRequest
 		calendarID: Types.ObjectId
 	}
@@ -129,35 +122,10 @@ namespace Message {
 	// Onboarding
 	// ------------------------------
 
-	export interface Welcome extends BaseMessageType {
+	export interface Welcome {
 		type: Type.Welcome
 		userID: Types.ObjectId
 		password: string
-	}
-
-	// ------------------------------
-	// Form Submission
-	// ------------------------------
-
-	export interface Form extends BaseMessageType {
-		form: any
-	}
-
-	export interface Application extends Form {
-		type: Type.Application
-	}
-
-	export interface MembershipInquiry extends Form {
-		type: Type.MembershipInquiry
-	}
-
-	export interface MembershipInquiryRes extends Form {
-		type: Type.MembershipInquiryRes
-	}
-	
-	export interface PublicRsvp extends Form {
-		type: Type.PublicRsvp
-		eventID: Types.ObjectId
 	}
 }
 
