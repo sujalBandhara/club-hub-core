@@ -45,6 +45,13 @@ var MenuService = (function () {
                     })];
             });
         }); };
+        this.getRestaurant = function (Id) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.get("restaurants/" + Id).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
         this.getOrders = function () { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2, this.client.get('orders').then(function (response) {

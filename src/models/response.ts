@@ -1,4 +1,5 @@
 // Internal Namespaces
+import Restaurant from './restaurant'
 import Calendar from './calendar'
 import Message from './message'
 import Section from './section'
@@ -38,6 +39,10 @@ namespace Response {
 
   export interface Section extends PaginatedResponse {
     sections: Section.Model[]
+  }
+
+  export interface Restaurant extends PaginatedResponse {
+    restaurants: Restaurant.Model[]
   }
 
 }

@@ -6,6 +6,7 @@ import ClubHubClient from '../client'
 
 // Local Namespace
 import User from '../models/user'
+import Response from '../models/response'
 
 /**
  * Interface to the ClubHub `Member` API.
@@ -22,10 +23,28 @@ export default class MemberService {
   }
 
   /**
+   * `GET` all members.
+   */
+  public getMembers = async (): Promise<Response.User> => {
+    return this.client.get(`users`).then((response: axios.AxiosResponse) => {
+      return response.data
+    })
+  }
+
+  /**
    * `GET` a single member for the given Id.
    */
   public getMemberById = async (Id: string): Promise<User.Model> => {
     return this.client.get(`users/${Id}`).then((response: axios.AxiosResponse) => {
+      return response.data
+    })
+  }
+
+  /**
+   * `PUT` an update to a single member for the given Id.
+   */
+  public putMemberById = async (Id: string, user: User.Model): Promise<User.Model> => {
+    return this.client.put(`users/${Id}`, user).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }

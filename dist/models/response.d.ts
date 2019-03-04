@@ -1,3 +1,4 @@
+import Restaurant from './restaurant';
 import Calendar from './calendar';
 import Message from './message';
 import Section from './section';
@@ -25,6 +26,9 @@ declare namespace Response {
     }
     interface Section extends PaginatedResponse {
         sections: Section.Model[];
+    }
+    interface Restaurant extends PaginatedResponse {
+        restaurants: Restaurant.Model[];
     }
 }
 export default Response;
