@@ -62,10 +62,7 @@ namespace Message {
 	Welcome | 
 
 	// Forms.
-	FormMessage |
-
-	// Services.
-	NewProviderRequest
+	FormMessage
 	
 	/** 
 	 * Defines the message's content type.
@@ -104,18 +101,9 @@ namespace Message {
 	 * Form message's content field.
 	 */
 	export interface FormMessage {
-		type: Type.Application | Type.MembershipInquiry | Type.PublicRsvp,
+		type: Type.Application | Type.MembershipInquiry | Type.PublicRsvp | Type.NewProviderRequest,
 		form: any,
 		eventID?: Types.ObjectId
-	}
-
-	// ------------------------------
-	// Services
-	// ------------------------------
-
-	export interface NewProviderRequest {
-		type: Type.NewProviderRequest
-		calendarID: Types.ObjectId
 	}
 
 	// ------------------------------

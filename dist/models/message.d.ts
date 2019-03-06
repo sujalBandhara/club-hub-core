@@ -32,7 +32,7 @@ declare namespace Message {
         Email = "EMAIL",
         Text = "TEXT"
     }
-    type Content = EventMessage | Welcome | FormMessage | NewProviderRequest;
+    type Content = EventMessage | Welcome | FormMessage;
     enum Type {
         Rsvp = "Rsvp",
         UnRsvp = "UnRsvp",
@@ -52,13 +52,9 @@ declare namespace Message {
         calendarID: Types.ObjectId;
     }
     interface FormMessage {
-        type: Type.Application | Type.MembershipInquiry | Type.PublicRsvp;
+        type: Type.Application | Type.MembershipInquiry | Type.PublicRsvp | Type.NewProviderRequest;
         form: any;
         eventID?: Types.ObjectId;
-    }
-    interface NewProviderRequest {
-        type: Type.NewProviderRequest;
-        calendarID: Types.ObjectId;
     }
     interface Welcome {
         type: Type.Welcome;
