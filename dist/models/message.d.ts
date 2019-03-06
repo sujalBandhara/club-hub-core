@@ -52,7 +52,7 @@ declare namespace Message {
         calendarID: Types.ObjectId;
     }
     interface FormMessage {
-        type: Type.Application | Type.MembershipInquiry | Type.PublicRsvp | Type.NewProviderRequest;
+        type: Type.Application | Type.MembershipInquiry | Type.PublicRsvp | Type.NewProviderRequest | Type.MembershipInquiryRes;
         form: any;
         eventID?: Types.ObjectId;
     }
