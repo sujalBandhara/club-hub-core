@@ -1,5 +1,9 @@
 // External Dependencies.
 import { Types } from 'mongoose'
+import * as Constants from '../constants'
+
+// Sub models.
+import * as Message from './message'
 
 export namespace Form {
 
@@ -10,6 +14,8 @@ export namespace Form {
 	export interface Model {
 		_id?: Types.ObjectId
 		name?: string
+		displayName?: string
+		type?: Message.default.Type
 		clubID?: Types.ObjectId
 		inputs?: Input[]
 		responses?: Response[]
@@ -25,7 +31,7 @@ export namespace Form {
 
 	export interface Response {
 		_id?: Types.ObjectId
-		userID: Types.ObjectId // The ID of the user who submitted the form.
+		userID?: Types.ObjectId // The ID of the user who submitted the form.
 		answers: ResponseValues[]
 	}
 

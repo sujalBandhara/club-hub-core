@@ -5,6 +5,9 @@ import { Types } from 'mongoose'
 import CarMeta from './subModels/car'
 import GolfMeta from './subModels/golf'
 
+// Constants
+import * as Constants from '../constants'
+
 namespace User {
 
 	// --------------------------------
@@ -38,6 +41,7 @@ namespace User {
 		maritalStatus?: MaritalStatus
 		memberStatus?: MemberStatus
 		meta?: UserMeta
+		displaySettings?: DisplaySettings
 	}
 	
 	// --------------------------------
@@ -57,6 +61,7 @@ namespace User {
 	}
 	
 	export interface UserMeta {
+		hide?: boolean
 		golf?: GolfMeta.Model
 		car?: CarMeta.Model
 	}
@@ -73,6 +78,10 @@ namespace User {
 		Prospect = 'PROSPECT',
 		Active = 'ACTIVE',
 		Lapsed = 'LAPSED',
+	}
+
+	export interface DisplaySettings {
+		contact: boolean
 	}
 }
 

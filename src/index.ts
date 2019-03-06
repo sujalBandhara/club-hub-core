@@ -12,6 +12,9 @@ import Restaurant from './models/restaurant'
 import Section from './models/section'
 import Form from './models/form'
 
+// Constants
+import * as Constants from './constants'
+
 // Sub Models.
 import * as SubModels from './models/subModels'
 
@@ -37,5 +40,6 @@ export {
 	SubModels,
 
 	// Misc
-	IShared
+	IShared,
+	Constants
 }
