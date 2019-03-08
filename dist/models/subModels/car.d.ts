@@ -2,7 +2,10 @@ import { Types } from 'mongoose';
 declare namespace CarMeta {
     interface Model {
         _id?: Types.ObjectId;
-        vehicles: Vehicle[];
+        vehicles?: Vehicle[];
+        leadID?: String;
+        tenantID?: String;
+        pushToken?: String;
     }
     interface Vehicle {
         _id?: Types.ObjectId;

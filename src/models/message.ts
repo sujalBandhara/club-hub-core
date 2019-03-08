@@ -68,22 +68,20 @@ namespace Message {
 	 * Defines the message's content type.
 	 */
 	export enum Type {
-		// Events.
-		Rsvp = 'Rsvp',
-		UnRsvp = 'UnRsvp',
+		// Events
+		Rsvp = "Event RSVP",
+		UnRsvp = "Cancel RSVP",
+		ServiceRequest = "Service Request",
 
-		// Onboarding.
-		Welcome = 'Welcome',
+		// OnBoarding
+		Welcome = "New User",
 
-		// Forms.
-		Application = 'Application',
-		MembershipInquiry = 'MembershipInquiry',
-		MembershipInquiryRes= 'MembershipInquiryRes',
-		PublicRsvp = 'PublicRsvp',
-		
-		// Services.
-		ServiceRequest = 'ServiceRequest',
-		NewProviderRequest = 'NewProviderRequest'
+		// Forms
+		Application = "Membership Application",
+		MembershipInquiry = "Membership Inquiry",
+		MembershipInquiryRes = "Membership Inquiry Response",
+		PublicRsvp = "Public Event RSVP",
+		NewProviderRequest = "Service Provider Request",
 	}
 
 	/** 

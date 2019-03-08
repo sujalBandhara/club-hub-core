@@ -34,15 +34,15 @@ declare namespace Message {
     }
     type Content = EventMessage | Welcome | FormMessage;
     enum Type {
-        Rsvp = "Rsvp",
-        UnRsvp = "UnRsvp",
-        Welcome = "Welcome",
-        Application = "Application",
-        MembershipInquiry = "MembershipInquiry",
-        MembershipInquiryRes = "MembershipInquiryRes",
-        PublicRsvp = "PublicRsvp",
-        ServiceRequest = "ServiceRequest",
-        NewProviderRequest = "NewProviderRequest"
+        Rsvp = "Event RSVP",
+        UnRsvp = "Cancel RSVP",
+        ServiceRequest = "Service Request",
+        Welcome = "New User",
+        Application = "Membership Application",
+        MembershipInquiry = "Membership Inquiry",
+        MembershipInquiryRes = "Membership Inquiry Response",
+        PublicRsvp = "Public Event RSVP",
+        NewProviderRequest = "Service Provider Request"
     }
     interface EventMessage {
         type: Type.Rsvp | Type.UnRsvp | Type.ServiceRequest;

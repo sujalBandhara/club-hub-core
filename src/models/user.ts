@@ -30,6 +30,7 @@ namespace User {
 		location?: string
 		middleName?: string
 		password?: string
+		salt?: string
 		phone?: string
 		photoURL?: string
 		state?: string
