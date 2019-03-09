@@ -35,19 +35,25 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require("mocha");
-describe('Message Service', function () {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            this.timeout(5000);
-            describe('should get all messages', function () {
-                return __awaiter(this, void 0, void 0, function () {
-                    return __generator(this, function (_a) {
-                        return [2];
-                    });
-                });
+var MenuService = (function () {
+    function MenuService(client) {
+        var _this = this;
+        this.postOrder = function (order) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.post('orders', order).then(function (response) {
+                        return response.data;
+                    })];
             });
-            return [2];
-        });
-    });
-});
+        }); };
+        this.postConfirm = function (orderID, order) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.post("orders/" + orderID + "/confirm", order).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.client = client;
+    }
+    return MenuService;
+}());
+exports.default = MenuService;

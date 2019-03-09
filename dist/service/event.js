@@ -35,51 +35,86 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var SectionService = (function () {
-    function SectionService(client) {
+var EventService = (function () {
+    function EventService(client) {
         var _this = this;
-        this.getSections = function () { return __awaiter(_this, void 0, void 0, function () {
+        this.getEvents = function (eventRequest) { return __awaiter(_this, void 0, void 0, function () {
+            var query;
             return __generator(this, function (_a) {
-                return [2, this.client.get('sections').then(function (response) {
+                query = {
+                    params: eventRequest
+                };
+                return [2, this.client.get('events', query).then(function (response) {
                         return response.data;
                     })];
             });
         }); };
-        this.createSection = function (section) { return __awaiter(_this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2, this.client.post('sections', section).then(function (response) {
-                        return response.data;
-                    })];
-            });
-        }); };
-        this.updateSection = function (section) { return __awaiter(_this, void 0, void 0, function () {
+        this.getEventsAttending = function (groupID) { return __awaiter(_this, void 0, void 0, function () {
             var query;
             return __generator(this, function (_a) {
                 query = {
                     params: {
-                        section_id: section._id
+                        groupID: groupID ? groupID : null
                     }
                 };
-                return [2, this.client.put('sections', section, query).then(function (response) {
+                return [2, this.client.get('events/attending', query).then(function (response) {
                         return response.data;
                     })];
             });
         }); };
-        this.deleteSection = function (sectionID) { return __awaiter(_this, void 0, void 0, function () {
-            var query;
+        this.getEvent = function (Id) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                query = {
-                    params: {
-                        section_id: sectionID
+                return [2, this.client.get("events/" + Id).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.postEvent = function (event) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.post('events', event).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.putEvent = function (event) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.put("events/" + event._id, event).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.deleteEvent = function (Id) {
+            return _this.client.delete("events/" + Id).then(function (response) {
+                return response.data;
+            });
+        };
+        this.postRSVP = function (eventID, user) { return __awaiter(_this, void 0, void 0, function () {
+            var postBody;
+            return __generator(this, function (_a) {
+                postBody = {
+                    reservation: {
+                        creator: user._id,
+                        participants: [{
+                                userID: user._id,
+                                name: user.firstName + " " + user.lastName,
+                                rsvp: true
+                            }]
                     }
                 };
-                return [2, this.client.delete('sections', query).then(function () {
-                        return;
+                return [2, this.client.post("events/" + eventID + "/rsvp", postBody).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.deleteRSVP = function (eventID, reservationID) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.delete("events/" + eventID + "/rsvp/" + reservationID).then(function (response) {
+                        return response.data;
                     })];
             });
         }); };
         this.client = client;
     }
-    return SectionService;
+    return EventService;
 }());
-exports.default = SectionService;
+exports.default = EventService;

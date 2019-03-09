@@ -36,9 +36,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 require("mocha");
-var chai_1 = require("chai");
-var service_1 = require("../../service");
-var constants_1 = require("../constants");
 describe('Section Service', function () {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -46,28 +43,6 @@ describe('Section Service', function () {
             describe('should fetch sections', function () {
                 return __awaiter(this, void 0, void 0, function () {
                     return __generator(this, function (_a) {
-                        it('should return 100 and all sections for the club', function () {
-                            return __awaiter(this, void 0, void 0, function () {
-                                var testUrl, login, service, sections;
-                                return __generator(this, function (_a) {
-                                    switch (_a.label) {
-                                        case 0:
-                                            testUrl = 'http://localhost:8080/v1/';
-                                            return [4, service_1.default.login(testUrl, constants_1.USERNAME, constants_1.PASSWORD, constants_1.CLUB)];
-                                        case 1:
-                                            login = _a.sent();
-                                            service = new service_1.default(testUrl, login.token);
-                                            return [4, service.sections.getSections()];
-                                        case 2:
-                                            sections = _a.sent();
-                                            chai_1.expect(sections).to.exist;
-                                            chai_1.expect(sections.count).to.exist;
-                                            chai_1.expect(sections.sections).to.exist;
-                                            return [2];
-                                    }
-                                });
-                            });
-                        });
                         return [2];
                     });
                 });

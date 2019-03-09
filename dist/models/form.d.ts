@@ -1,15 +1,18 @@
 import { Types } from 'mongoose';
+import * as Message from './message';
 export declare namespace Form {
     interface Model {
         _id?: Types.ObjectId;
         name?: string;
+        displayName?: string;
+        type?: Message.default.Type;
         clubID?: Types.ObjectId;
         inputs?: Input[];
         responses?: Response[];
     }
     interface Response {
         _id?: Types.ObjectId;
-        userID: Types.ObjectId;
+        userID?: Types.ObjectId;
         answers: ResponseValues[];
     }
     interface ResponseValues {

@@ -18,6 +18,7 @@ declare namespace User {
         location?: string;
         middleName?: string;
         password?: string;
+        salt?: string;
         phone?: string;
         photoURL?: string;
         state?: string;
@@ -29,6 +30,7 @@ declare namespace User {
         maritalStatus?: MaritalStatus;
         memberStatus?: MemberStatus;
         meta?: UserMeta;
+        displaySettings?: DisplaySettings;
     }
     enum DefaultUserGroups {
         AllAdmins = "All Admins",
@@ -41,6 +43,7 @@ declare namespace User {
         users?: Types.ObjectId[] | Model[];
     }
     interface UserMeta {
+        hide?: boolean;
         golf?: GolfMeta.Model;
         car?: CarMeta.Model;
     }
@@ -55,6 +58,9 @@ declare namespace User {
         Prospect = "PROSPECT",
         Active = "ACTIVE",
         Lapsed = "LAPSED"
+    }
+    interface DisplaySettings {
+        contact: boolean;
     }
 }
 export default User;

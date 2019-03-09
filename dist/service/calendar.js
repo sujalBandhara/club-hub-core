@@ -35,19 +35,45 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require("mocha");
-describe('Message Service', function () {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            this.timeout(5000);
-            describe('should get all messages', function () {
-                return __awaiter(this, void 0, void 0, function () {
-                    return __generator(this, function (_a) {
-                        return [2];
-                    });
-                });
+var CalendarService = (function () {
+    function CalendarService(client) {
+        var _this = this;
+        this.getCalendars = function (groupID) { return __awaiter(_this, void 0, void 0, function () {
+            var query;
+            return __generator(this, function (_a) {
+                query = {
+                    params: {
+                        groupID: groupID
+                    }
+                };
+                return [2, this.client.get('calendars', query).then(function (response) {
+                        return response.data;
+                    })];
             });
-            return [2];
-        });
-    });
-});
+        }); };
+        this.getBookableSlots = function (date, calendarIDs) { return __awaiter(_this, void 0, void 0, function () {
+            var query;
+            return __generator(this, function (_a) {
+                query = {
+                    params: {
+                        date: date,
+                        calendarIDs: calendarIDs
+                    }
+                };
+                return [2, this.client.get('calendars/available', query).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.postBookableSlot = function (body) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.post("calendars/" + body.calendarID + "/reserve", body).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.client = client;
+    }
+    return CalendarService;
+}());
+exports.default = CalendarService;

@@ -35,19 +35,43 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require("mocha");
-describe('Message Service', function () {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            this.timeout(5000);
-            describe('should get all messages', function () {
-                return __awaiter(this, void 0, void 0, function () {
-                    return __generator(this, function (_a) {
-                        return [2];
-                    });
-                });
+var MessageService = (function () {
+    function MessageService(client) {
+        var _this = this;
+        this.getMessages = function (messageRequest) { return __awaiter(_this, void 0, void 0, function () {
+            var query;
+            return __generator(this, function (_a) {
+                query = {
+                    params: messageRequest
+                };
+                return [2, this.client.get('messages', query).then(function (response) {
+                        return response.data;
+                    })];
             });
-            return [2];
-        });
-    });
-});
+        }); };
+        this.postMessage = function (message) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.post('messages', message).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.putMessage = function (message) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.put("messages/" + message._id, message).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.deleteMessage = function (message) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.delete("messages/" + message._id).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.client = client;
+    }
+    return MessageService;
+}());
+exports.default = MessageService;

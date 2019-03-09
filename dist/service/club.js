@@ -35,19 +35,18 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require("mocha");
-describe('Message Service', function () {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            this.timeout(5000);
-            describe('should get all messages', function () {
-                return __awaiter(this, void 0, void 0, function () {
-                    return __generator(this, function (_a) {
-                        return [2];
-                    });
-                });
+var ClubService = (function () {
+    function ClubService(client) {
+        var _this = this;
+        this.getClubs = function () { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.get('clubs').then(function (response) {
+                        return response.data;
+                    })];
             });
-            return [2];
-        });
-    });
-});
+        }); };
+        this.client = client;
+    }
+    return ClubService;
+}());
+exports.default = ClubService;

@@ -35,19 +35,29 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require("mocha");
-describe('Message Service', function () {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            this.timeout(5000);
-            describe('should get all messages', function () {
-                return __awaiter(this, void 0, void 0, function () {
-                    return __generator(this, function (_a) {
-                        return [2];
-                    });
-                });
+var PostService = (function () {
+    function PostService(client) {
+        var _this = this;
+        this.getPosts = function (postRequest) { return __awaiter(_this, void 0, void 0, function () {
+            var query;
+            return __generator(this, function (_a) {
+                query = {
+                    params: postRequest
+                };
+                return [2, this.client.get('posts', query).then(function (response) {
+                        return response.data;
+                    })];
             });
-            return [2];
-        });
-    });
-});
+        }); };
+        this.getPost = function (Id) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.get("posts/" + Id).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.client = client;
+    }
+    return PostService;
+}());
+exports.default = PostService;
