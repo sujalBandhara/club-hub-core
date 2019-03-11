@@ -8,6 +8,7 @@ import ClubHubClient from '../client'
 import Response from '../models/response'
 import Calendar from '../models/calendar'
 import Request from '../models/request'
+import Event from '../models/event'
 
 /**
  * Interface to the ClubHub `Calendar` API.
@@ -40,14 +41,23 @@ export default class CalendarService {
   /**
    * `GET` all the calendars for a given calendar group.
    */
-  public getBookableSlots = async (date: string, calendarIDs: string[]): Promise<Calendar.BookableResponse> => {
+  public getCalendarById = async (Id?: string): Promise<Calendar.Model> => {
+    return this.client.get(`calendars/${Id}`).then((response: axios.AxiosResponse) => {
+      return response.data
+    })
+  }
+
+  /**
+   * `GET` all the calendars for a given calendar group.
+   */
+  public getBookableSlots = async (date: string, calendarIDs: string[]): Promise<Calendar.BookableResponse[]> => {
     const query: axios.AxiosRequestConfig = {
       params: {
         date: date,
         calendarIDs: calendarIDs
       }
     }
-    return this.client.get('calendars/available', query).then((response: axios.AxiosResponse) => {
+    return this.client.get('calendar/available', query).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }
@@ -55,8 +65,8 @@ export default class CalendarService {
   /**
    * `POST` data needed to make a reservation.
    */
-  public postBookableSlot = async (body: Request.ReservationPost): Promise<void> => {
-    return this.client.post(`calendars/${body.calendarID}/reserve`, body).then((response: axios.AxiosResponse) => {
+  public postBookableSlot = async (body: Request.ReservationPost): Promise<Event.Model> => {
+    return this.client.post(`calendar/${body.calendarID}/reserve`, body).then((response: axios.AxiosResponse) => {
       return response.data
     })
   }

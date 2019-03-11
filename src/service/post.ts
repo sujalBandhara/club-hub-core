@@ -5,6 +5,7 @@ import * as axios from 'axios'
 import Response from '../models/response'
 import Request from '../models/request'
 import ClubHubClient from '../client'
+import Post from '../models/post'
 
 /**
  * Interface to the ClubHub `Post` API.
@@ -35,7 +36,7 @@ export default class PostService {
   /**
    * `GET` posts for the given parameters.
    */
-  public getPost = async (Id: string): Promise<Response.Post> => {
+  public getPost = async (Id: string): Promise<Post.Model> => {
     return this.client.get(`posts/${Id}`).then((response: axios.AxiosResponse) => {
       return response.data
     })

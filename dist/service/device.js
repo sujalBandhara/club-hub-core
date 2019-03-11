@@ -35,60 +35,22 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var MenuService = (function () {
-    function MenuService(client) {
+var DeviceService = (function () {
+    function DeviceService(client) {
         var _this = this;
-        this.getRestaurants = function () { return __awaiter(_this, void 0, void 0, function () {
+        this.postDevice = function (oneSignalID) { return __awaiter(_this, void 0, void 0, function () {
+            var postBody;
             return __generator(this, function (_a) {
-                return [2, this.client.get('restaurants').then(function (response) {
-                        return response.data;
-                    })];
-            });
-        }); };
-        this.getRestaurant = function (Id) { return __awaiter(_this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2, this.client.get("restaurants/" + Id).then(function (response) {
-                        return response.data;
-                    })];
-            });
-        }); };
-        this.getOrders = function () { return __awaiter(_this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2, this.client.get('orders').then(function (response) {
-                        return response.data;
-                    })];
-            });
-        }); };
-        this.getOrderWithId = function (Id) { return __awaiter(_this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2, this.client.get("orders/" + Id).then(function (response) {
-                        return response.data;
-                    })];
-            });
-        }); };
-        this.postOrder = function (order) { return __awaiter(_this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2, this.client.post('orders', order).then(function (response) {
-                        return response.data;
-                    })];
-            });
-        }); };
-        this.putOrder = function (order) { return __awaiter(_this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2, this.client.put("orders/" + order._id, order).then(function (response) {
-                        return response.data;
-                    })];
-            });
-        }); };
-        this.postConfirm = function (orderID, order) { return __awaiter(_this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2, this.client.post("orders/" + orderID + "/confirm", order).then(function (response) {
+                postBody = {
+                    oneSignalID: oneSignalID
+                };
+                return [2, this.client.post('device', postBody).then(function (response) {
                         return response.data;
                     })];
             });
         }); };
         this.client = client;
     }
-    return MenuService;
+    return DeviceService;
 }());
-exports.default = MenuService;
+exports.default = DeviceService;

@@ -9,6 +9,7 @@ import MemberService from './member';
 import Session from '../models/session';
 import MessageService from './message';
 import SectionService from './section';
+import DeviceService from './device';
 export default class ClubHubService {
     static login: (url: string, email: string, password: string, clubName: string) => Promise<Session.Login>;
     client: ClubHubClient;
@@ -21,5 +22,6 @@ export default class ClubHubService {
     menus: MenuService;
     sections: SectionService;
     post: PostService;
+    device: DeviceService;
     constructor(baseURL: string, token: string);
 }

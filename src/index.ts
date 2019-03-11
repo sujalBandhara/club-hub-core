@@ -12,8 +12,8 @@ import Restaurant from './models/restaurant'
 import Section from './models/section'
 import Form from './models/form'
 import Session from './models/session'
-import ApiRequest from './models/request'
-import ApiResponse from './models/response'
+import Responses from './models/response'
+import Requests from './models/request'
 
 // Constants
 import * as Constants from './constants'
@@ -47,15 +47,13 @@ export {
 	Restaurant,
 	Form,
 	Section,
+	Responses,
+	Requests,
 	
 	// Sub Models.
 	SubModels,
 
 	// Misc
 	IShared,
-	Constants,
-
-	// Networking
-	ApiRequest,
-	ApiResponse
+	Constants
 }

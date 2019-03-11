@@ -47,6 +47,7 @@ var post_1 = require("./post");
 var member_1 = require("./member");
 var message_1 = require("./message");
 var section_1 = require("./section");
+var device_1 = require("./device");
 var ClubHubService = (function () {
     function ClubHubService(baseURL, token) {
         this.client = new client_1.default(baseURL, token);
@@ -59,6 +60,7 @@ var ClubHubService = (function () {
         this.menus = new menu_1.default(this.client);
         this.sections = new section_1.default(this.client);
         this.post = new post_1.default(this.client);
+        this.device = new device_1.default(this.client);
     }
     ClubHubService.login = function (url, email, password, clubName) { return __awaiter(_this, void 0, void 0, function () {
         var request;

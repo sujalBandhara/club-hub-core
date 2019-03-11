@@ -3,6 +3,7 @@ export default class ClubHubClient {
     axios: axios.AxiosInstance;
     shouldRetry: boolean;
     baseURL: string;
+    headers: axios.AxiosRequestConfig;
     constructor(baseURL: string, token: string);
     setToken: (token: string) => void;
     get: (url: string, config?: axios.AxiosRequestConfig | undefined) => axios.AxiosPromise<any>;

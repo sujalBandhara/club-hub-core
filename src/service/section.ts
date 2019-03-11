@@ -20,7 +20,7 @@ export default class SectionService {
    * `GET` all of the sections for the Club of the
    * currently authenticated User
    */
-  public getSections = async (): Promise<Section.Model[]> => {
+  public getSections = async (): Promise<Response.Section> => {
     return this.client.get('sections').then((response: axios.AxiosResponse) => {
       return response.data
     })

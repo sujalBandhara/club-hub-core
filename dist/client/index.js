@@ -1,4 +1,15 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -43,35 +54,43 @@ var ClubHubClient = (function () {
             _this.axios.defaults.headers.common['Authorization'] = token;
         };
         this.get = function (url, config) {
-            return _this.axios.get("" + _this.baseURL + url, config);
+            var headerCopy = __assign({}, _this.headers, { params: config ? config.params : {} });
+            console.log('The headers? ', _this.headers);
+            return _this.axios.get("" + _this.baseURL + url, headerCopy);
         };
         this.post = function (url, data, config) {
-            return _this.axios.post("" + _this.baseURL + url, data, config);
+            return _this.axios.post("" + _this.baseURL + url, data, _this.headers);
         };
         this.put = function (url, data, config) {
-            return _this.axios.put("" + _this.baseURL + url, data, config);
+            console.log('hit with data : ', data);
+            var reqOpts = {
+                headers: _this.headers,
+                data: data,
+            };
+            console.log('full request opts : ', reqOpts);
+            return _this.axios.put("" + _this.baseURL + url, data, _this.headers);
         };
         this.delete = function (url, config) {
-            return _this.axios.delete("" + _this.baseURL + url, config);
+            return _this.axios.delete("" + _this.baseURL + url, _this.headers);
         };
         this.responseHandler = function (response) {
             return response;
         };
         this.errorHandler = function (error) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2, error];
+                throw error;
             });
         }); };
         this.shouldRetry = true;
         this.baseURL = baseURL;
-        var headers = {
+        this.headers = {
             withCredentials: true,
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': token
             }
         };
-        this.axios = axios_1.default.create({ baseURL: baseURL, headers: headers });
-        this.setToken(token);
+        this.axios = axios_1.default.create({ baseURL: baseURL });
         this.axios.interceptors.response.use(this.responseHandler, this.errorHandler);
     }
     return ClubHubClient;

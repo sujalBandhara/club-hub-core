@@ -61,11 +61,11 @@ var UserService = (function () {
                     })];
             });
         }); };
-        this.deleteSubDocument = function (userId, path, data) { return __awaiter(_this, void 0, void 0, function () {
-            var postPath;
+        this.deleteSubDocument = function (userId, path, dataId) { return __awaiter(_this, void 0, void 0, function () {
+            var deletePath;
             return __generator(this, function (_a) {
-                postPath = "users/" + userId + "/meta/" + path;
-                return [2, this.client.delete(postPath, data).then(function (response) {
+                deletePath = "users/" + userId + "/meta/" + path + "/" + dataId;
+                return [2, this.client.delete(deletePath).then(function (response) {
                         return response.data;
                     })];
             });

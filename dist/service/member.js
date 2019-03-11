@@ -35,9 +35,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var FormData = require('form-data');
 var MemberService = (function () {
     function MemberService(client) {
         var _this = this;
+        this.getMembers = function () { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.get("users").then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
         this.getMemberById = function (Id) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2, this.client.get("users/" + Id).then(function (response) {
@@ -45,9 +53,20 @@ var MemberService = (function () {
                     })];
             });
         }); };
-        this.postMember = function (member) { return __awaiter(_this, void 0, void 0, function () {
+        this.putMemberById = function (Id, user) { return __awaiter(_this, void 0, void 0, function () {
+            var putPayload;
             return __generator(this, function (_a) {
-                return [2, this.client.post("register", member).then(function (response) {
+                putPayload = JSON.stringify(user);
+                return [2, this.client.put("users/" + Id, user).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
+        this.postMember = function (member) { return __awaiter(_this, void 0, void 0, function () {
+            var postPayload;
+            return __generator(this, function (_a) {
+                postPayload = JSON.stringify(member);
+                return [2, this.client.post("register", postPayload).then(function (response) {
                         return response.data;
                     })];
             });
