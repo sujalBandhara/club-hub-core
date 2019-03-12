@@ -1,4 +1,6 @@
+/// <reference types="json-rules-engine-types" />
 import { Types } from 'mongoose';
+import * as JsonRules from 'json-rules-engine';
 import Location from './subModels/shared/location';
 import Event from './event';
 declare namespace Calendar {
@@ -15,6 +17,7 @@ declare namespace Calendar {
         groupID?: Types.ObjectId;
         maxParticipants?: number | null;
         location?: Location.Model;
+        reservationSettings?: ReservationSetting[];
     }
     enum CalendarGroupType {
         Recreation = "RECREATION",
@@ -48,6 +51,19 @@ declare namespace Calendar {
             start: string;
             end: string;
             reservations?: Event.Reservation[];
+        };
+    }
+    interface ReservationSetting {
+        isDefault: boolean;
+        rules: ReservationSettingRules[];
+    }
+    interface ReservationSettingRules extends JsonRules.RuleFields {
+        event: {
+            type: string;
+            params: {
+                successMessage: string;
+                failureMessage: string;
+            };
         };
     }
 }
