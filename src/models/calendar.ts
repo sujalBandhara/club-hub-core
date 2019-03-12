@@ -76,6 +76,8 @@ namespace Calendar {
     
     export interface ReservationSetting {
         isDefault: boolean
+        dateRangeStart: Date
+        dateRangeEnd: Date
         rules: ReservationSettingRules[]
     }
 

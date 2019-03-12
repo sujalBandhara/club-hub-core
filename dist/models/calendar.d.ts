@@ -55,6 +55,8 @@ declare namespace Calendar {
     }
     interface ReservationSetting {
         isDefault: boolean;
+        dateRangeStart: Date;
+        dateRangeEnd: Date;
         rules: ReservationSettingRules[];
     }
     interface ReservationSettingRules extends JsonRules.RuleFields {
