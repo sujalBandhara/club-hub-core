@@ -8,9 +8,6 @@ import Calendar from './calendar'
 // Sub Documents.
 import Location from './subModels/shared/location'
 
-// Shared Interfaces.
-import IShared from './shared'
-
 namespace Club {
 	
 	// --------------------------------
@@ -25,11 +22,12 @@ namespace Club {
 		calendarCredentials?: Calendar.CalendarSyncData
 		userGroups?: User.UserGroup[]
 		calendarGroups?: Calendar.CalendarGroup[]
-		clubInfo?: IShared.GeneralMap<any>
+		clubInfo?: ClubInfo
 		navigationConfig?: Navigation
 		photoURL?: string
 		domain?: string
 		resources?: Resources
+		clubSettings?: ClubSettings
 	}
 
 	/**
@@ -60,6 +58,45 @@ namespace Club {
 	export const defaultEventTypes = ['Member', 'Outside', 'Club']
 
 	// --------------------------------
+	// General Club Info Interfaces
+	// --------------------------------
+
+	export interface ClubInfo {
+		data: ClubInfoSection[]
+	}
+	export interface ClubInfoSection {
+		title: string
+		sections: ClubInfoEntity[]
+	}
+	
+	export interface ClubInfoEntity {
+		title: string
+		values: ClubInfoData[]
+	}
+	
+	export interface ClubInfoData {
+		type: ClubInfoDataType
+		title: string
+		action?: ClubInfoDataAction
+		value: string | TableValue[]
+	}
+	
+	export interface TableValue {
+		title: string
+		value: string
+	}
+	
+	export enum ClubInfoDataType {
+		single = 'single',
+		table = 'table'
+	}
+	
+	export enum ClubInfoDataAction {
+		call = 'call',
+		email = 'email'
+	}
+
+	// --------------------------------
 	// Resource interfaces specific to clubs.
 	// --------------------------------
 
@@ -78,6 +115,10 @@ namespace Club {
 		}
 	}
 	
+	export interface ClubSettings {
+		displaysMemberNumber: boolean
+	}
+
 	export interface ResourceType {
 		_id?: Types.ObjectId
 		title?: string
