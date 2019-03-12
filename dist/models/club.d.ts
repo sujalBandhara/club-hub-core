@@ -2,7 +2,6 @@ import { Types } from 'mongoose';
 import User from './user';
 import Calendar from './calendar';
 import Location from './subModels/shared/location';
-import IShared from './shared';
 declare namespace Club {
     interface Model {
         _id?: Types.ObjectId;
@@ -12,11 +11,12 @@ declare namespace Club {
         calendarCredentials?: Calendar.CalendarSyncData;
         userGroups?: User.UserGroup[];
         calendarGroups?: Calendar.CalendarGroup[];
-        clubInfo?: IShared.GeneralMap<any>;
+        clubInfo?: ClubInfo;
         navigationConfig?: Navigation;
         photoURL?: string;
         domain?: string;
         resources?: Resources;
+        clubSettings?: ClubSettings;
     }
     interface UnprotectedModel {
         _id: string;
@@ -32,6 +32,35 @@ declare namespace Club {
     }
     const defaultMembershipTypes: string[];
     const defaultEventTypes: string[];
+    interface ClubInfo {
+        data: ClubInfoSection[];
+    }
+    interface ClubInfoSection {
+        title: string;
+        sections: ClubInfoEntity[];
+    }
+    interface ClubInfoEntity {
+        title: string;
+        values: ClubInfoData[];
+    }
+    interface ClubInfoData {
+        type: ClubInfoDataType;
+        title: string;
+        action?: ClubInfoDataAction;
+        value: string | TableValue[];
+    }
+    interface TableValue {
+        title: string;
+        value: string;
+    }
+    enum ClubInfoDataType {
+        single = "single",
+        table = "table"
+    }
+    enum ClubInfoDataAction {
+        call = "call",
+        email = "email"
+    }
     interface Resources {
         events?: {
             types?: ResourceType[];
@@ -45,6 +74,9 @@ declare namespace Club {
         messages?: {
             types?: ResourceType[];
         };
+    }
+    interface ClubSettings {
+        displaysMemberNumber: boolean;
     }
     interface ResourceType {
         _id?: Types.ObjectId;
