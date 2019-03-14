@@ -22,7 +22,6 @@
 		"paths": {
 			"@clubhub/*": ["./"]
         },
-        "types": ["json-rules-engine-types"],
 	},
 	"exclude": [
 		"node_modules",

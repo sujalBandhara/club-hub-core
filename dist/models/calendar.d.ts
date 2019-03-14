@@ -1,6 +1,4 @@
-/// <reference types="json-rules-engine-types" />
 import { Types } from 'mongoose';
-import * as JsonRules from 'json-rules-engine';
 import Location from './subModels/shared/location';
 import Event from './event';
 declare namespace Calendar {
@@ -54,19 +52,18 @@ declare namespace Calendar {
         };
     }
     interface ReservationSetting {
+        _id?: Types.ObjectId;
+        name: string;
         isDefault: boolean;
         dateRangeStart: Date;
         dateRangeEnd: Date;
-        rules: ReservationSettingRules[];
-    }
-    interface ReservationSettingRules extends JsonRules.RuleFields {
-        event: {
-            type: string;
-            params: {
-                successMessage: string;
-                failureMessage: string;
-            };
-        };
+        bookingDuration: number;
+        maxGuestsAdmin: number;
+        maxGuestsMember: number;
+        publicBookings: boolean;
+        joinableBookings: boolean;
+        hours: string[];
+        privilege: any[];
     }
 }
 export default Calendar;
