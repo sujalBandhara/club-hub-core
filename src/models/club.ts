@@ -25,6 +25,7 @@ namespace Club {
 		clubInfo?: ClubInfo
 		navigationConfig?: Navigation
 		photoURL?: string
+		phoneNumber: string
 		domain?: string
 		resources?: Resources
 		clubSettings?: ClubSettings
