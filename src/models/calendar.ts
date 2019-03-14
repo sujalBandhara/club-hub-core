@@ -1,5 +1,6 @@
 // External Dependencies.
 import { Types } from 'mongoose'
+import * as JsonRules from 'json-rules-engine'
 
 // Sub Models.
 import Location from './subModels/shared/location'
@@ -26,7 +27,8 @@ namespace Calendar {
 		clubID?: Types.ObjectId,
 		groupID?: Types.ObjectId,
 		maxParticipants?: number | null
-		location?: Location.Model
+        location?: Location.Model
+        reservationSettings?: ReservationSetting[]
 	}
 
 	// --------------------------------
@@ -70,7 +72,24 @@ namespace Calendar {
 				end: string
 				reservations?: Event.Reservation[]
 		}
-	}
+    }
+    
+    export interface ReservationSetting {
+        isDefault: boolean
+        dateRangeStart: Date
+        dateRangeEnd: Date
+        rules: ReservationSettingRules[]
+    }
+
+    export interface ReservationSettingRules extends JsonRules.RuleFields {
+        event: {
+            type: string,
+            params: {
+                successMessage: string,
+                failureMessage: string,
+            }
+        }
+    }
 
 }
 

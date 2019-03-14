@@ -43,6 +43,7 @@ namespace User {
 		memberStatus?: MemberStatus
 		meta?: UserMeta
 		displaySettings?: DisplaySettings
+		agentAccessCode?: string
 	}
 	
 	// --------------------------------
