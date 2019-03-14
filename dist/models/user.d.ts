@@ -31,6 +31,7 @@ declare namespace User {
         memberStatus?: MemberStatus;
         meta?: UserMeta;
         displaySettings?: DisplaySettings;
+        agentAccessCode?: string;
     }
     enum DefaultUserGroups {
         AllAdmins = "All Admins",
