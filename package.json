@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "@types/mongoose": "^5.3.5",
-    "json-rules-engine-types": "https://git@github.com/meshhq/json-rules-engine-types.git#v0.0.2",
     "typescript": "^3.3.3"
   }
 }
