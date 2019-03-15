@@ -29,6 +29,7 @@ declare namespace Event {
         richContent?: RichContent.Model;
         maxParticipants?: number;
         requiresRSVP?: boolean;
+        recurring?: String;
     }
     interface Reservation {
         _id?: Types.ObjectId;
