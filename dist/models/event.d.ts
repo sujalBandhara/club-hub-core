@@ -21,7 +21,7 @@ declare namespace Event {
         photoURL?: string;
         clubID?: Types.ObjectId;
         groupID?: Types.ObjectId;
-        price?: number;
+        price?: string;
         shortLink?: string;
         reservations?: Reservation[];
         public?: boolean;
