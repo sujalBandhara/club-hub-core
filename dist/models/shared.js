@@ -20,5 +20,12 @@ var IShared;
         DayOfWeek[DayOfWeek["Friday"] = 5] = "Friday";
         DayOfWeek[DayOfWeek["Saturday"] = 6] = "Saturday";
     })(DayOfWeek = IShared.DayOfWeek || (IShared.DayOfWeek = {}));
+    var TimePeriod;
+    (function (TimePeriod) {
+        TimePeriod[TimePeriod["Day"] = 0] = "Day";
+        TimePeriod[TimePeriod["Week"] = 1] = "Week";
+        TimePeriod[TimePeriod["Month"] = 2] = "Month";
+        TimePeriod[TimePeriod["Year"] = 3] = "Year";
+    })(TimePeriod = IShared.TimePeriod || (IShared.TimePeriod = {}));
 })(IShared || (IShared = {}));
 exports.default = IShared;

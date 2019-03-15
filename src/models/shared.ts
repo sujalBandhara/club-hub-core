@@ -79,6 +79,24 @@ namespace IShared {
         Friday = 5,
         Saturday = 6
     }
+
+    /**
+     * An enum to describe a period of Time
+     */
+    export enum TimePeriod {
+        Day = 0,
+        Week = 1,
+        Month = 2,
+        Year = 3
+    }
+
+    /**
+     * An enum to describe a restriction for a period of Time
+     */
+    export interface LimitForPeriod {
+        period: TimePeriod,
+        limit: number
+    }
 }
 
 export default IShared
