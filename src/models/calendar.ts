@@ -3,6 +3,7 @@ import { Types } from 'mongoose'
 
 // Sub Models.
 import Location from './subModels/shared/location'
+import IShared from './shared'
 
 // Required local Namespace.
 import Event from './event'
@@ -84,8 +85,14 @@ namespace Calendar {
         maxGuestsMember: number
         publicBookings: boolean
         joinableBookings: boolean
-        hours: string[]
+        hours: HoursOfOperation[]
         privilege: any[]
+    }
+
+    export interface HoursOfOperation {
+        dayOfWeek: IShared.DayOfWeek,
+        opens: Date,
+        closes: Date,
     }
 }
 

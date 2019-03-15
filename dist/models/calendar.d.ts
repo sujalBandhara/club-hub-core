@@ -1,5 +1,6 @@
 import { Types } from 'mongoose';
 import Location from './subModels/shared/location';
+import IShared from './shared';
 import Event from './event';
 declare namespace Calendar {
     interface BookableResponse {
@@ -62,8 +63,13 @@ declare namespace Calendar {
         maxGuestsMember: number;
         publicBookings: boolean;
         joinableBookings: boolean;
-        hours: string[];
+        hours: HoursOfOperation[];
         privilege: any[];
+    }
+    interface HoursOfOperation {
+        dayOfWeek: IShared.DayOfWeek;
+        opens: Date;
+        closes: Date;
     }
 }
 export default Calendar;
