@@ -93,8 +93,8 @@ namespace Calendar {
     export interface Privilege {
         memberType: Types.ObjectId,
         bookingWindow: number,
-        maxBookings: IShared.LimitForPeriod
-        maxGuests: IShared.LimitForPeriod
+        maxBookings: IShared.LimitForPeriod[]
+        maxGuests: IShared.LimitForPeriod[]
     }
 
     export interface HoursOfOperation {

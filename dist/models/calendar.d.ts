@@ -70,8 +70,8 @@ declare namespace Calendar {
     interface Privilege {
         memberType: Types.ObjectId;
         bookingWindow: number;
-        maxBookings: IShared.LimitForPeriod;
-        maxGuests: IShared.LimitForPeriod;
+        maxBookings: IShared.LimitForPeriod[];
+        maxGuests: IShared.LimitForPeriod[];
     }
     interface HoursOfOperation {
         dayOfWeek: IShared.DayOfWeek;
