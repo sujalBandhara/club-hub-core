@@ -29,6 +29,7 @@ declare namespace Calendar {
         name: string;
         rRule?: string;
         type?: CalendarGroupType;
+        reservationSettings?: ReservationSetting[];
     }
     interface CalendarSyncData {
         google?: {

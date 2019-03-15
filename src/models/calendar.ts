@@ -46,7 +46,8 @@ namespace Calendar {
 		_id?: Types.ObjectId
 		name: string
 		rRule?: string
-		type?: CalendarGroupType
+        type?: CalendarGroupType
+        reservationSettings?: ReservationSetting[]
 	}
 	
 	export interface CalendarSyncData {
