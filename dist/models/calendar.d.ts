@@ -29,6 +29,7 @@ declare namespace Calendar {
         name: string;
         rRule?: string;
         type?: CalendarGroupType;
+        reservationSettings?: ReservationSetting[];
     }
     interface CalendarSyncData {
         google?: {
@@ -64,7 +65,13 @@ declare namespace Calendar {
         publicBookings: boolean;
         joinableBookings: boolean;
         hours: HoursOfOperation[];
-        privilege: any[];
+        privileges: Privilege[];
+    }
+    interface Privilege {
+        memberType: Types.ObjectId;
+        bookingWindow: number;
+        maxBookings: IShared.LimitForPeriod;
+        maxGuests: IShared.LimitForPeriod;
     }
     interface HoursOfOperation {
         dayOfWeek: IShared.DayOfWeek;

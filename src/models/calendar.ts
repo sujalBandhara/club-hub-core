@@ -46,7 +46,8 @@ namespace Calendar {
 		_id?: Types.ObjectId
 		name: string
 		rRule?: string
-		type?: CalendarGroupType
+        type?: CalendarGroupType
+        reservationSettings?: ReservationSetting[]
 	}
 	
 	export interface CalendarSyncData {
@@ -86,7 +87,14 @@ namespace Calendar {
         publicBookings: boolean
         joinableBookings: boolean
         hours: HoursOfOperation[]
-        privilege: any[]
+        privileges: Privilege[]
+    }
+
+    export interface Privilege {
+        memberType: Types.ObjectId,
+        bookingWindow: number,
+        maxBookings: IShared.LimitForPeriod
+        maxGuests: IShared.LimitForPeriod
     }
 
     export interface HoursOfOperation {

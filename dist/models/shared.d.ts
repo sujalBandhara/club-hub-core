@@ -41,5 +41,15 @@ declare namespace IShared {
         Friday = 5,
         Saturday = 6
     }
+    enum TimePeriod {
+        Day = 0,
+        Week = 1,
+        Month = 2,
+        Year = 3
+    }
+    interface LimitForPeriod {
+        period: TimePeriod;
+        limit: number;
+    }
 }
 export default IShared;
