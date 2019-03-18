@@ -30,7 +30,8 @@ declare namespace IShared {
         Pending = "PENDING",
         Published = "PUBLISHED",
         Scheduled = "SCHEDULED",
-        Delivered = "DELIVERED"
+        Delivered = "DELIVERED",
+        Template = "TEMPLATE"
     }
     enum DayOfWeek {
         Sunday = 0,

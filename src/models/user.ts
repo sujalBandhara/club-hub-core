@@ -83,7 +83,8 @@ namespace User {
 	}
 
 	export interface DisplaySettings {
-		contact: boolean
+		publicProfile: boolean
+		publicContact: boolean
 	}
 }
 

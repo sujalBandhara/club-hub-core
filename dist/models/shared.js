@@ -9,6 +9,7 @@ var IShared;
         PublicationStatus["Published"] = "PUBLISHED";
         PublicationStatus["Scheduled"] = "SCHEDULED";
         PublicationStatus["Delivered"] = "DELIVERED";
+        PublicationStatus["Template"] = "TEMPLATE";
     })(PublicationStatus = IShared.PublicationStatus || (IShared.PublicationStatus = {}));
     var DayOfWeek;
     (function (DayOfWeek) {

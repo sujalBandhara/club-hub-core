@@ -18,18 +18,19 @@ declare namespace Calendar {
         location?: Location.Model;
         reservationSettings?: ReservationSetting[];
     }
-    enum CalendarGroupType {
+    enum GroupType {
         Recreation = "RECREATION",
         Social = "SOCIAL",
         Dining = "DINING",
         ServiceProvider = "SERVICE_PROVIDER"
     }
-    interface CalendarGroup {
+    interface Group {
         _id?: Types.ObjectId;
         name: string;
         rRule?: string;
-        type?: CalendarGroupType;
+        type?: GroupType;
         reservationSettings?: ReservationSetting[];
+        photoURL: string;
     }
     interface CalendarSyncData {
         google?: {
@@ -38,9 +39,13 @@ declare namespace Calendar {
         };
         iCal?: string;
     }
-    enum CalendarGroupName {
+    enum GroupName {
         Club = "Club",
-        Golf = "Golf"
+        Golf = "Golf",
+        Tennis = "Tennis",
+        Simulator = "Simulator",
+        Dining = "Dining",
+        Service = "Service"
     }
     interface AvailableEvent {
         time: string;
@@ -65,7 +70,7 @@ declare namespace Calendar {
         publicBookings: boolean;
         joinableBookings: boolean;
         hours: HoursOfOperation[];
-        privileges: Privilege[];
+        privileges?: Privilege[];
     }
     interface Privilege {
         memberType: Types.ObjectId;
