@@ -2,17 +2,21 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Calendar;
 (function (Calendar) {
-    var CalendarGroupType;
-    (function (CalendarGroupType) {
-        CalendarGroupType["Recreation"] = "RECREATION";
-        CalendarGroupType["Social"] = "SOCIAL";
-        CalendarGroupType["Dining"] = "DINING";
-        CalendarGroupType["ServiceProvider"] = "SERVICE_PROVIDER";
-    })(CalendarGroupType = Calendar.CalendarGroupType || (Calendar.CalendarGroupType = {}));
-    var CalendarGroupName;
-    (function (CalendarGroupName) {
-        CalendarGroupName["Club"] = "Club";
-        CalendarGroupName["Golf"] = "Golf";
-    })(CalendarGroupName = Calendar.CalendarGroupName || (Calendar.CalendarGroupName = {}));
+    var GroupType;
+    (function (GroupType) {
+        GroupType["Recreation"] = "RECREATION";
+        GroupType["Social"] = "SOCIAL";
+        GroupType["Dining"] = "DINING";
+        GroupType["ServiceProvider"] = "SERVICE_PROVIDER";
+    })(GroupType = Calendar.GroupType || (Calendar.GroupType = {}));
+    var GroupName;
+    (function (GroupName) {
+        GroupName["Club"] = "Club";
+        GroupName["Golf"] = "Golf";
+        GroupName["Tennis"] = "Tennis";
+        GroupName["Simulator"] = "Simulator";
+        GroupName["Dining"] = "Dining";
+        GroupName["Service"] = "Service";
+    })(GroupName = Calendar.GroupName || (Calendar.GroupName = {}));
 })(Calendar || (Calendar = {}));
 exports.default = Calendar;

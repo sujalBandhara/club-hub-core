@@ -28,26 +28,27 @@ namespace Calendar {
 		groupID?: Types.ObjectId,
 		maxParticipants?: number | null
         location?: Location.Model
-        reservationSettings?: ReservationSetting[]
+		reservationSettings?: ReservationSetting[]
 	}
 
 	// --------------------------------
 	// Supporting Interfaces and Types
 	// --------------------------------
 
-	export enum CalendarGroupType {
+	export enum GroupType {
 		Recreation = 'RECREATION',
 		Social = 'SOCIAL',
 		Dining = 'DINING',
 		ServiceProvider = 'SERVICE_PROVIDER'
 	}
 
-	export interface CalendarGroup {
+	export interface Group {
 		_id?: Types.ObjectId
 		name: string
 		rRule?: string
-        type?: CalendarGroupType
-        reservationSettings?: ReservationSetting[]
+        type?: GroupType
+		reservationSettings?: ReservationSetting[],
+		photoURL: string
 	}
 	
 	export interface CalendarSyncData {
@@ -58,9 +59,13 @@ namespace Calendar {
 		iCal?: string
 	}
 
-	export enum CalendarGroupName {
+	export enum GroupName {
 		Club = 'Club',
-		Golf = 'Golf'
+		Golf = 'Golf',
+		Tennis = 'Tennis',
+		Simulator = 'Simulator',
+		Dining = 'Dining',
+		Service = 'Service',
 	}
 
 	export interface AvailableEvent {

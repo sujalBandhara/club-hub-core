@@ -61,7 +61,8 @@ declare namespace User {
         Lapsed = "LAPSED"
     }
     interface DisplaySettings {
-        contact: boolean;
+        publicProfile: boolean;
+        publicContact: boolean;
     }
 }
 export default User;

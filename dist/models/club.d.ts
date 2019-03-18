@@ -10,7 +10,7 @@ declare namespace Club {
         locations?: Location.Model[];
         calendarCredentials?: Calendar.CalendarSyncData;
         userGroups?: User.UserGroup[];
-        calendarGroups?: Calendar.CalendarGroup[];
+        calendarGroups?: Calendar.Group[];
         clubInfo?: ClubInfo;
         navigationConfig?: Navigation;
         photoURL?: string;
