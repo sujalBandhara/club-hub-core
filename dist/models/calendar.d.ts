@@ -70,7 +70,7 @@ declare namespace Calendar {
         publicBookings: boolean;
         joinableBookings: boolean;
         hours: HoursOfOperation[];
-        privileges?: Privilege[];
+        privileges: Privilege[];
     }
     interface Privilege {
         memberType: Types.ObjectId;

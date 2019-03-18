@@ -92,7 +92,7 @@ namespace Calendar {
         publicBookings: boolean
         joinableBookings: boolean
         hours: HoursOfOperation[]
-        privileges?: Privilege[]
+        privileges: Privilege[]
     }
 
     export interface Privilege {
