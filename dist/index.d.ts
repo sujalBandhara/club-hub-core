@@ -11,6 +11,6 @@ import Restaurant from './models/restaurant';
 import Section from './models/section';
 import Form from './models/form';
 import * as Constants from './constants';
-import * as SubModels from './models/subModels';
+import { GolfMeta, CarMeta, Location, RichContent } from './models/subModels';
 import IShared from './models/shared';
-export { User, Club, Calendar, Device, Event, Message, Notification, Order, Post, Restaurant, Form, Section, SubModels, IShared, Constants };
+export { User, Club, Calendar, Device, Event, Message, Notification, Order, Post, Restaurant, Form, Section, GolfMeta, CarMeta, Location, RichContent, IShared, Constants };

@@ -13,6 +13,7 @@ namespace Order {
 	// ---------------------------------
 
 	export interface Model {
+		_id?: Types.ObjectId
 		clubID?: Types.ObjectId | Club.Model
 		userID?: Types.ObjectId | User.Model
 		restaurantID?: Types.ObjectId | Restaurant.Model

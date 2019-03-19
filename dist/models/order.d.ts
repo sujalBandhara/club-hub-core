@@ -4,6 +4,7 @@ import Club from './club';
 import User from './user';
 declare namespace Order {
     interface Model {
+        _id?: Types.ObjectId;
         clubID?: Types.ObjectId | Club.Model;
         userID?: Types.ObjectId | User.Model;
         restaurantID?: Types.ObjectId | Restaurant.Model;
