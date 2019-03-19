@@ -112,6 +112,9 @@ namespace Club {
 		},
 		messages?: {
 			types?: ResourceType[]
+		},
+		services?: {
+			types?: ResourceType[]
 		}
 	}
 	
