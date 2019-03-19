@@ -18,7 +18,5 @@ var form_1 = require("./models/form");
 exports.Form = form_1.default;
 var Constants = require("./constants");
 exports.Constants = Constants;
-var SubModels = require("./models/subModels");
-exports.SubModels = SubModels;
 var shared_1 = require("./models/shared");
 exports.IShared = shared_1.default;
