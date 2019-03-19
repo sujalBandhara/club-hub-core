@@ -71,7 +71,8 @@ namespace Event {
 	}
 	
 	export interface CarReservationMeta extends ReservationBaseMeta {
-		vehicleID: Types.ObjectId
+		vehicleID: Types.ObjectId,
+		type?: Types.ObjectId
 	}
 
 	/**

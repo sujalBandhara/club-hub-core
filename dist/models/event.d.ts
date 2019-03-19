@@ -50,6 +50,7 @@ declare namespace Event {
     }
     interface CarReservationMeta extends ReservationBaseMeta {
         vehicleID: Types.ObjectId;
+        type?: Types.ObjectId;
     }
     enum TimeFieldType {
         Start = "start",
