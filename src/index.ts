@@ -16,12 +16,7 @@ import Form from './models/form'
 import * as Constants from './constants'
 
 // Sub Models.
-import {
-	GolfMeta,
-	CarMeta,
-	Location,
-	RichContent
-} from './models/subModels'
+import * as SubModels from './models/subModels'
 
 // Shared Interfaces.
 import IShared from './models/shared'
@@ -42,10 +37,7 @@ export {
 	Section,
 	
 	// Sub Models.
-	GolfMeta,
-	CarMeta,
-	Location,
-	RichContent,
+	SubModels,
 
 	// Misc
 	IShared,

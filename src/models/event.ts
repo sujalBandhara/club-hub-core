@@ -42,7 +42,7 @@ namespace Event {
 		richContent?: RichContent.Model
 		maxParticipants?: number
 		requiresRSVP?: boolean
-		recurring?: string
+		recurring?: number
 	}
 
 	// --------------------------------
