@@ -31,6 +31,15 @@ declare namespace Event {
         requiresRSVP?: boolean;
         recurring?: string;
     }
+    enum RecurringFrequency {
+        YEARLY = 0,
+        MONTHLY = 1,
+        WEEKLY = 2,
+        DAILY = 3,
+        HOURLY = 4,
+        MINUTELY = 5,
+        SECONDLY = 6
+    }
     interface Reservation {
         _id?: Types.ObjectId;
         creator: Types.ObjectId | User.Model;
