@@ -14,9 +14,9 @@ namespace CarMeta {
 	export interface Model {
 		_id?: Types.ObjectId
 		vehicles?: Vehicle[]
-		leadID?: String,
-		tenantID?: String,
-		pushToken?: String
+		leadID?: string,
+		tenantID?: string,
+		pushToken?: string
 	}
 
 	// --------------------------------

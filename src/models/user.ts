@@ -63,6 +63,7 @@ namespace User {
 	}
 	
 	export interface UserMeta {
+		_id?: Types.ObjectId
 		hide?: boolean
 		golf?: GolfMeta.Model
 		car?: CarMeta.Model

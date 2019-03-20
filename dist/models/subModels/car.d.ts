@@ -3,9 +3,9 @@ declare namespace CarMeta {
     interface Model {
         _id?: Types.ObjectId;
         vehicles?: Vehicle[];
-        leadID?: String;
-        tenantID?: String;
-        pushToken?: String;
+        leadID?: string;
+        tenantID?: string;
+        pushToken?: string;
     }
     interface Vehicle {
         _id?: Types.ObjectId;
