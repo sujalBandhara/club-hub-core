@@ -27,6 +27,7 @@ declare namespace Event {
         public?: boolean;
         type?: Types.ObjectId;
         richContent?: RichContent.Model;
+        maxGuests?: number;
         maxParticipants?: number;
         requiresRSVP?: boolean;
         recurring?: number;

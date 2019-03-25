@@ -28,6 +28,7 @@ namespace Club {
 		domain?: string
 		resources?: Resources
 		clubSettings?: ClubSettings
+		website?: Website
 	}
 
 	/**
@@ -148,6 +149,20 @@ namespace Club {
 		fontAwesomeIcon?: string,
 		featherIcon?: string,
 		path: string,
+	}
+
+	// --------------------------------
+	// Website
+	// --------------------------------
+
+	export interface Website  {
+		status: string
+		quickLinks: QuickLink[]
+	}
+
+	export interface QuickLink  {
+		title: string
+		link: string
 	}
 }
 
