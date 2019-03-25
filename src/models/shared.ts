@@ -79,7 +79,7 @@ namespace IShared {
         Thursday = 4,
         Friday = 5,
         Saturday = 6
-    }
+	}
 
     /**
      * An enum to describe a period of Time
