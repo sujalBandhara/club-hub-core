@@ -7,6 +7,9 @@ declare namespace Club {
         _id?: Types.ObjectId;
         name: string;
         type: Type;
+        tzid: string;
+        lat: string;
+        lon: string;
         locations?: Location.Model[];
         calendarCredentials?: Calendar.CalendarSyncData;
         userGroups?: User.UserGroup[];
