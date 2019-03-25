@@ -44,6 +44,7 @@ namespace User {
 		meta?: UserMeta
 		displaySettings?: DisplaySettings
 		agentAccessCode?: string
+		hostIDs?: Types.ObjectId[]
 	}
 	
 	// --------------------------------
@@ -81,6 +82,7 @@ namespace User {
 		Prospect = 'PROSPECT',
 		Active = 'ACTIVE',
 		Lapsed = 'LAPSED',
+		Guest = 'GUEST',
 	}
 
 	export interface DisplaySettings {

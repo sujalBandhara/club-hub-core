@@ -20,6 +20,7 @@ var User;
         MemberStatus["Prospect"] = "PROSPECT";
         MemberStatus["Active"] = "ACTIVE";
         MemberStatus["Lapsed"] = "LAPSED";
+        MemberStatus["Guest"] = "GUEST";
     })(MemberStatus = User.MemberStatus || (User.MemberStatus = {}));
 })(User || (User = {}));
 exports.default = User;
