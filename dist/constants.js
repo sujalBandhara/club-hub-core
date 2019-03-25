@@ -1,5 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var Clubs;
+(function (Clubs) {
+    Clubs["BROADMOOR"] = "Broadmoor";
+    Clubs["DRIVERS_CLUB"] = "Drivers Club";
+    Clubs["OTTO"] = "OTTO";
+})(Clubs = exports.Clubs || (exports.Clubs = {}));
 var Colors;
 (function (Colors) {
     Colors["BLUE"] = "#4780CF";

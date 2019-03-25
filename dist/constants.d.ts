@@ -1,3 +1,8 @@
+export declare enum Clubs {
+    BROADMOOR = "Broadmoor",
+    DRIVERS_CLUB = "Drivers Club",
+    OTTO = "OTTO"
+}
 export declare enum Colors {
     BLUE = "#4780CF",
     AZURE = "#45aaf2",
