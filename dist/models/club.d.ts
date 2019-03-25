@@ -17,6 +17,7 @@ declare namespace Club {
         domain?: string;
         resources?: Resources;
         clubSettings?: ClubSettings;
+        website?: Website;
     }
     interface UnprotectedModel {
         _id: string;
@@ -100,6 +101,14 @@ declare namespace Club {
         fontAwesomeIcon?: string;
         featherIcon?: string;
         path: string;
+    }
+    interface Website {
+        status: string;
+        quickLinks: QuickLink[];
+    }
+    interface QuickLink {
+        title: string;
+        link: string;
     }
 }
 export default Club;
