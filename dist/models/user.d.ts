@@ -32,6 +32,7 @@ declare namespace User {
         meta?: UserMeta;
         displaySettings?: DisplaySettings;
         agentAccessCode?: string;
+        hostIDs?: Types.ObjectId[];
     }
     enum DefaultUserGroups {
         AllAdmins = "All Admins",
@@ -59,7 +60,8 @@ declare namespace User {
     enum MemberStatus {
         Prospect = "PROSPECT",
         Active = "ACTIVE",
-        Lapsed = "LAPSED"
+        Lapsed = "LAPSED",
+        Guest = "GUEST"
     }
     interface DisplaySettings {
         publicProfile: boolean;
