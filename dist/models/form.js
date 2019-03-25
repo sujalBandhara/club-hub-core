@@ -24,6 +24,7 @@ var Form;
         InputType["CHECKBOX_GROUP"] = "checkboxgroup";
         InputType["BLANK"] = "blank";
         InputType["QUILL"] = "quill";
+        InputType["PHONE"] = "phone";
     })(InputType = Form.InputType || (Form.InputType = {}));
 })(Form = exports.Form || (exports.Form = {}));
 exports.default = Form;

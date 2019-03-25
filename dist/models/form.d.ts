@@ -56,7 +56,8 @@ export declare namespace Form {
         CHECKBOX = "checkbox",
         CHECKBOX_GROUP = "checkboxgroup",
         BLANK = "blank",
-        QUILL = "quill"
+        QUILL = "quill",
+        PHONE = "phone"
     }
     interface SelectItem {
         label: string;

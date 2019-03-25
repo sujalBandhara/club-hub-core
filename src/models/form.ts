@@ -83,6 +83,7 @@ export namespace Form {
 		CHECKBOX_GROUP = 'checkboxgroup',
 		BLANK = 'blank',
 		QUILL = 'quill',
+		PHONE = 'phone'
 	}
 
 	export interface SelectItem {
