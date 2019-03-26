@@ -107,6 +107,7 @@ declare namespace Club {
     }
     interface Website {
         status: string;
+        coverImageURL: string;
         quickLinks: QuickLink[];
     }
     interface QuickLink {
