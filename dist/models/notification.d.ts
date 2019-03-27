@@ -10,6 +10,12 @@ declare namespace Notification {
         method: Message.DeliveryType;
         remoteID: string;
         metadata: IShared.GeneralMap<any>;
+        status: Status;
+    }
+    enum Status {
+        Delivered = "DELIVERED",
+        Read = "READ",
+        Error = "ERROR"
     }
 }
 export default Notification;
