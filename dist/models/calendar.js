@@ -11,6 +11,7 @@ var Calendar;
         GroupType["ServiceProvider"] = "SERVICE_PROVIDER";
         GroupType["Golf"] = "GOLF";
         GroupType["Tennis"] = "TENNIS";
+        GroupType["Simulator"] = "SIMULATOR";
     })(GroupType = Calendar.GroupType || (Calendar.GroupType = {}));
     var GroupName;
     (function (GroupName) {

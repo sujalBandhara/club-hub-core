@@ -25,7 +25,8 @@ declare namespace Calendar {
         Dining = "DINING",
         ServiceProvider = "SERVICE_PROVIDER",
         Golf = "GOLF",
-        Tennis = "TENNIS"
+        Tennis = "TENNIS",
+        Simulator = "SIMULATOR"
     }
     interface Group {
         _id?: Types.ObjectId;
