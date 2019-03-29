@@ -32,10 +32,11 @@ declare namespace Club {
     }
     enum Type {
         Car = "CAR",
-        Golf = "GOLF"
+        Golf = "GOLF",
+        Tennis = "Tennis",
+        Social = "Social",
+        Yacht = "Yacht"
     }
-    const defaultMembershipTypes: string[];
-    const defaultEventTypes: string[];
     interface ClubInfo {
         data: ClubInfoSection[];
     }
@@ -84,6 +85,8 @@ declare namespace Club {
     }
     interface ClubSettings {
         displaysMemberNumber: boolean;
+        primaryColor: string;
+        secondaryColor: string;
     }
     interface ResourceType {
         _id?: Types.ObjectId;

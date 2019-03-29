@@ -54,12 +54,11 @@ namespace Club {
 
 	export enum Type {
 		Car = 'CAR',
-		Golf = 'GOLF'
+		Golf = 'GOLF',
+		Tennis = 'Tennis',
+		Social = 'Social',
+		Yacht = 'Yacht',
 	}
-
-	export const defaultMembershipTypes = ['EQUITY', 'SPOUSE', 'PARENT']
-	
-	export const defaultEventTypes = ['Member', 'Outside', 'Club']
 
 	// --------------------------------
 	// General Club Info Interfaces
@@ -124,6 +123,8 @@ namespace Club {
 	
 	export interface ClubSettings {
 		displaysMemberNumber: boolean
+		primaryColor: string
+		secondaryColor: string
 	}
 
 	export interface ResourceType {
