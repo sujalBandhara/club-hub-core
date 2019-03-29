@@ -22,7 +22,8 @@ declare namespace Calendar {
         Recreation = "RECREATION",
         Social = "SOCIAL",
         Dining = "DINING",
-        ServiceProvider = "SERVICE_PROVIDER"
+        ServiceProvider = "SERVICE_PROVIDER",
+        Golf = "GOLF"
     }
     interface Group {
         _id?: Types.ObjectId;
@@ -42,6 +43,7 @@ declare namespace Calendar {
     enum GroupName {
         Club = "Club",
         Golf = "Golf",
+        TeeTimes = "Tee Times",
         Tennis = "Tennis",
         Simulator = "Simulator",
         Dining = "Dining",
