@@ -122,9 +122,9 @@ namespace Club {
 	}
 	
 	export interface ClubSettings {
-		displaysMemberNumber: boolean
-		primaryColor: string
-		secondaryColor: string
+		displaysMemberNumber?: boolean
+		primaryColor?: string
+		secondaryColor?: string
 	}
 
 	export interface ResourceType {
