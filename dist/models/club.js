@@ -6,9 +6,10 @@ var Club;
     (function (Type) {
         Type["Car"] = "CAR";
         Type["Golf"] = "GOLF";
+        Type["Tennis"] = "Tennis";
+        Type["Social"] = "Social";
+        Type["Yacht"] = "Yacht";
     })(Type = Club.Type || (Club.Type = {}));
-    Club.defaultMembershipTypes = ['EQUITY', 'SPOUSE', 'PARENT'];
-    Club.defaultEventTypes = ['Member', 'Outside', 'Club'];
     var ClubInfoDataType;
     (function (ClubInfoDataType) {
         ClubInfoDataType["single"] = "single";
