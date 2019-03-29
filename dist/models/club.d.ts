@@ -84,9 +84,9 @@ declare namespace Club {
         };
     }
     interface ClubSettings {
-        displaysMemberNumber: boolean;
-        primaryColor: string;
-        secondaryColor: string;
+        displaysMemberNumber?: boolean;
+        primaryColor?: string;
+        secondaryColor?: string;
     }
     interface ResourceType {
         _id?: Types.ObjectId;
