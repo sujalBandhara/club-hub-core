@@ -5,14 +5,19 @@ var Calendar;
     var GroupType;
     (function (GroupType) {
         GroupType["Recreation"] = "RECREATION";
+        GroupType["Club"] = "CLUB";
         GroupType["Social"] = "SOCIAL";
         GroupType["Dining"] = "DINING";
         GroupType["ServiceProvider"] = "SERVICE_PROVIDER";
+        GroupType["Golf"] = "GOLF";
+        GroupType["Tennis"] = "TENNIS";
+        GroupType["Simulator"] = "SIMULATOR";
     })(GroupType = Calendar.GroupType || (Calendar.GroupType = {}));
     var GroupName;
     (function (GroupName) {
         GroupName["Club"] = "Club";
         GroupName["Golf"] = "Golf";
+        GroupName["TeeTimes"] = "Tee Times";
         GroupName["Tennis"] = "Tennis";
         GroupName["Simulator"] = "Simulator";
         GroupName["Dining"] = "Dining";
