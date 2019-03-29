@@ -37,10 +37,12 @@ namespace Calendar {
 
 	export enum GroupType {
 		Recreation = 'RECREATION',
+		Club = 'CLUB',
 		Social = 'SOCIAL',
 		Dining = 'DINING',
 		ServiceProvider = 'SERVICE_PROVIDER',
-		Golf = 'GOLF'
+		Golf = 'GOLF',
+		Tennis = 'TENNIS'
 	}
 
 	export interface Group {

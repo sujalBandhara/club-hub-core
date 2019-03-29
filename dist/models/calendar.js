@@ -5,10 +5,12 @@ var Calendar;
     var GroupType;
     (function (GroupType) {
         GroupType["Recreation"] = "RECREATION";
+        GroupType["Club"] = "CLUB";
         GroupType["Social"] = "SOCIAL";
         GroupType["Dining"] = "DINING";
         GroupType["ServiceProvider"] = "SERVICE_PROVIDER";
         GroupType["Golf"] = "GOLF";
+        GroupType["Tennis"] = "TENNIS";
     })(GroupType = Calendar.GroupType || (Calendar.GroupType = {}));
     var GroupName;
     (function (GroupName) {
