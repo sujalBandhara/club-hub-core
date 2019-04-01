@@ -16,7 +16,6 @@ namespace Message {
 	
 	export interface Model {
 		_id?: Types.ObjectId
-		text?: string
 		author?: Types.ObjectId | User.Model
 		clubID?: Types.ObjectId | Club.Model
 		subjectType?: SubjectType
