@@ -28,7 +28,6 @@ namespace Event {
 		rDuration?: number
 		rDate?: string[]
 		categories?: string[]
-		description?: string
 		location?: Location.Model
 		calendarID?: Types.ObjectId
 		photoURL?: string
