@@ -5,6 +5,7 @@ import Calendar from './models/calendar'
 import Device from './models/device'
 import Event from './models/event'
 import Message from './models/message'
+import Action from './models/action'
 import Notification from './models/notification'
 import Order from './models/order'
 import Post from './models/post'
@@ -29,6 +30,7 @@ export {
 	Device,
 	Event,
 	Message,
+	Action,
 	Notification,
 	Order,
 	Post,

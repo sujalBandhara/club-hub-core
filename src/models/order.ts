@@ -59,7 +59,6 @@ namespace Order {
 		quantity: number
 		notes: string
 	}
-
 }
 
 export default Order
