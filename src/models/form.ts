@@ -4,6 +4,7 @@ import * as Constants from '../constants'
 
 // Sub models.
 import * as Message from './message'
+import * as Action from './action'
 
 export namespace Form {
 
@@ -15,7 +16,7 @@ export namespace Form {
 		_id?: Types.ObjectId
 		name?: string
 		displayName?: string
-		type?: Message.default.Type
+		type?: Action.default.Type
 		clubID?: Types.ObjectId
 		inputs?: Input[]
 		responses?: Response[]
