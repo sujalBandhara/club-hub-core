@@ -28,7 +28,6 @@ declare namespace Event {
         richContent?: RichContent.Model;
         maxGuests?: number;
         maxParticipants?: number;
-        requiresRSVP?: boolean;
         recurring?: number;
     }
     enum RecurringFrequency {
