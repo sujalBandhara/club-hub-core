@@ -17,6 +17,7 @@ declare namespace Calendar {
         maxParticipants?: number | null;
         location?: Location.Model;
         reservationSettings?: ReservationSetting[];
+        live?: boolean;
     }
     enum GroupType {
         Recreation = "RECREATION",
