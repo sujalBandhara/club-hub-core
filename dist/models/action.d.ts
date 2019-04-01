@@ -3,6 +3,7 @@ declare namespace Action {
     interface Model {
         type: Type;
         clubID: Types.ObjectId;
+        adminID?: Types.ObjectId;
         userID?: Types.ObjectId;
         calendarID?: Types.ObjectId;
         eventID?: Types.ObjectId;

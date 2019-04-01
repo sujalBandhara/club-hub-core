@@ -15,6 +15,9 @@ namespace Action {
         clubID: Types.ObjectId
 
 		// The User that generated the action.
+		adminID?: Types.ObjectId
+
+		// The User that generated the action.
 		userID?: Types.ObjectId
 		
         // The calendar associated with the action.
