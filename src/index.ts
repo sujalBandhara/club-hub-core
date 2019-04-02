@@ -12,6 +12,7 @@ import Post from './models/post'
 import Restaurant from './models/restaurant'
 import Section from './models/section'
 import Form from './models/form'
+import Invitation from './models/invitation'
 
 // Constants
 import * as Constants from './constants'
@@ -37,6 +38,7 @@ export {
 	Restaurant,
 	Form,
 	Section,
+	Invitation,
 	
 	// Sub Models.
 	SubModels,
