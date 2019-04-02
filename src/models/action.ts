@@ -27,7 +27,10 @@ namespace Action {
         eventID?: Types.ObjectId
 
         // The reservation associated with the action.
-        reservationID?: Types.ObjectId
+		reservationID?: Types.ObjectId
+		
+		// The invitation associated with the action.
+		invitationID?: Types.ObjectId
 
         // The form data associated with the action.
         form?: any

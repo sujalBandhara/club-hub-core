@@ -8,6 +8,7 @@ declare namespace Action {
         calendarID?: Types.ObjectId;
         eventID?: Types.ObjectId;
         reservationID?: Types.ObjectId;
+        invitationID?: Types.ObjectId;
         form?: any;
         password?: string;
     }
