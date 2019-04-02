@@ -11,14 +11,11 @@ namespace Invitation {
 		_id?: Types.ObjectId
 		clubID?: Types.ObjectId
 		inviterID?: Types.ObjectId
-		redeemUserID?: Types.ObjectId
-		inviteeFirstName?: string
-		inviteeLastName?: string
-		inviteeEmail?: string
+		inviteeID?: Types.ObjectId
 		code?: string
 		inviteURL?: string
-		inviteePhone?: string
 		type?: Type
+		inviteStatus?: Status
 		createdAt?: Date
 		updatedAt?: Date
 	}
@@ -30,6 +27,11 @@ namespace Invitation {
 	export enum Type {
 		NewMember = 'NEW_MEMBER',
 		Guest = 'GUEST_MEMBER'
+	}
+
+	export enum Status {
+		Accepted = 'ACCEPTED',
+		Pending = 'PENDING'
 	}
 }
 
