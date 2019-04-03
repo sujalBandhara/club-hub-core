@@ -105,7 +105,7 @@ namespace Event {
 		time: Date
 		openSpots: number | null
 		totalSpots: number | null
-		existingEvent?: Event
+		existingEvent?: Model
 		status: AvailableEventStatus
 	}
 
