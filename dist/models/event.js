@@ -17,5 +17,15 @@ var Event;
         TimeFieldType["Start"] = "start";
         TimeFieldType["CreatedAt"] = "createdAt";
     })(TimeFieldType = Event.TimeFieldType || (Event.TimeFieldType = {}));
+    var AvailableEventStatus;
+    (function (AvailableEventStatus) {
+        AvailableEventStatus["Open"] = "open";
+        AvailableEventStatus["PublicBooked"] = "public-booked";
+        AvailableEventStatus["PrivateBooked"] = "private-booked";
+        AvailableEventStatus["PublicJoinable"] = "public-joinable";
+        AvailableEventStatus["PrivateJoinable"] = "private-joinable";
+        AvailableEventStatus["PublicNotJoinable"] = "public-not-joinable";
+        AvailableEventStatus["PrivateNotJoinable"] = "private-not-joinable";
+    })(AvailableEventStatus = Event.AvailableEventStatus || (Event.AvailableEventStatus = {}));
 })(Event || (Event = {}));
 exports.default = Event;

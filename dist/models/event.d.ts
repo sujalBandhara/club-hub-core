@@ -64,5 +64,28 @@ declare namespace Event {
         Start = "start",
         CreatedAt = "createdAt"
     }
+    interface AvailableEvent {
+        time: Date;
+        openSpots: number | null;
+        totalSpots: number | null;
+        existingEvent?: Event;
+        status: AvailableEventStatus;
+    }
+    enum AvailableEventStatus {
+        Open = "open",
+        PublicBooked = "public-booked",
+        PrivateBooked = "private-booked",
+        PublicJoinable = "public-joinable",
+        PrivateJoinable = "private-joinable",
+        PublicNotJoinable = "public-not-joinable",
+        PrivateNotJoinable = "private-not-joinable"
+    }
+    interface EventDataForCalendar {
+        calendarID: Types.ObjectId;
+        allTimes: Date[];
+        eventInfo: AvailableEvent[];
+        public: boolean;
+        joinable: boolean;
+    }
 }
 export default Event;

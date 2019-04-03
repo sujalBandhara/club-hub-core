@@ -96,7 +96,36 @@ namespace Event {
 		Start = 'start',
 		CreatedAt = 'createdAt'
 	}
+	
+	// --------------------------------
+	// Available Event Status
+	// --------------------------------
 
+	export interface AvailableEvent {
+		time: Date
+		openSpots: number | null
+		totalSpots: number | null
+		existingEvent?: Event
+		status: AvailableEventStatus
+	}
+
+	export enum AvailableEventStatus {
+		Open = 'open', // All Slots are Open.
+		PublicBooked = 'public-booked', // All spots are booked and public.
+		PrivateBooked = 'private-booked', // All spots are booked and private.
+		PublicJoinable = 'public-joinable', // Public booking & joinable..
+		PrivateJoinable = 'private-joinable', // Private booking & joinable.
+		PublicNotJoinable = 'public-not-joinable', // Public booking but not joinable.
+		PrivateNotJoinable = 'private-not-joinable', // Private booking & not joinable.
+	}
+
+	export interface EventDataForCalendar {
+		calendarID: Types.ObjectId,
+		allTimes: Date[],
+		eventInfo: AvailableEvent[],
+		public: boolean
+		joinable: boolean
+	}
 }
 
 export default Event
