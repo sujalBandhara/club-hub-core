@@ -30,7 +30,7 @@ namespace Calendar {
         location?: Location.Model
 		reservationSettings?: ReservationSetting[]
 		live?: boolean
-		color: string
+		color?: string
 	}
 
 	// --------------------------------
