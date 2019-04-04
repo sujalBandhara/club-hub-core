@@ -18,7 +18,7 @@ declare namespace Calendar {
         location?: Location.Model;
         reservationSettings?: ReservationSetting[];
         live?: boolean;
-        color: string;
+        color?: string;
     }
     enum GroupType {
         Recreation = "RECREATION",
