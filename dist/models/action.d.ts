@@ -13,9 +13,8 @@ declare namespace Action {
         password?: string;
     }
     enum Type {
-        Rsvp = "Event RSVP",
-        UnRsvp = "Cancel RSVP",
-        ServiceRequest = "Service Request",
+        Reservation = "Reservation",
+        CancelReservation = "Cancel Reservation",
         Welcome = "New User",
         Application = "Membership Application",
         MembershipInquiry = "Membership Inquiry",

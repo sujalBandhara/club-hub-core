@@ -8,7 +8,7 @@ var Calendar;
         GroupType["Club"] = "CLUB";
         GroupType["Social"] = "SOCIAL";
         GroupType["Dining"] = "DINING";
-        GroupType["ServiceProvider"] = "SERVICE_PROVIDER";
+        GroupType["Service"] = "SERVICE";
         GroupType["Golf"] = "GOLF";
         GroupType["Tennis"] = "TENNIS";
         GroupType["Simulator"] = "SIMULATOR";
