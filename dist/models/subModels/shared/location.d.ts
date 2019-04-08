@@ -12,6 +12,7 @@ export declare namespace Location {
         phone?: string;
         email?: string;
         website?: string;
+        primary?: boolean;
     }
 }
 export default Location;
