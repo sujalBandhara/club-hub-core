@@ -42,7 +42,7 @@ namespace Calendar {
 		Club = 'CLUB',
 		Social = 'SOCIAL',
 		Dining = 'DINING',
-		ServiceProvider = 'SERVICE_PROVIDER',
+		Service = 'SERVICE',
 		Golf = 'GOLF',
 		Tennis = 'TENNIS',
 		Simulator = 'SIMULATOR'

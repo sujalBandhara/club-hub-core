@@ -4,9 +4,8 @@ var Action;
 (function (Action) {
     var Type;
     (function (Type) {
-        Type["Rsvp"] = "Event RSVP";
-        Type["UnRsvp"] = "Cancel RSVP";
-        Type["ServiceRequest"] = "Service Request";
+        Type["Reservation"] = "Reservation";
+        Type["CancelReservation"] = "Cancel Reservation";
         Type["Welcome"] = "New User";
         Type["Application"] = "Membership Application";
         Type["MembershipInquiry"] = "Membership Inquiry";

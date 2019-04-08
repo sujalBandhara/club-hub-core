@@ -43,10 +43,9 @@ namespace Action {
 	 * Defines the message's content type.
 	 */
 	export enum Type {
-		// Events
-		Rsvp = "Event RSVP",
-		UnRsvp = "Cancel RSVP",
-		ServiceRequest = "Service Request",
+		// Reservations
+		Reservation = "Reservation",
+		CancelReservation = "Cancel Reservation",
 
 		// OnBoarding
 		Welcome = "New User",
