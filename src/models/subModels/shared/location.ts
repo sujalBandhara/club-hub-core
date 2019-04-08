@@ -19,6 +19,7 @@ export namespace Location {
 		phone?: string
 		email?: string
 		website?: string
+		primary?: boolean // Tells if this is the primary location for contact purposes for the club.   
 	}
 }
 
