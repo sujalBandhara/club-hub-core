@@ -52,13 +52,17 @@ declare namespace Event {
         rsvp?: boolean;
         paid?: boolean;
     }
-    type ReservationMeta = ReservationBaseMeta | CarReservationMeta;
+    type ReservationMeta = ReservationBaseMeta | CarReservationMeta | GolfReservationMeta;
     interface ReservationBaseMeta {
         notes: string;
     }
     interface CarReservationMeta extends ReservationBaseMeta {
         vehicleID: Types.ObjectId;
         type?: Types.ObjectId;
+    }
+    interface GolfReservationMeta extends ReservationBaseMeta {
+        golfCartCount?: number;
+        holeCount?: number;
     }
     enum TimeFieldType {
         Start = "start",

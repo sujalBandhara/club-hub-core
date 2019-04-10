@@ -73,7 +73,7 @@ namespace Event {
 		paid?: boolean
 	}
 	
-	export type ReservationMeta = ReservationBaseMeta | CarReservationMeta // This will be extended to include golf reservation meta etc...
+	export type ReservationMeta = ReservationBaseMeta | CarReservationMeta | GolfReservationMeta // This will be extended to include golf reservation meta etc...
 	
 	export interface ReservationBaseMeta {
 		notes: string
@@ -82,6 +82,11 @@ namespace Event {
 	export interface CarReservationMeta extends ReservationBaseMeta {
 		vehicleID: Types.ObjectId,
 		type?: Types.ObjectId
+	}
+
+	export interface GolfReservationMeta extends ReservationBaseMeta {
+		golfCartCount?: number
+		holeCount?: number
 	}
 
 	/**

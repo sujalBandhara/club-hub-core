@@ -6,6 +6,8 @@ declare namespace CarMeta {
         leadID?: string;
         tenantID?: string;
         pushToken?: string;
+        keySpots?: string;
+        stallNumbers?: string;
     }
     interface Vehicle {
         _id?: Types.ObjectId;
@@ -17,7 +19,6 @@ declare namespace CarMeta {
         color?: string;
         description?: string;
         vehicleNumber?: string;
-        stallNumber?: string;
         vin?: string;
     }
 }
