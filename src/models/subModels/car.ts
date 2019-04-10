@@ -14,9 +14,11 @@ namespace CarMeta {
 	export interface Model {
 		_id?: Types.ObjectId
 		vehicles?: Vehicle[]
-		leadID?: string,
-		tenantID?: string,
+		leadID?: string
+		tenantID?: string
 		pushToken?: string
+		keySpots?: string
+		stallNumbers?: string
 	}
 
 	// --------------------------------
@@ -33,7 +35,6 @@ namespace CarMeta {
 		color?: string
 		description?: string
 		vehicleNumber?: string
-		stallNumber?: string
 		vin?: string
 	}
 }
