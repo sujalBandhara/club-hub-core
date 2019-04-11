@@ -41,7 +41,8 @@ namespace Event {
 		richContent?: RichContent.Model
 		maxGuests?: number // The Max Number of Guests a member can bring to an event. 
 		maxParticipants?: number // The max number of people that can attend an event.
-		recurring?: number
+        recurring?: number
+        blockCalendar?: boolean
 	}
 
 	// --------------------------------
@@ -121,7 +122,8 @@ namespace Event {
 		PublicJoinable = 'public-joinable', // Public booking & joinable..
 		PrivateJoinable = 'private-joinable', // Private booking & joinable.
 		PublicNotJoinable = 'public-not-joinable', // Public booking but not joinable.
-		PrivateNotJoinable = 'private-not-joinable', // Private booking & not joinable.
+        PrivateNotJoinable = 'private-not-joinable', // Private booking & not joinable.
+        Blocked = 'blocked' // Block this Event from bookings
 	}
 
 	export interface EventDataForCalendar {

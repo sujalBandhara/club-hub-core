@@ -29,6 +29,7 @@ declare namespace Event {
         maxGuests?: number;
         maxParticipants?: number;
         recurring?: number;
+        blockCalendar?: boolean;
     }
     enum RecurringFrequency {
         YEARLY = 0,
@@ -82,7 +83,8 @@ declare namespace Event {
         PublicJoinable = "public-joinable",
         PrivateJoinable = "private-joinable",
         PublicNotJoinable = "public-not-joinable",
-        PrivateNotJoinable = "private-not-joinable"
+        PrivateNotJoinable = "private-not-joinable",
+        Blocked = "blocked"
     }
     interface EventDataForCalendar {
         calendarID: Types.ObjectId;
