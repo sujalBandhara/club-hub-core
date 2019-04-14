@@ -6,6 +6,7 @@ import Club from './club'
 
 // Sub Models.
 import Location from './subModels/shared/location'
+import IShared from './shared'
 
 namespace Restaurant {
 
@@ -32,7 +33,7 @@ namespace Restaurant {
 	export interface Menu {
 		_id?: Types.ObjectId
 		name?: string
-		rRule?: string
+		hours: IShared.HoursOfOperation[]
 		description?: string
 	}
 	

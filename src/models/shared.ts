@@ -97,6 +97,15 @@ namespace IShared {
     export interface LimitForPeriod {
         period: TimePeriod,
         limit: number
+	}
+	
+	/**
+	 * Defines the hours of operation for a resource.
+	 */
+	export interface HoursOfOperation {
+        dayOfWeek: DayOfWeek,
+        opens: Date,
+        closes: Date,
     }
 }
 
