@@ -1,6 +1,7 @@
 import { Types } from 'mongoose';
 import Club from './club';
 import Location from './subModels/shared/location';
+import IShared from './shared';
 declare namespace Restaurant {
     interface Model {
         _id?: Types.ObjectId;
@@ -16,7 +17,7 @@ declare namespace Restaurant {
     interface Menu {
         _id?: Types.ObjectId;
         name?: string;
-        rRule?: string;
+        hours: IShared.HoursOfOperation[];
         description?: string;
     }
     interface MenuItem {

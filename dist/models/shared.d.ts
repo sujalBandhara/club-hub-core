@@ -52,5 +52,10 @@ declare namespace IShared {
         period: TimePeriod;
         limit: number;
     }
+    interface HoursOfOperation {
+        dayOfWeek: DayOfWeek;
+        opens: Date;
+        closes: Date;
+    }
 }
 export default IShared;

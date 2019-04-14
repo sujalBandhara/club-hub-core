@@ -76,7 +76,7 @@ declare namespace Calendar {
         maxGuestsMember: number;
         publicBookings: boolean;
         joinableBookings: boolean;
-        hours: HoursOfOperation[];
+        hours: IShared.HoursOfOperation[];
         privileges: Privilege[];
     }
     interface Privilege {
@@ -84,11 +84,6 @@ declare namespace Calendar {
         bookingWindow: number;
         maxBookings: IShared.LimitForPeriod[];
         maxGuests: IShared.LimitForPeriod[];
-    }
-    interface HoursOfOperation {
-        dayOfWeek: IShared.DayOfWeek;
-        opens: Date;
-        closes: Date;
     }
 }
 export default Calendar;
