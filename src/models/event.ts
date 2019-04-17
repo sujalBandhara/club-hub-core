@@ -70,7 +70,7 @@ namespace Event {
 		_id?: Types.ObjectId
 		userID: Types.ObjectId | User.Model | null
 		name: string
-		rsvp?: boolean
+		checkedIn?: boolean
 		paid?: boolean
 	}
 	

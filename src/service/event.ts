@@ -96,7 +96,7 @@ export default class EventService {
         participants: [{
           userID: user._id!,
           name: `${user.firstName} ${user.lastName}`,
-          rsvp: true
+          checkedIn: true
         }]
       }
     }
