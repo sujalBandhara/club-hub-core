@@ -163,6 +163,7 @@ namespace Club {
 		status: string
 		coverImageURL: string
 		quickLinks: QuickLink[]
+		placeholderImageURL: string
 	}
 
 	export interface QuickLink  {
