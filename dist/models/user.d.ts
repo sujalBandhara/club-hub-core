@@ -1,10 +1,11 @@
 import { Types } from 'mongoose';
 import CarMeta from './subModels/car';
 import GolfMeta from './subModels/golf';
+import Location from './subModels/shared/location';
 declare namespace User {
     interface Model {
         _id?: Types.ObjectId;
-        address?: string;
+        addresses?: Location.Model[];
         admin?: boolean;
         birthday?: Date | null;
         city?: string;

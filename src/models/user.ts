@@ -4,6 +4,7 @@ import { Types } from 'mongoose'
 // Sub Documents.
 import CarMeta from './subModels/car'
 import GolfMeta from './subModels/golf'
+import Location from './subModels/shared/location'
 
 // Constants
 import * as Constants from '../constants'
@@ -16,7 +17,7 @@ namespace User {
 
 	export interface Model {
 		_id?: Types.ObjectId
-		address?: string
+		addresses?: Location.Model[]
 		admin?: boolean
 		birthday?: Date | null
 		city?: string
