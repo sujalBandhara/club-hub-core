@@ -6,6 +6,7 @@ declare namespace Club {
     interface Model {
         _id?: Types.ObjectId;
         name: string;
+        shortName: string;
         type: Type;
         tzid: string;
         lat: string;
