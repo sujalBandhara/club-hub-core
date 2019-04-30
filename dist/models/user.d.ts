@@ -30,6 +30,7 @@ declare namespace User {
         displaySettings?: DisplaySettings;
         agentAccessCode?: string;
         hostIDs?: Types.ObjectId[];
+        primaryAccountHolder?: boolean;
     }
     enum DefaultUserGroups {
         AllAdmins = "All Admins",
