@@ -41,7 +41,8 @@ namespace User {
 		meta?: UserMeta
 		displaySettings?: DisplaySettings
 		agentAccessCode?: string
-		hostIDs?: Types.ObjectId[]
+        hostIDs?: Types.ObjectId[]
+        primaryAccountHolder?: boolean
 	}
 	
 	// --------------------------------
