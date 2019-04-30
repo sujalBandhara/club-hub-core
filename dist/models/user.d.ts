@@ -1,4 +1,5 @@
 import { Types } from 'mongoose';
+import Note from './note';
 import CarMeta from './subModels/car';
 import GolfMeta from './subModels/golf';
 import Location from './subModels/shared/location';
@@ -17,7 +18,7 @@ declare namespace User {
         remoteID?: string;
         email?: string;
         jobTitle?: string;
-        notes?: string;
+        notes?: Note.Model[];
         company?: string;
         website?: string;
         joined?: Date;

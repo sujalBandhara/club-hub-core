@@ -1,6 +1,9 @@
 // External Dependencies
 import { Types } from 'mongoose'
 
+// Models
+import Note from './note'
+
 // Sub Documents.
 import CarMeta from './subModels/car'
 import GolfMeta from './subModels/golf'
@@ -29,7 +32,7 @@ namespace User {
 		remoteID?: string
 		email?: string
 		jobTitle?: string
-		notes?: string
+		notes?: Note.Model[]
 		company?: string
 		website?: string
 		joined?: Date
