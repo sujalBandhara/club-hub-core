@@ -22,6 +22,7 @@ import * as SubModels from './models/subModels'
 
 // Shared Interfaces.
 import IShared from './models/shared'
+import Response from './models/response'
 
 export {
 	// First Class Models.
@@ -42,6 +43,7 @@ export {
 	
 	// Sub Models.
 	SubModels,
+	Response,
 
 	// Misc
 	IShared,
