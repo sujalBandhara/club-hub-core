@@ -6,7 +6,7 @@ declare namespace Calendar {
     interface BookableResponse {
         calendarID: string;
         allTimes: string[];
-        eventInfo: AvailableEvent[];
+        eventInfo: Event.AvailableEvent[];
     }
     interface Model {
         _id?: Types.ObjectId;
@@ -53,17 +53,6 @@ declare namespace Calendar {
         Simulator = "Simulator",
         Dining = "Dining",
         Service = "Service"
-    }
-    interface AvailableEvent {
-        time: string;
-        openSpots: number | null;
-        totalSpots: number | null;
-        existingEvent?: {
-            _id: string;
-            start: string;
-            end: string;
-            reservations?: Event.Reservation[];
-        };
     }
     interface ReservationSetting {
         _id?: Types.ObjectId;
