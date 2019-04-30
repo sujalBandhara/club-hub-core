@@ -13,7 +13,7 @@ namespace Calendar {
 	export interface BookableResponse {
 		calendarID: string
 		allTimes: string[]
-		eventInfo: AvailableEvent[]
+		eventInfo: Event.AvailableEvent[]
 	}
 
 	// --------------------------------
@@ -74,18 +74,6 @@ namespace Calendar {
 		Dining = 'Dining',
 		Service = 'Service',
 	}
-
-	export interface AvailableEvent {
-		time: string
-		openSpots: number | null
-		totalSpots: number | null
-		existingEvent?: {
-				_id: string
-				start: string
-				end: string
-				reservations?: Event.Reservation[]
-		}
-    }
     
     export interface ReservationSetting {
         _id?: Types.ObjectId
