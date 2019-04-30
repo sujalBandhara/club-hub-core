@@ -17,17 +17,22 @@ namespace User {
 
 	export interface Model {
 		_id?: Types.ObjectId
+		title: string
+		suffix: string
+		firstName?: string
+		lastName?: string
+		middleName?: string
 		addresses?: Location.Model[]
 		admin?: boolean
 		birthday?: Date | null
 		clubID?: Types.ObjectId
 		remoteID?: string
 		email?: string
-		firstName?: string
 		jobTitle?: string
+		notes?: string
+		company?: string
+		website?: string
 		joined?: Date
-		lastName?: string
-		middleName?: string
 		password?: string
 		salt?: string
 		phone?: string

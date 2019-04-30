@@ -17,7 +17,7 @@ var Calendar;
     (function (GroupName) {
         GroupName["Club"] = "Club";
         GroupName["Golf"] = "Golf";
-        GroupName["TeeTimes"] = "Tee Times";
+        GroupName["TeeTimes"] = "Tee Time";
         GroupName["Tennis"] = "Tennis";
         GroupName["Simulator"] = "Simulator";
         GroupName["Dining"] = "Dining";
