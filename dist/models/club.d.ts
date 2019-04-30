@@ -110,6 +110,7 @@ declare namespace Club {
         path: string;
     }
     interface Website {
+        _id?: Types.ObjectId;
         status: string;
         coverImageURL: string;
         quickLinks: QuickLink[];

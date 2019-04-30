@@ -161,6 +161,7 @@ namespace Club {
 	// --------------------------------
 
 	export interface Website  {
+		_id?: Types.ObjectId
 		status: string
 		coverImageURL: string
 		quickLinks: QuickLink[]
