@@ -15,4 +15,5 @@ import Invitation from './models/invitation';
 import * as Constants from './constants';
 import * as SubModels from './models/subModels';
 import IShared from './models/shared';
-export { User, Club, Calendar, Device, Event, Message, Action, Notification, Order, Post, Restaurant, Form, Section, Invitation, SubModels, IShared, Constants };
+import Response from './models/response';
+export { User, Club, Calendar, Device, Event, Message, Action, Notification, Order, Post, Restaurant, Form, Section, Invitation, SubModels, Response, IShared, Constants };
