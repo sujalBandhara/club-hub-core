@@ -13,6 +13,7 @@ import Restaurant from './models/restaurant'
 import Section from './models/section'
 import Form from './models/form'
 import Invitation from './models/invitation'
+import Relation from './models/relation'
 
 // Constants
 import * as Constants from './constants'
@@ -39,7 +40,8 @@ export {
 	Restaurant,
 	Form,
 	Section,
-	Invitation,
+    Invitation,
+    Relation,
 	
 	// Sub Models.
 	SubModels,
