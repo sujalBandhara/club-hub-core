@@ -6,7 +6,6 @@ declare namespace Club {
     interface Model {
         _id?: Types.ObjectId;
         name: string;
-        shortName: string;
         type: Type;
         tzid: string;
         lat: string;
@@ -22,6 +21,7 @@ declare namespace Club {
         resources?: Resources;
         clubSettings?: ClubSettings;
         website?: Website;
+        shortName?: string;
     }
     interface UnprotectedModel {
         _id: string;

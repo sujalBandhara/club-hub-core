@@ -17,7 +17,6 @@ namespace Club {
 	export interface Model {
 		_id?: Types.ObjectId
 		name: string
-		shortName: string
 		type: Type
 		tzid: string
 		lat: string
@@ -33,6 +32,7 @@ namespace Club {
 		resources?: Resources
 		clubSettings?: ClubSettings
 		website?: Website
+        shortName?: string
 	}
 
 	/**
