@@ -12,6 +12,8 @@ declare namespace IShared {
         start?: number | Date | string;
         end?: number | Date | string;
         timeField?: string;
+        sortField?: string;
+        sortValue?: string | number;
         [key: string]: any;
     }
     interface MongooseError {
