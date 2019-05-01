@@ -69,7 +69,7 @@ namespace Calendar {
 	export enum GroupName {
 		Club = 'Club',
 		Golf = 'Golf',
-		TeeTimes = 'Tee Times',
+		TeeTimes = 'Tee Time',
 		Tennis = 'Tennis',
 		Simulator = 'Simulator',
 		Dining = 'Dining',

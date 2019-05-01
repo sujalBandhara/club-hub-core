@@ -1,4 +1,5 @@
 import { Types } from 'mongoose';
+import Note from './note';
 import CarMeta from './subModels/car';
 import GolfMeta from './subModels/golf';
 import Location from './subModels/shared/location';
@@ -6,17 +7,22 @@ import Image from './subModels/shared/image';
 declare namespace User {
     interface Model {
         _id?: Types.ObjectId;
+        title: string;
+        suffix: string;
+        firstName?: string;
+        lastName?: string;
+        middleName?: string;
         addresses?: Location.Model[];
         admin?: boolean;
         birthday?: Date | null;
         clubID?: Types.ObjectId;
         remoteID?: string;
         email?: string;
-        firstName?: string;
         jobTitle?: string;
+        notes?: Note.Model[];
+        company?: string;
+        website?: string;
         joined?: Date;
-        lastName?: string;
-        middleName?: string;
         password?: string;
         salt?: string;
         phone?: string;
