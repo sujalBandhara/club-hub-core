@@ -21,8 +21,8 @@ namespace User {
 
 	export interface Model {
 		_id?: Types.ObjectId
-		title: string
-		suffix: string
+		title?: string
+		suffix?: string
 		firstName?: string
 		lastName?: string
 		middleName?: string

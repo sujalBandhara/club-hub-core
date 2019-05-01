@@ -30,7 +30,6 @@ declare namespace Event {
         maxGuests?: number;
         maxParticipants?: number;
         recurring?: number;
-        blockCalendar?: boolean;
         displayInFeed?: boolean;
     }
     enum RecurringFrequency {
