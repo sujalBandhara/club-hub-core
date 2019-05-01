@@ -42,7 +42,8 @@ namespace Event {
 		maxGuests?: number // The Max Number of Guests a member can bring to an event. 
 		maxParticipants?: number // The max number of people that can attend an event.
         recurring?: number
-        blockCalendar?: boolean
+		blockCalendar?: boolean
+		displayInFeed?: boolean
 	}
 
 	// --------------------------------
