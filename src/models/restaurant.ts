@@ -6,6 +6,7 @@ import Club from './club'
 
 // Sub Models.
 import Location from './subModels/shared/location'
+import Image from './subModels/shared/image'
 import IShared from './shared'
 
 namespace Restaurant {
@@ -18,7 +19,7 @@ namespace Restaurant {
 		_id?: Types.ObjectId
 		name?: string
 		clubID?: Types.ObjectId | Club.Model
-		imageUrl?: string
+		image?: Image.Model
 		description?: string
 		location?: Location.Model
 		menus?: Menu[]
