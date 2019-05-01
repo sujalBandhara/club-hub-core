@@ -10,6 +10,7 @@ import RichContent from './subModels/shared/richContent'
 
 // Shared Interfaces.
 import IShared from './shared'
+import Image from './subModels/shared/image'
 
 namespace Event {
 
@@ -30,7 +31,7 @@ namespace Event {
 		categories?: string[]
 		location?: Location.Model
 		calendarID?: Types.ObjectId
-		photoURL?: string
+		image?: Image.Model
 		clubID?: Types.ObjectId
 		groupID?: Types.ObjectId
 		price?: string
@@ -41,8 +42,8 @@ namespace Event {
 		richContent?: RichContent.Model
 		maxGuests?: number // The Max Number of Guests a member can bring to an event. 
 		maxParticipants?: number // The max number of people that can attend an event.
-        recurring?: number
-        blockCalendar?: boolean
+		recurring?: number
+		blockCalendar?: boolean
 	}
 
 	// --------------------------------
@@ -58,14 +59,14 @@ namespace Event {
 		MINUTELY = 5,
 		SECONDLY = 6
 	}
-	
+
 	export interface Reservation {
 		_id?: Types.ObjectId
 		creator: Types.ObjectId | User.Model
 		participants: Participant[]
 		meta?: ReservationMeta
 	}
-	
+
 	export interface Participant {
 		_id?: Types.ObjectId
 		userID: Types.ObjectId | User.Model | null
@@ -73,13 +74,13 @@ namespace Event {
 		checkedIn?: boolean
 		paid?: boolean
 	}
-	
+
 	export type ReservationMeta = ReservationBaseMeta | CarReservationMeta | GolfReservationMeta // This will be extended to include golf reservation meta etc...
-	
+
 	export interface ReservationBaseMeta {
 		notes: string
 	}
-	
+
 	export interface CarReservationMeta extends ReservationBaseMeta {
 		vehicleID: Types.ObjectId,
 		type?: Types.ObjectId
@@ -102,7 +103,7 @@ namespace Event {
 		Start = 'start',
 		CreatedAt = 'createdAt'
 	}
-	
+
 	// --------------------------------
 	// Available Event Status
 	// --------------------------------
@@ -122,8 +123,8 @@ namespace Event {
 		PublicJoinable = 'public-joinable', // Public booking & joinable..
 		PrivateJoinable = 'private-joinable', // Private booking & joinable.
 		PublicNotJoinable = 'public-not-joinable', // Public booking but not joinable.
-        PrivateNotJoinable = 'private-not-joinable', // Private booking & not joinable.
-        Blocked = 'blocked' // Block this Event from bookings
+		PrivateNotJoinable = 'private-not-joinable', // Private booking & not joinable.
+		Blocked = 'blocked' // Block this Event from bookings
 	}
 
 	export interface EventDataForCalendar {
