@@ -9,11 +9,13 @@ export namespace Image {
 
     export interface Model {
         // Max Width: 1200px
-        large?: string
-        // Max Width: 760px
-        medium?: string
+        lg?: string
+        // Max Width: 600px
+        md?: string
         // Max Width: 300px
-        small?: string
+        sm?: string
+        // Max Width: 100px
+        xs?: string
         // Max Width: 10px
         micro?: string
     }
