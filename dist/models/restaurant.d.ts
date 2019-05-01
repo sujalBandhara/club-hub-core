@@ -1,13 +1,14 @@
 import { Types } from 'mongoose';
 import Club from './club';
 import Location from './subModels/shared/location';
+import Image from './subModels/shared/image';
 import IShared from './shared';
 declare namespace Restaurant {
     interface Model {
         _id?: Types.ObjectId;
         name?: string;
         clubID?: Types.ObjectId | Club.Model;
-        imageUrl?: string;
+        image?: Image.Model;
         description?: string;
         location?: Location.Model;
         menus?: Menu[];
