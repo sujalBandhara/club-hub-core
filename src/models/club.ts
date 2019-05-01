@@ -2,14 +2,15 @@
 import { Types } from 'mongoose'
 
 // Models
-import User from  './user'
+import User from './user'
 import Calendar from './calendar'
 
 // Sub Documents.
 import Location from './subModels/shared/location'
+import Image from './subModels/shared/image'
 
 namespace Club {
-	
+
 	// --------------------------------
 	// Main Interface
 	// ---------------------------------
@@ -27,12 +28,12 @@ namespace Club {
 		calendarGroups?: Calendar.Group[]
 		clubInfo?: ClubInfo
 		navigationConfig?: Navigation
-		photoURL?: string
+		image?: Image.Model
 		domain?: string
 		resources?: Resources
 		clubSettings?: ClubSettings
 		website?: Website
-        shortName?: string
+		shortName?: string
 	}
 
 	/**
@@ -46,7 +47,7 @@ namespace Club {
 		city: string
 		state: string
 		zip: string
-		photoURL: string
+		image?: Image.Model
 		domain: string
 	}
 
@@ -73,29 +74,29 @@ namespace Club {
 		title: string
 		sections: ClubInfoEntity[]
 	}
-	
+
 	export interface ClubInfoEntity {
 		title: string
 		values: ClubInfoData[]
 	}
-	
+
 	export interface ClubInfoData {
 		type: ClubInfoDataType
 		title: string
 		action?: ClubInfoDataAction
 		value: string | TableValue[]
 	}
-	
+
 	export interface TableValue {
 		title: string
 		value: string
 	}
-	
+
 	export enum ClubInfoDataType {
 		single = 'single',
 		table = 'table'
 	}
-	
+
 	export enum ClubInfoDataAction {
 		call = 'call',
 		email = 'email'
@@ -122,7 +123,7 @@ namespace Club {
 			types?: ResourceType[]
 		}
 	}
-	
+
 	export interface ClubSettings {
 		displaysMemberNumber?: boolean
 		primaryColor?: string
@@ -138,18 +139,18 @@ namespace Club {
 	// --------------------------------
 	// Navigation
 	// --------------------------------
-	
+
 	export interface Navigation {
 		admin: NavigationSection[],
 		customer: NavigationSection[],
 		mobile: NavigationSection[],
 	}
-	
+
 	export interface NavigationSection {
 		title: string,
 		items: NavigationItem[]
 	}
-	
+
 	export interface NavigationItem {
 		title: string,
 		fontAwesomeIcon?: string,
@@ -161,15 +162,15 @@ namespace Club {
 	// Website
 	// --------------------------------
 
-	export interface Website  {
+	export interface Website {
 		_id?: Types.ObjectId
 		status: string
-		coverImageURL: string
+		coverImage: Image.Model
 		quickLinks: QuickLink[]
-		placeholderImageURL?: string
+		placeholderImage?: Image.Model
 	}
 
-	export interface QuickLink  {
+	export interface QuickLink {
 		title: string
 		link: string
 	}

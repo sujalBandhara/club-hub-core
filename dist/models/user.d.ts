@@ -3,6 +3,7 @@ import Note from './note';
 import CarMeta from './subModels/car';
 import GolfMeta from './subModels/golf';
 import Location from './subModels/shared/location';
+import Image from './subModels/shared/image';
 declare namespace User {
     interface Model {
         _id?: Types.ObjectId;
@@ -25,7 +26,7 @@ declare namespace User {
         password?: string;
         salt?: string;
         phone?: string;
-        photoURL?: string;
+        image?: Image.Model;
         username?: string;
         groups?: string[];
         memberNumber?: string;

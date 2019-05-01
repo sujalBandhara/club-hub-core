@@ -7,6 +7,7 @@ import IShared from './shared'
 
 // Required local Namespace.
 import Event from './event'
+import Image from './subModels/shared/image'
 
 namespace Calendar {
 
@@ -27,7 +28,7 @@ namespace Calendar {
 		clubID?: Types.ObjectId,
 		groupID?: Types.ObjectId,
 		maxParticipants?: number | null
-        location?: Location.Model
+		location?: Location.Model
 		reservationSettings?: ReservationSetting[]
 		live?: boolean
 		color?: string
@@ -52,11 +53,11 @@ namespace Calendar {
 		_id?: Types.ObjectId
 		name: string
 		rRule?: string
-        type?: GroupType
+		type?: GroupType
 		reservationSettings?: ReservationSetting[],
-		photoURL: string
+		image: Image.Model
 	}
-	
+
 	export interface CalendarSyncData {
 		google?: {
 			accessToken: string
@@ -74,28 +75,28 @@ namespace Calendar {
 		Dining = 'Dining',
 		Service = 'Service',
 	}
-    
-    export interface ReservationSetting {
-        _id?: Types.ObjectId
-        name: string
-        isDefault: boolean
-        dateRangeStart: Date
-        dateRangeEnd: Date
-        bookingDuration: number
-        maxGuestsAdmin: number
-        maxGuestsMember: number
-        publicBookings: boolean
-        joinableBookings: boolean
-        hours: IShared.HoursOfOperation[]
-        privileges: Privilege[]
-    }
 
-    export interface Privilege {
-        memberType: Types.ObjectId,
-        bookingWindow: number,
-        maxBookings: IShared.LimitForPeriod[]
-        maxGuests: IShared.LimitForPeriod[]
-    }
+	export interface ReservationSetting {
+		_id?: Types.ObjectId
+		name: string
+		isDefault: boolean
+		dateRangeStart: Date
+		dateRangeEnd: Date
+		bookingDuration: number
+		maxGuestsAdmin: number
+		maxGuestsMember: number
+		publicBookings: boolean
+		joinableBookings: boolean
+		hours: IShared.HoursOfOperation[]
+		privileges: Privilege[]
+	}
+
+	export interface Privilege {
+		memberType: Types.ObjectId,
+		bookingWindow: number,
+		maxBookings: IShared.LimitForPeriod[]
+		maxGuests: IShared.LimitForPeriod[]
+	}
 }
 
 export default Calendar

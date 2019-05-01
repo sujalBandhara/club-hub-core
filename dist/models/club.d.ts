@@ -2,6 +2,7 @@ import { Types } from 'mongoose';
 import User from './user';
 import Calendar from './calendar';
 import Location from './subModels/shared/location';
+import Image from './subModels/shared/image';
 declare namespace Club {
     interface Model {
         _id?: Types.ObjectId;
@@ -16,7 +17,7 @@ declare namespace Club {
         calendarGroups?: Calendar.Group[];
         clubInfo?: ClubInfo;
         navigationConfig?: Navigation;
-        photoURL?: string;
+        image?: Image.Model;
         domain?: string;
         resources?: Resources;
         clubSettings?: ClubSettings;
@@ -29,7 +30,7 @@ declare namespace Club {
         city: string;
         state: string;
         zip: string;
-        photoURL: string;
+        image?: Image.Model;
         domain: string;
     }
     enum Type {
@@ -113,9 +114,9 @@ declare namespace Club {
     interface Website {
         _id?: Types.ObjectId;
         status: string;
-        coverImageURL: string;
+        coverImage: Image.Model;
         quickLinks: QuickLink[];
-        placeholderImageURL?: string;
+        placeholderImage?: Image.Model;
     }
     interface QuickLink {
         title: string;

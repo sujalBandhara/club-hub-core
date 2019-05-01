@@ -11,6 +11,7 @@ import Location from './subModels/shared/location'
 
 // Constants
 import * as Constants from '../constants'
+import Image from './subModels/shared/image'
 
 namespace User {
 
@@ -39,7 +40,7 @@ namespace User {
 		password?: string
 		salt?: string
 		phone?: string
-		photoURL?: string
+		image?: Image.Model
 		username?: string
 		groups?: string[]
 		memberNumber?: string
@@ -49,10 +50,10 @@ namespace User {
 		meta?: UserMeta
 		displaySettings?: DisplaySettings
 		agentAccessCode?: string
-        hostIDs?: Types.ObjectId[]
-        primaryAccountHolder?: boolean
+		hostIDs?: Types.ObjectId[]
+		primaryAccountHolder?: boolean
 	}
-	
+
 	// --------------------------------
 	// Supporting Interfaces and Types
 	// --------------------------------
@@ -68,14 +69,14 @@ namespace User {
 		description?: string
 		users?: Types.ObjectId[] | Model[]
 	}
-	
+
 	export interface UserMeta {
 		_id?: Types.ObjectId
 		hide?: boolean
 		golf?: GolfMeta.Model
 		car?: CarMeta.Model
 	}
-	
+
 	export enum MaritalStatus {
 		Single = 'SINGLE',
 		InRelationship = 'IN_RELATIONSHIP',
@@ -83,7 +84,7 @@ namespace User {
 		Divorced = 'DIVORCED',
 		Widowed = 'WIDOWED',
 	}
-	
+
 	export enum MemberStatus {
 		Prospect = 'PROSPECT',
 		Active = 'ACTIVE',

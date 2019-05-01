@@ -2,6 +2,7 @@ import { Types } from 'mongoose';
 import Location from './subModels/shared/location';
 import IShared from './shared';
 import Event from './event';
+import Image from './subModels/shared/image';
 declare namespace Calendar {
     interface BookableResponse {
         calendarID: string;
@@ -36,7 +37,7 @@ declare namespace Calendar {
         rRule?: string;
         type?: GroupType;
         reservationSettings?: ReservationSetting[];
-        photoURL: string;
+        image: Image.Model;
     }
     interface CalendarSyncData {
         google?: {

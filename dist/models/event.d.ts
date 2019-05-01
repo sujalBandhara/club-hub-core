@@ -3,6 +3,7 @@ import User from './user';
 import Location from './subModels/shared/location';
 import RichContent from './subModels/shared/richContent';
 import IShared from './shared';
+import Image from './subModels/shared/image';
 declare namespace Event {
     interface Model {
         _id?: Types.ObjectId;
@@ -17,7 +18,7 @@ declare namespace Event {
         categories?: string[];
         location?: Location.Model;
         calendarID?: Types.ObjectId;
-        photoURL?: string;
+        image?: Image.Model;
         clubID?: Types.ObjectId;
         groupID?: Types.ObjectId;
         price?: string;
