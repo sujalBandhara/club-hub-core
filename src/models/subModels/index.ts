@@ -2,11 +2,13 @@
 import GolfMeta from './golf'
 import CarMeta from './car'
 import Location from './shared/location'
+import Image from './shared/image'
 import RichContent from './shared/richContent'
 
 export {
 	GolfMeta,
 	CarMeta,
 	Location,
-	RichContent
+	RichContent,
+	Image,
 }
