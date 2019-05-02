@@ -9,10 +9,10 @@ declare namespace Relation {
         secondType: RelationType;
     }
     enum RelationType {
-        Parent = "parent",
-        Child = "child",
-        Spouse = "spouse",
-        Sibling = "sibling"
+        Parent = "PARENT",
+        Child = "CHILD",
+        Spouse = "SPOUSE",
+        Sibling = "SIBLING"
     }
 }
 export default Relation;
