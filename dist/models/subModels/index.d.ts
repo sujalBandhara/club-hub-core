@@ -3,4 +3,5 @@ import CarMeta from './car';
 import Location from './shared/location';
 import Image from './shared/image';
 import RichContent from './shared/richContent';
-export { GolfMeta, CarMeta, Location, RichContent, Image, };
+import PhoneNumber from './shared/phoneNumber';
+export { GolfMeta, CarMeta, Location, RichContent, Image, PhoneNumber, };

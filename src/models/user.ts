@@ -8,10 +8,11 @@ import Note from './note'
 import CarMeta from './subModels/car'
 import GolfMeta from './subModels/golf'
 import Location from './subModels/shared/location'
+import Image from './subModels/shared/image'
+import PhoneNumber from './subModels/shared/phoneNumber'
 
 // Constants
 import * as Constants from '../constants'
-import Image from './subModels/shared/image'
 
 namespace User {
 
@@ -39,7 +40,7 @@ namespace User {
 		joined?: Date
 		password?: string
 		salt?: string
-		phoneNumbers?: string[]
+		phoneNumbers?: PhoneNumber.Model[]
 		image?: Image.Model
 		username?: string
 		groups?: string[]
@@ -60,7 +61,7 @@ namespace User {
 
 	export interface MemberNumber {
 		number: string
-		suffix: string
+		suffix?: string
 	}
 
 	export enum DefaultUserGroups {

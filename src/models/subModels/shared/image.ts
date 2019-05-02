@@ -1,6 +1,3 @@
-// External Dependencies
-import { Types } from 'mongoose'
-
 export namespace Image {
 
     // --------------------------------
@@ -22,4 +19,3 @@ export namespace Image {
 }
 
 export default Image
-

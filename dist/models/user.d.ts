@@ -4,6 +4,7 @@ import CarMeta from './subModels/car';
 import GolfMeta from './subModels/golf';
 import Location from './subModels/shared/location';
 import Image from './subModels/shared/image';
+import PhoneNumber from './subModels/shared/phoneNumber';
 declare namespace User {
     interface Model {
         _id?: Types.ObjectId;
@@ -25,7 +26,7 @@ declare namespace User {
         joined?: Date;
         password?: string;
         salt?: string;
-        phoneNumbers?: string[];
+        phoneNumbers?: PhoneNumber.Model[];
         image?: Image.Model;
         username?: string;
         groups?: string[];
@@ -41,7 +42,7 @@ declare namespace User {
     }
     interface MemberNumber {
         number: string;
-        suffix: string;
+        suffix?: string;
     }
     enum DefaultUserGroups {
         AllAdmins = "All Admins",
