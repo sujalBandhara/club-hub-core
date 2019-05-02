@@ -94,6 +94,7 @@ var EventService = (function () {
                 postBody = {
                     reservation: {
                         creator: user._id,
+                        owner: user._id,
                         participants: [{
                                 userID: user._id,
                                 name: user.firstName + " " + user.lastName,

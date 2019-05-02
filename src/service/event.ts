@@ -92,7 +92,8 @@ export default class EventService {
   public postRSVP = async (eventID: string, user: User.Model): Promise<void> => {
     const postBody: Request.RSVPPost = {
       reservation: {
-        creator: user._id!,
+		creator: user._id!,
+		owner: user._id!,
         participants: [{
           userID: user._id!,
           name: `${user.firstName} ${user.lastName}`,
