@@ -25,7 +25,7 @@ declare namespace User {
         joined?: Date;
         password?: string;
         salt?: string;
-        phone?: string;
+        phoneNumbers?: string[];
         image?: Image.Model;
         username?: string;
         groups?: string[];
