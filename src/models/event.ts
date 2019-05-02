@@ -63,7 +63,8 @@ namespace Event {
 
 	export interface Reservation {
 		_id?: Types.ObjectId
-		creator: Types.ObjectId | User.Model
+		creator: Types.ObjectId | User.Model // The creator of the reservation (admin or member).
+		owner: Types.ObjectId | User.Model // The owner of the reservation (first participant in participant array).
 		participants: Participant[]
 		meta?: ReservationMeta
 	}

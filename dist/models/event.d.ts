@@ -45,6 +45,7 @@ declare namespace Event {
     interface Reservation {
         _id?: Types.ObjectId;
         creator: Types.ObjectId | User.Model;
+        owner: Types.ObjectId | User.Model;
         participants: Participant[];
         meta?: ReservationMeta;
     }
