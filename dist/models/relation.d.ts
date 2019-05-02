@@ -3,13 +3,16 @@ declare namespace Relation {
     interface Model {
         _id?: Types.ObjectId;
         clubID: Types.ObjectId;
-        primaryID: Types.ObjectId;
-        relationID: Types.ObjectId;
-        type: RelationType;
+        firstID: Types.ObjectId;
+        firstType: RelationType;
+        secondID: Types.ObjectId;
+        secondType: RelationType;
     }
     enum RelationType {
-        Child = "child",
-        Spouse = "spouse"
+        Parent = "PARENT",
+        Child = "CHILD",
+        Spouse = "SPOUSE",
+        Sibling = "SIBLING"
     }
 }
 export default Relation;
