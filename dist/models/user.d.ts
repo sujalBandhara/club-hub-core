@@ -29,7 +29,7 @@ declare namespace User {
         image?: Image.Model;
         username?: string;
         groups?: string[];
-        memberNumber?: string;
+        memberNumber?: MemberNumber;
         membershipType?: Types.ObjectId;
         maritalStatus?: MaritalStatus;
         memberStatus?: MemberStatus;
@@ -38,6 +38,10 @@ declare namespace User {
         agentAccessCode?: string;
         hostIDs?: Types.ObjectId[];
         primaryAccountHolder?: boolean;
+    }
+    interface MemberNumber {
+        number: string;
+        suffix: string;
     }
     enum DefaultUserGroups {
         AllAdmins = "All Admins",
