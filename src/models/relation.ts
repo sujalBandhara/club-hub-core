@@ -9,16 +9,19 @@ namespace Relation {
 	export interface Model {
         _id?: Types.ObjectId
         clubID: Types.ObjectId
-        primaryID: Types.ObjectId
-        relationID: Types.ObjectId
-        type: RelationType
+        firstID: Types.ObjectId
+        firstType: RelationType
+        secondID: Types.ObjectId
+        secondType: RelationType
     }
     
     // The RelationType represents the relationship
     // of the primary to the relation
     export enum RelationType {
+        Parent = 'parent',
         Child = 'child',
         Spouse = 'spouse',
+        Sibling = 'sibling',
     }
 }
 
