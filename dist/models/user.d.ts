@@ -36,7 +36,6 @@ declare namespace User {
         memberStatus?: MemberStatus;
         meta?: UserMeta;
         displaySettings?: DisplaySettings;
-        agentAccessCode?: string;
         hostIDs?: Types.ObjectId[];
         primaryAccountHolder?: boolean;
     }

@@ -17,8 +17,8 @@ namespace CarMeta {
 		leadID?: string
 		tenantID?: string
 		pushToken?: string
-		keySpots?: string
 		stallNumbers?: string
+		agentAccessCode?: string
 	}
 
 	// --------------------------------
@@ -36,6 +36,7 @@ namespace CarMeta {
 		description?: string
 		vehicleNumber?: string
 		vin?: string
+		keySpots?: string
 	}
 }
 
