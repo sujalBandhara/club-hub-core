@@ -23,8 +23,8 @@ namespace Restaurant {
 		description?: string
 		location?: Location.Model
 		menus?: Menu[]
-		menuItems?: MenuItem[]
-		displayGroups?: string[]
+        menuItems?: MenuItem[]
+        menuSections?: MenuSection[]
 	}
 
 	// --------------------------------
@@ -40,14 +40,20 @@ namespace Restaurant {
 	
 	export interface MenuItem {
 		_id?: Types.ObjectId
-		menuIDs?: Types.ObjectId[]
 		name?: string
 		price?: number
 		available?: boolean
 		sku?: string
-		displayGroup?: string
-		description?: string
-	}
+        description?: string
+        sectionID?: Types.ObjectId
+		menuID?: Types.ObjectId
+    }
+    
+    export interface MenuSection {
+        _id?: Types.ObjectId
+        name: string
+        menuID: Types.ObjectId
+    }
 	
 }
 
