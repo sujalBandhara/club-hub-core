@@ -33,6 +33,7 @@ declare namespace Restaurant {
     }
     interface MenuSection {
         _id?: Types.ObjectId;
+        orderingIndex: number;
         name: string;
         menuID: Types.ObjectId;
     }

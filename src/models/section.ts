@@ -17,6 +17,7 @@ namespace Section {
         name: string
         status: IShared.PublicationStatus
         pages: Page[]
+        orderingIndex: number
         createdBy: Types.ObjectId
         updatedBy: Types.ObjectId
     }
@@ -30,6 +31,7 @@ namespace Section {
         sectionID: Types.ObjectId
         name: string
         content: RichContent.Model
+        orderingIndex: number
         createdBy: Types.ObjectId
         updatedBy: Types.ObjectId
     }
