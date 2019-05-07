@@ -18,6 +18,7 @@ namespace Relation {
     // The RelationType represents the relationship
     // of the primary to the relation
     export enum RelationType {
+		Main = 'MAIN',
         Parent = 'PARENT',
         Child = 'CHILD',
         Spouse = 'SPOUSE',

@@ -4,6 +4,7 @@ var Relation;
 (function (Relation) {
     var RelationType;
     (function (RelationType) {
+        RelationType["Main"] = "MAIN";
         RelationType["Parent"] = "PARENT";
         RelationType["Child"] = "CHILD";
         RelationType["Spouse"] = "SPOUSE";
