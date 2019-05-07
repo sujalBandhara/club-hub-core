@@ -20,5 +20,13 @@ var Club;
         ClubInfoDataAction["call"] = "call";
         ClubInfoDataAction["email"] = "email";
     })(ClubInfoDataAction = Club.ClubInfoDataAction || (Club.ClubInfoDataAction = {}));
+    var MobileNavigationButtonName;
+    (function (MobileNavigationButtonName) {
+        MobileNavigationButtonName["MessageButton"] = "MessageButton";
+        MobileNavigationButtonName["CalendarButton"] = "CalendarButton";
+        MobileNavigationButtonName["ClubInfoButton"] = "ClubInfoButton";
+        MobileNavigationButtonName["ProfileButton"] = "ProfileButton";
+        MobileNavigationButtonName["EditProfileButton"] = "EditProfileButton";
+    })(MobileNavigationButtonName = Club.MobileNavigationButtonName || (Club.MobileNavigationButtonName = {}));
 })(Club || (Club = {}));
 exports.default = Club;
