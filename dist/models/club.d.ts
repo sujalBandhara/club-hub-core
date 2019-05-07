@@ -112,7 +112,7 @@ declare namespace Club {
         path: string;
     }
     interface MobileNavigationSection {
-        title: string;
+        title: TabNames;
         icon: string;
         props?: MobileNavigationSectionProps;
     }
@@ -128,6 +128,17 @@ declare namespace Club {
         ClubInfoButton = "ClubInfoButton",
         ProfileButton = "ProfileButton",
         EditProfileButton = "EditProfileButton"
+    }
+    enum TabNames {
+        News = "News",
+        Events = "Events",
+        Members = "Members",
+        Profile = "Profile",
+        Menu = "Menu",
+        Calendar = "Calendar",
+        Club = "Club",
+        Services = "Services",
+        Reservation = "Reservation"
     }
     interface Website {
         _id?: Types.ObjectId;

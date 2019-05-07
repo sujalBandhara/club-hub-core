@@ -163,7 +163,7 @@ namespace Club {
 	// --------------------------------
 
 	export interface MobileNavigationSection {
-		title: string
+		title: TabNames
 		icon: string
 		props?: MobileNavigationSectionProps
 	}
@@ -181,6 +181,18 @@ namespace Club {
 		ClubInfoButton = 'ClubInfoButton',
 		ProfileButton = 'ProfileButton',
 		EditProfileButton = 'EditProfileButton'
+	}
+
+	export enum TabNames {
+		News = 'News',
+		Events = 'Events',
+		Members = 'Members',
+		Profile = 'Profile',
+		Menu = 'Menu',
+		Calendar = 'Calendar',
+		Club = 'Club',
+		Services = 'Services',
+		Reservation = 'Reservation'
 	}
 
 	// --------------------------------
