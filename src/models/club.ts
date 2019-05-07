@@ -143,7 +143,7 @@ namespace Club {
 	export interface Navigation {
 		admin: NavigationSection[],
 		customer: NavigationSection[],
-		mobile: NavigationSection[],
+		mobile: MobileNavigationSection[],
 	}
 
 	export interface NavigationSection {
@@ -156,6 +156,43 @@ namespace Club {
 		fontAwesomeIcon?: string,
 		featherIcon?: string,
 		path: string,
+	}
+
+	// --------------------------------
+	// Mobile
+	// --------------------------------
+
+	export interface MobileNavigationSection {
+		title: TabNames
+		icon: string
+		props?: MobileNavigationSectionProps
+	}
+
+	export interface MobileNavigationSectionProps {
+		leftButton?: MobileNavigationButtonName
+		leftIcon?: string
+		rightButton?: MobileNavigationButtonName
+		rightIcon?: string
+	}
+
+	export enum MobileNavigationButtonName {
+		MessageButton = 'MessageButton',
+		CalendarButton = 'CalendarButton',
+		ClubInfoButton = 'ClubInfoButton',
+		ProfileButton = 'ProfileButton',
+		EditProfileButton = 'EditProfileButton'
+	}
+
+	export enum TabNames {
+		News = 'News',
+		Events = 'Events',
+		Members = 'Members',
+		Profile = 'Profile',
+		Menu = 'Menu',
+		Calendar = 'Calendar',
+		Club = 'Club',
+		Services = 'Services',
+		Reservation = 'Reservation'
 	}
 
 	// --------------------------------

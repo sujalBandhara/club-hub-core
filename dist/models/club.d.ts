@@ -99,7 +99,7 @@ declare namespace Club {
     interface Navigation {
         admin: NavigationSection[];
         customer: NavigationSection[];
-        mobile: NavigationSection[];
+        mobile: MobileNavigationSection[];
     }
     interface NavigationSection {
         title: string;
@@ -110,6 +110,35 @@ declare namespace Club {
         fontAwesomeIcon?: string;
         featherIcon?: string;
         path: string;
+    }
+    interface MobileNavigationSection {
+        title: TabNames;
+        icon: string;
+        props?: MobileNavigationSectionProps;
+    }
+    interface MobileNavigationSectionProps {
+        leftButton?: MobileNavigationButtonName;
+        leftIcon?: string;
+        rightButton?: MobileNavigationButtonName;
+        rightIcon?: string;
+    }
+    enum MobileNavigationButtonName {
+        MessageButton = "MessageButton",
+        CalendarButton = "CalendarButton",
+        ClubInfoButton = "ClubInfoButton",
+        ProfileButton = "ProfileButton",
+        EditProfileButton = "EditProfileButton"
+    }
+    enum TabNames {
+        News = "News",
+        Events = "Events",
+        Members = "Members",
+        Profile = "Profile",
+        Menu = "Menu",
+        Calendar = "Calendar",
+        Club = "Club",
+        Services = "Services",
+        Reservation = "Reservation"
     }
     interface Website {
         _id?: Types.ObjectId;

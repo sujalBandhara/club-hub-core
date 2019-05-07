@@ -20,5 +20,25 @@ var Club;
         ClubInfoDataAction["call"] = "call";
         ClubInfoDataAction["email"] = "email";
     })(ClubInfoDataAction = Club.ClubInfoDataAction || (Club.ClubInfoDataAction = {}));
+    var MobileNavigationButtonName;
+    (function (MobileNavigationButtonName) {
+        MobileNavigationButtonName["MessageButton"] = "MessageButton";
+        MobileNavigationButtonName["CalendarButton"] = "CalendarButton";
+        MobileNavigationButtonName["ClubInfoButton"] = "ClubInfoButton";
+        MobileNavigationButtonName["ProfileButton"] = "ProfileButton";
+        MobileNavigationButtonName["EditProfileButton"] = "EditProfileButton";
+    })(MobileNavigationButtonName = Club.MobileNavigationButtonName || (Club.MobileNavigationButtonName = {}));
+    var TabNames;
+    (function (TabNames) {
+        TabNames["News"] = "News";
+        TabNames["Events"] = "Events";
+        TabNames["Members"] = "Members";
+        TabNames["Profile"] = "Profile";
+        TabNames["Menu"] = "Menu";
+        TabNames["Calendar"] = "Calendar";
+        TabNames["Club"] = "Club";
+        TabNames["Services"] = "Services";
+        TabNames["Reservation"] = "Reservation";
+    })(TabNames = Club.TabNames || (Club.TabNames = {}));
 })(Club || (Club = {}));
 exports.default = Club;
