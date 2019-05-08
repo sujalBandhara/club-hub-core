@@ -9,7 +9,6 @@ declare namespace Relation {
         secondType: RelationType;
     }
     enum RelationType {
-        Main = "MAIN",
         Parent = "PARENT",
         Child = "CHILD",
         Spouse = "SPOUSE",
