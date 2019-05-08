@@ -14,6 +14,7 @@ import Section from './models/section'
 import Form from './models/form'
 import Invitation from './models/invitation'
 import Relation from './models/relation'
+import QueryFilter from './models/queryFilter'
 
 // Constants
 import * as Constants from './constants'
@@ -42,6 +43,7 @@ export {
 	Section,
     Invitation,
     Relation,
+    QueryFilter,
 	
 	// Sub Models.
 	SubModels,
