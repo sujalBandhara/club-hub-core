@@ -38,6 +38,7 @@ declare namespace User {
         displaySettings?: DisplaySettings;
         hostIDs?: Types.ObjectId[];
         primaryAccountHolder?: boolean;
+        gender?: string;
     }
     interface MemberNumber {
         number: string;
