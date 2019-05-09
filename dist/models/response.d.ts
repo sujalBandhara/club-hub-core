@@ -1,7 +1,10 @@
-import Calendar from './calendar';
 import Event from './event';
 import User from './user';
 import Post from './post';
+import Club from './club';
+import Section from './section';
+import Calendar from './calendar';
+import Restaurant from './restaurant';
 declare namespace Response {
     interface PaginatedResponse {
         count: number;
@@ -17,6 +20,22 @@ declare namespace Response {
     }
     interface Calendar extends PaginatedResponse {
         calendars: Calendar.Model;
+    }
+    interface NonAdminStateResponse {
+        club: Club.Model;
+        user: User.Model;
+        users: User.Model[];
+        restaurants: Restaurant.Model[];
+        calendars: Calendar.Model[];
+        sections: Section.Model[];
+    }
+    interface AdminStateResponse {
+        user: User.Model;
+        club: Club.Model;
+        calendars: Calendar.Model[];
+        admins: User.Model[];
+        members: User.Model[];
+        restaurants: Restaurant.Model[];
     }
 }
 export default Response;
