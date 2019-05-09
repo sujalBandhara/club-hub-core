@@ -5,7 +5,8 @@
 export enum Clubs {
 	BROADMOOR = 'Broadmoor',
 	DRIVERS_CLUB = 'Drivers Club',
-	OTTO = 'OTTO'
+	OTTO = 'OTTO',
+	WING_POINT = 'Wing Point Golf & Country Club'
 }
 
 // =======================================

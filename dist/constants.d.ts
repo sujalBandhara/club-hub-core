@@ -1,7 +1,8 @@
 export declare enum Clubs {
     BROADMOOR = "Broadmoor",
     DRIVERS_CLUB = "Drivers Club",
-    OTTO = "OTTO"
+    OTTO = "OTTO",
+    WING_POINT = "Wing Point Golf & Country Club"
 }
 export declare enum Colors {
     BLUE = "#4780CF",
