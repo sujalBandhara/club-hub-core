@@ -5,6 +5,7 @@ var Clubs;
     Clubs["BROADMOOR"] = "Broadmoor";
     Clubs["DRIVERS_CLUB"] = "Drivers Club";
     Clubs["OTTO"] = "OTTO";
+    Clubs["WING_POINT"] = "Wing Point Golf & Country Club";
 })(Clubs = exports.Clubs || (exports.Clubs = {}));
 var Colors;
 (function (Colors) {
