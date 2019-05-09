@@ -17,5 +17,15 @@ var QueryFilter;
         ComparisonOperator["lte"] = "$lte";
         ComparisonOperator["ne"] = "$ne";
     })(ComparisonOperator = QueryFilter.ComparisonOperator || (QueryFilter.ComparisonOperator = {}));
+    var ComparisonOperatorLabel;
+    (function (ComparisonOperatorLabel) {
+        ComparisonOperatorLabel["$eq"] = "=";
+        ComparisonOperatorLabel["$gt"] = ">";
+        ComparisonOperatorLabel["$gte"] = ">=";
+        ComparisonOperatorLabel["$in"] = "in";
+        ComparisonOperatorLabel["$lt"] = "<";
+        ComparisonOperatorLabel["$lte"] = "<=";
+        ComparisonOperatorLabel["$ne"] = "not equal";
+    })(ComparisonOperatorLabel = QueryFilter.ComparisonOperatorLabel || (QueryFilter.ComparisonOperatorLabel = {}));
 })(QueryFilter || (QueryFilter = {}));
 exports.default = QueryFilter;

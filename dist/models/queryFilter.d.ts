@@ -2,6 +2,7 @@ import { Types } from 'mongoose';
 declare namespace QueryFilter {
     interface Model {
         _id?: Types.ObjectId;
+        name: string;
         clubID: Types.ObjectId;
         predicates: Array<NestedPredicate | Predicate>;
         resource: string;
@@ -28,6 +29,15 @@ declare namespace QueryFilter {
         lt = "$lt",
         lte = "$lte",
         ne = "$ne"
+    }
+    enum ComparisonOperatorLabel {
+        $eq = "=",
+        $gt = ">",
+        $gte = ">=",
+        $in = "in",
+        $lt = "<",
+        $lte = "<=",
+        $ne = "not equal"
     }
 }
 export default QueryFilter;
