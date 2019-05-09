@@ -9,6 +9,7 @@ namespace QueryFilter {
 
     export interface Model {
         _id?: Types.ObjectId
+        name: string
         clubID: Types.ObjectId
         predicates: Array<NestedPredicate | Predicate>
         resource: string
@@ -43,6 +44,16 @@ namespace QueryFilter {
         lt = '$lt',
         lte = '$lte',
         ne = '$ne',
+    }
+
+    export enum ComparisonOperatorLabel {
+        $eq = '=',
+        $gt = '>',
+        $gte = '>=',
+        $in = 'in',
+        $lt = '<',
+        $lte = '<=',
+        $ne = 'not equal',
     }
 }
 
