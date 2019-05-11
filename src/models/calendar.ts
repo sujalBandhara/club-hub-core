@@ -27,6 +27,7 @@ namespace Calendar {
 		remoteID?: string
 		clubID?: Types.ObjectId,
 		groupID?: Types.ObjectId,
+		userGroupID?: Types.ObjectId,
 		maxParticipants?: number | null
 		location?: Location.Model
 		reservationSettings?: ReservationSetting[]
