@@ -3,9 +3,15 @@
 // =======================================
 
 export enum Clubs {
+	ALDARRA = 'Aldarra Golf Club',
 	BROADMOOR = 'Broadmoor',
 	DRIVERS_CLUB = 'Drivers Club',
+	MILL_CREEK = 'Mill Creek Country Club',
 	OTTO = 'OTTO',
+	PINE_CREEK = 'Pine Creek Golf & Country Club',
+	SEMIAHMOO = 'Semiahmoo Golf & Country Club',
+	STONE_WAY = 'Stone Way Car Club',
+	WAC = 'Washington Athletic Club',
 	WING_POINT = 'Wing Point Golf & Country Club'
 }
 
