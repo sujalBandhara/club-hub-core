@@ -27,7 +27,8 @@ namespace Message {
 		link?: string
 
 		userGroupIDs?: Types.ObjectId[]
-		individualUserIDs?: Types.ObjectId[]
+        individualUserIDs?: Types.ObjectId[]
+        eventIDs?: Types.ObjectId[]
 		
 		richContent?: RichContent.Model
 		templateID?: string
