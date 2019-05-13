@@ -2,9 +2,15 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Clubs;
 (function (Clubs) {
+    Clubs["ALDARRA"] = "Aldarra Golf Club";
     Clubs["BROADMOOR"] = "Broadmoor";
     Clubs["DRIVERS_CLUB"] = "Drivers Club";
+    Clubs["MILL_CREEK"] = "Mill Creek Country Club";
     Clubs["OTTO"] = "OTTO";
+    Clubs["PINE_CREEK"] = "Pine Creek Golf & Country Club";
+    Clubs["SEMIAHMOO"] = "Semiahmoo Golf & Country Club";
+    Clubs["STONE_WAY"] = "Stone Way Car Club";
+    Clubs["WAC"] = "Washington Athletic Club";
     Clubs["WING_POINT"] = "Wing Point Golf & Country Club";
 })(Clubs = exports.Clubs || (exports.Clubs = {}));
 var Colors;
