@@ -16,6 +16,7 @@ namespace Notification {
 
 	export interface Model {
 		_id?: Types.ObjectId
+		clubID?: Types.ObjectId
 		recipient: Types.ObjectId | User.Model
 		message: Types.ObjectId | Message.Model
 		method: Message.DeliveryType

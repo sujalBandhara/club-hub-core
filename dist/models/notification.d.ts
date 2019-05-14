@@ -5,6 +5,7 @@ import IShared from './shared';
 declare namespace Notification {
     interface Model {
         _id?: Types.ObjectId;
+        clubID?: Types.ObjectId;
         recipient: Types.ObjectId | User.Model;
         message: Types.ObjectId | Message.Model;
         method: Message.DeliveryType;
