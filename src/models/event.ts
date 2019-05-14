@@ -44,7 +44,7 @@ namespace Event {
 		maxParticipants?: number // The max number of people that can attend an event.
 		recurring?: number
         displayInFeed?: boolean
-        blockCalendar?: boolean
+		blockCalendar?: boolean
 	}
 
 	// --------------------------------
