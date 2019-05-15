@@ -18,19 +18,19 @@ namespace Response {
   }
 
   export interface Event extends PaginatedResponse {
-    events: Event.Model
+    events: Event.Model[]
   }
 
   export interface User extends PaginatedResponse {
-    users: User.Model
+    users: User.Model[]
   }
 
   export interface Post extends PaginatedResponse {
-    posts: Post.Model
+    posts: Post.Model[]
   }
 
   export interface Calendar extends PaginatedResponse {
-    calendars: Calendar.Model
+    calendars: Calendar.Model[]
   }
 
   export interface NonAdminStateResponse {

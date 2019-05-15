@@ -10,16 +10,16 @@ declare namespace Response {
         count: number;
     }
     interface Event extends PaginatedResponse {
-        events: Event.Model;
+        events: Event.Model[];
     }
     interface User extends PaginatedResponse {
-        users: User.Model;
+        users: User.Model[];
     }
     interface Post extends PaginatedResponse {
-        posts: Post.Model;
+        posts: Post.Model[];
     }
     interface Calendar extends PaginatedResponse {
-        calendars: Calendar.Model;
+        calendars: Calendar.Model[];
     }
     interface NonAdminStateResponse {
         club: Club.Model;
