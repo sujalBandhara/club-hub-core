@@ -1,5 +1,6 @@
 import { Types } from 'mongoose';
 import Note from './note';
+import QueryFilter from './queryFilter';
 import CarMeta from './subModels/car';
 import GolfMeta from './subModels/golf';
 import Location from './subModels/shared/location';
@@ -53,6 +54,7 @@ declare namespace User {
         name: string;
         description?: string;
         users?: Types.ObjectId[] | Model[];
+        queryFilter: QueryFilter.Model;
     }
     interface UserMeta {
         _id?: Types.ObjectId;
