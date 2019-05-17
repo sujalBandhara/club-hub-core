@@ -90,6 +90,7 @@ declare namespace Club {
         displaysMemberNumber?: boolean;
         primaryColor?: string;
         secondaryColor?: string;
+        font?: string;
     }
     interface ResourceType {
         _id?: Types.ObjectId;
