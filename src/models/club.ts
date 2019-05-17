@@ -128,6 +128,7 @@ namespace Club {
 		displaysMemberNumber?: boolean
 		primaryColor?: string
 		secondaryColor?: string
+		font?: string
 	}
 
 	export interface ResourceType {
