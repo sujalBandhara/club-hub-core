@@ -75,7 +75,7 @@ namespace User {
 		name: string
 		description?: string
 		users?: Types.ObjectId[] | Model[]
-		queryFilter: QueryFilter.Model
+		queryFilter: Types.ObjectId | QueryFilter.Model
 	}
 
 	export interface UserMeta {
