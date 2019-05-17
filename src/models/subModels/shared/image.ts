@@ -5,6 +5,8 @@ export namespace Image {
     // ---------------------------------
 
     export interface Model {
+        // Original Image
+        original?: string
         // Max Width: 1200px
         lg?: string
         // Max Width: 600px
@@ -15,6 +17,8 @@ export namespace Image {
         xs?: string
         // Max Width: 10px
         micro?: string
+        // Width/Height Aspect Ratio
+        aspectRatio: number
     }
 }
 
