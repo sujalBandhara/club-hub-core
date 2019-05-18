@@ -6,7 +6,7 @@ export declare namespace Image {
         sm?: string;
         xs?: string;
         micro?: string;
-        aspectRatio: number;
+        aspectRatio?: number;
     }
 }
 export default Image;

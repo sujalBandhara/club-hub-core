@@ -18,7 +18,7 @@ export namespace Image {
         // Max Width: 10px
         micro?: string
         // Width/Height Aspect Ratio
-        aspectRatio: number
+        aspectRatio?: number
     }
 }
 
