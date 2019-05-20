@@ -16,6 +16,7 @@ import Invitation from './models/invitation'
 import Relation from './models/relation'
 import QueryFilter from './models/queryFilter'
 import Statement from './models/statement'
+import Charge from './models/charge'
 
 // Constants
 import * as Constants from './constants'
@@ -46,6 +47,7 @@ export {
     Relation,
 	QueryFilter,
 	Statement,
+	Charge,
 	
 	// Sub Models.
 	SubModels,
