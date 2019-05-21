@@ -62,6 +62,7 @@ declare namespace Calendar {
         isDefault: boolean;
         dateRangeStart: Date;
         dateRangeEnd: Date;
+        bookingDuration: number;
         maxGuestsAdmin: number;
         maxGuestsMember: number;
         publicBookings: boolean;

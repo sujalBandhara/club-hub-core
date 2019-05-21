@@ -82,7 +82,8 @@ namespace Calendar {
 		name: string
 		isDefault: boolean
 		dateRangeStart: Date
-		dateRangeEnd: Date
+        dateRangeEnd: Date
+        bookingDuration: number
 		maxGuestsAdmin: number
 		maxGuestsMember: number
 		publicBookings: boolean
