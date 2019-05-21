@@ -108,6 +108,7 @@ namespace IShared {
         dayOfWeek: DayOfWeek,
         opens: Date,
         closes: Date,
+        duration: number,
     }
 }
 
