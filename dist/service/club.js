@@ -45,6 +45,13 @@ var ClubService = (function () {
                     })];
             });
         }); };
+        this.getPublicClubInfo = function (domain) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.get("clubs/" + domain).then(function (response) {
+                        return response.data;
+                    })];
+            });
+        }); };
         this.client = client;
     }
     return ClubService;

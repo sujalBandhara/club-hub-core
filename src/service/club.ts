@@ -27,4 +27,13 @@ export default class ClubService {
             return response.data
         })
     }
+
+    /**
+     * Fetches all clubs. 
+     */
+    public getPublicClubInfo = async (domain: string): Promise<Club.PublicClubInfo> => {
+        return this.client.get(`clubs/${domain}`).then((response: axios.AxiosResponse) => {
+            return response.data
+        })
+    }
 }

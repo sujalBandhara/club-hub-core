@@ -8,6 +8,7 @@ import Calendar from './calendar'
 // Sub Documents.
 import Location from './subModels/shared/location'
 import Image from './subModels/shared/image'
+import Section from './section'
 
 namespace Club {
 
@@ -51,13 +52,21 @@ namespace Club {
 		domain: string
 	}
 
+	/**
+	 * PublicClubInfo contains the content for a public ClubHub website.
+	 */
+	export interface PublicClubInfo {
+		club: Model
+		sections: Section.Model[]
+	}
+
 	// --------------------------------
 	// Supporting Interfaces and Types
 	// --------------------------------
 
 	export enum Type {
-		Car = 'CAR',
-		Golf = 'GOLF',
+		Car = 'Car',
+		Golf = 'Golf',
 		Tennis = 'Tennis',
 		Social = 'Social',
 		Yacht = 'Yacht',
