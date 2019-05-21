@@ -4,8 +4,8 @@ var Club;
 (function (Club) {
     var Type;
     (function (Type) {
-        Type["Car"] = "CAR";
-        Type["Golf"] = "GOLF";
+        Type["Car"] = "Car";
+        Type["Golf"] = "Golf";
         Type["Tennis"] = "Tennis";
         Type["Social"] = "Social";
         Type["Yacht"] = "Yacht";

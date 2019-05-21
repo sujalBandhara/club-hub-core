@@ -3,6 +3,7 @@ import User from './user';
 import Calendar from './calendar';
 import Location from './subModels/shared/location';
 import Image from './subModels/shared/image';
+import Section from './section';
 declare namespace Club {
     interface Model {
         _id?: Types.ObjectId;
@@ -33,9 +34,13 @@ declare namespace Club {
         image?: Image.Model;
         domain: string;
     }
+    interface PublicClubInfo {
+        club: Model;
+        sections: Section.Model[];
+    }
     enum Type {
-        Car = "CAR",
-        Golf = "GOLF",
+        Car = "Car",
+        Golf = "Golf",
         Tennis = "Tennis",
         Social = "Social",
         Yacht = "Yacht"
