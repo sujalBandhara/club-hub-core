@@ -20,6 +20,7 @@ namespace Section {
         orderingIndex: number
         createdBy: Types.ObjectId
         updatedBy: Types.ObjectId
+        public?: boolean
     }
 
 	// --------------------------------

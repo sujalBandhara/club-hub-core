@@ -11,6 +11,7 @@ declare namespace Section {
         orderingIndex: number;
         createdBy: Types.ObjectId;
         updatedBy: Types.ObjectId;
+        public?: boolean;
     }
     interface Page extends IShared.Timestamps {
         _id?: Types.ObjectId;
