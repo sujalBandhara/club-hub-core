@@ -3,8 +3,8 @@ import * as axios from 'axios'
 
 // Client
 import ClubHubClient from '../client'
-import Message from 'src/models/message'
-import Request from 'src/models/request'
+import Message from '../models/message'
+import Request from '../models/request'
 
 /**
  * Interface to the ClubHub `Message` API.

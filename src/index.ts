@@ -18,6 +18,9 @@ import QueryFilter from './models/queryFilter'
 import Statement from './models/statement'
 import Charge from './models/charge'
 
+// Client 
+import Service from './service'
+
 // Constants
 import * as Constants from './constants'
 
@@ -55,5 +58,8 @@ export {
 
 	// Misc
 	IShared,
-	Constants
+	Constants,
+
+	// Networking
+	Service
 }

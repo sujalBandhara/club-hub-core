@@ -43,8 +43,8 @@ var ClubHubClient = (function () {
             _this.token = token;
             _this.axios.defaults.headers.common['Authorization'] = token;
         };
-        this.get = function (url, config) {
-            return _this.axios.get(url, config);
+        this.get = function (url, params) {
+            return _this.axios.get(url);
         };
         this.post = function (url, data, config) {
             return _this.axios.post(url, data, config);
@@ -71,7 +71,7 @@ var ClubHubClient = (function () {
                 'Content-Type': 'application/json'
             }
         };
-        this.axios = axios_1.default.create({ url: baseURL, headers: headers });
+        this.axios = axios_1.default.create({ baseURL: baseURL, headers: headers });
         this.axios.interceptors.response.use(this.responseHandler, this.errorHandler);
     }
     return ClubHubClient;

@@ -28,7 +28,8 @@
 		".vscode",
 		".git",
 		"**/*.spec.ts",
-		"dist"
+		"dist",
+		"test"
 	],
 	"include": [
 		"./",

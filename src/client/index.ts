@@ -1,6 +1,9 @@
 import Axios from 'axios'
 import * as axios from 'axios'
 
+// Services 
+import ClubService from '../service'
+
 /**
  * `ClubHubClient` is a thin wrapper around the Axios library. 
  */
@@ -36,7 +39,7 @@ export default class ClubHubClient {
 				'Content-Type': 'application/json'
 			}
 		}
-		this.axios = Axios.create({ url: baseURL, headers: headers })
+		this.axios = Axios.create({ baseURL: baseURL, headers: headers })
 		this.axios.interceptors.response.use(this.responseHandler, this.errorHandler)
 	}
 
@@ -51,8 +54,8 @@ export default class ClubHubClient {
 	/**
 	 * Get Requests
 	 */
-	public get = (url: string, config?: axios.AxiosRequestConfig) => {
-		return this.axios.get(url, config)
+	public get = (url: string, params?: any) => {
+		return this.axios.get(url)
 	}
 
 	/**

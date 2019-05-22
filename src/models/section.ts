@@ -4,6 +4,7 @@ import { Types } from 'mongoose'
 // Sub Models.
 import { RichContent } from './subModels/shared/richContent'
 import IShared from './shared'
+import Image from './subModels/shared/image'
 
 namespace Section {
     
@@ -15,6 +16,8 @@ namespace Section {
         _id?: Types.ObjectId
         clubID: Types.ObjectId
         name: string
+        description?: string
+        image?: Image.Model
         status: IShared.PublicationStatus
         pages: Page[]
         orderingIndex: number

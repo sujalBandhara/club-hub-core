@@ -2,12 +2,12 @@
 import * as axios from 'axios'
 
 // Client.
-import ClubHubClient from 'src/client'
+import ClubHubClient from '../client'
 
 // Local Namespace
-import User from 'src/models/user'
-import Response from 'src/models/response'
-import Request from 'src/models/request'
+import User from '../models/user'
+import Response from '../models/response'
+import Request from '../models/request'
 
 /**
  * Interface to the ClubHub `Member` API.
