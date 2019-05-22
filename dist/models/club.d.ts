@@ -8,6 +8,8 @@ declare namespace Club {
     interface Model {
         _id?: Types.ObjectId;
         name: string;
+        primaryName?: string;
+        secondaryName?: string;
         type: Type;
         tzid: string;
         lat: string;
@@ -149,8 +151,9 @@ declare namespace Club {
     interface Website {
         _id?: Types.ObjectId;
         status: string;
-        coverImage: Image.Model;
         quickLinks: QuickLink[];
+        coverImage: Image.Model;
+        publicCoverImages?: Image.Model[];
         placeholderImage?: Image.Model;
     }
     interface QuickLink {

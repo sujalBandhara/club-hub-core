@@ -1,6 +1,6 @@
 import ClubHubClient from '../client';
-import Message from 'src/models/message';
-import Request from 'src/models/request';
+import Message from '../models/message';
+import Request from '../models/request';
 export default class MessageService {
     client: ClubHubClient;
     constructor(client: ClubHubClient);

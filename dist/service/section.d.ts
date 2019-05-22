@@ -1,5 +1,5 @@
-import ClubHubClient from 'src/client';
-import Section from 'src/models/section';
+import ClubHubClient from '../client';
+import Section from '../models/section';
 export default class SectionService {
     client: ClubHubClient;
     constructor(client: ClubHubClient);

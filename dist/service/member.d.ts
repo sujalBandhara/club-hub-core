@@ -1,7 +1,7 @@
-import ClubHubClient from 'src/client';
-import User from 'src/models/user';
-import Response from 'src/models/response';
-import Request from 'src/models/request';
+import ClubHubClient from '../client';
+import User from '../models/user';
+import Response from '../models/response';
+import Request from '../models/request';
 export default class MemberService {
     client: ClubHubClient;
     constructor(client: ClubHubClient);

@@ -2,8 +2,8 @@
 import * as axios from 'axios'
 
 // Client
-import Response from 'src/models/response'
-import Request from 'src/models/request'
+import Response from '../models/response'
+import Request from '../models/request'
 import ClubHubClient from '../client'
 
 /**

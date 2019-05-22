@@ -1,6 +1,6 @@
 import ClubHubClient from '../client';
-import Session from 'src/models/session';
-import User from 'src/models/user';
+import Session from '../models/session';
+import User from '../models/user';
 export default class UserService {
     client: ClubHubClient;
     constructor(client: ClubHubClient);

@@ -19,6 +19,8 @@ namespace Club {
 	export interface Model {
 		_id?: Types.ObjectId
 		name: string
+		primaryName?: string
+		secondaryName?: string
 		type: Type
 		tzid: string
 		lat: string
@@ -30,6 +32,7 @@ namespace Club {
 		clubInfo?: ClubInfo
 		navigationConfig?: Navigation
 		image?: Image.Model
+		icon?: Image.Model
 		domain?: string
 		resources?: Resources
 		clubSettings?: ClubSettings
@@ -212,8 +215,9 @@ namespace Club {
 	export interface Website {
 		_id?: Types.ObjectId
 		status: string
-		coverImage: Image.Model
 		quickLinks: QuickLink[]
+		coverImage: Image.Model
+		publicCoverImages?: Image.Model[]
 		placeholderImage?: Image.Model
 	}
 

@@ -3,7 +3,7 @@ import * as axios from 'axios'
 
 // Client
 import ClubHubClient from '../client'
-import Club from 'src/models/club'
+import Club from '../models/club'
 
 /**
  * Interface to the ClubHub `Clubs` API.
@@ -23,7 +23,7 @@ export default class ClubService {
      * Fetches all clubs. 
      */
     public getClubs = async (): Promise<Club.UnprotectedModel[]> => {
-        return this.client.get('clubs').then((response: axios.AxiosResponse) => {
+        return this.client.get('/clubs').then((response: axios.AxiosResponse) => {
             return response.data
         })
     }
@@ -32,7 +32,7 @@ export default class ClubService {
      * Fetches all clubs. 
      */
     public getPublicClubInfo = async (domain: string): Promise<Club.PublicClubInfo> => {
-        return this.client.get(`clubs/${domain}`).then((response: axios.AxiosResponse) => {
+        return this.client.get(`/clubs/${domain}`).then((response: axios.AxiosResponse) => {
             return response.data
         })
     }

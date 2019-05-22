@@ -40,14 +40,14 @@ var ClubService = (function () {
         var _this = this;
         this.getClubs = function () { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2, this.client.get('clubs').then(function (response) {
+                return [2, this.client.get('/clubs').then(function (response) {
                         return response.data;
                     })];
             });
         }); };
         this.getPublicClubInfo = function (domain) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2, this.client.get("clubs/" + domain).then(function (response) {
+                return [2, this.client.get("/clubs/" + domain).then(function (response) {
                         return response.data;
                     })];
             });
