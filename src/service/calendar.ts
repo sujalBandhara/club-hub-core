@@ -8,7 +8,7 @@ import ClubHubClient from '../client'
 import Response from '../models/response'
 import Calendar from '../models/calendar'
 import Event from '../models/event'
-import Request from '../models/request';
+import Request from '../models/request'
 
 /**
  * Interface to the ClubHub `Calendar` API.
