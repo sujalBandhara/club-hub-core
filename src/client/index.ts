@@ -91,7 +91,6 @@ export default class ClubHubClient {
 	 * to attempt a re-auth.
 	 */
 	private errorHandler = async (error: any): Promise<any> => {
-		console.log("Error", error)
 		return error
 	}
 
