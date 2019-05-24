@@ -54,13 +54,13 @@ export namespace Form {
 		selectItems?: InputSelectionItem[] | SelectItem[]
 		size?: number
 		class?: string
-		required?: boolean
 		file_accept?: string
 		file_multipleFiles?: boolean
 		select_isClearable?: boolean
 		select_selectAll?: boolean
 		number_min?: number
-		number_max?: number
+        number_max?: number
+        validation?: any
 	}
 
 	export enum InputType {
