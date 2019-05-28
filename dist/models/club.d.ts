@@ -21,6 +21,7 @@ declare namespace Club {
         clubInfo?: ClubInfo;
         navigationConfig?: Navigation;
         image?: Image.Model;
+        icon?: Image.Model;
         domain?: string;
         resources?: Resources;
         clubSettings?: ClubSettings;
