@@ -17,6 +17,7 @@ import Relation from './models/relation'
 import QueryFilter from './models/queryFilter'
 import Statement from './models/statement'
 import Charge from './models/charge'
+import NotificationPreference from './models/notificationPreference'
 
 // Client 
 import Service from './service'
@@ -51,6 +52,7 @@ export {
 	QueryFilter,
 	Statement,
 	Charge,
+	NotificationPreference,
 	
 	// Sub Models.
 	SubModels,
