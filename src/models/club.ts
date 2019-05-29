@@ -137,6 +137,7 @@ namespace Club {
 	}
 
 	export interface ClubSettings {
+        _id?: Types.ObjectId
 		displaysMemberNumber?: boolean
 		primaryColor?: string
 		secondaryColor?: string
