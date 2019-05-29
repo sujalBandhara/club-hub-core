@@ -95,6 +95,7 @@ declare namespace Club {
         };
     }
     interface ClubSettings {
+        _id?: Types.ObjectId;
         displaysMemberNumber?: boolean;
         primaryColor?: string;
         secondaryColor?: string;
