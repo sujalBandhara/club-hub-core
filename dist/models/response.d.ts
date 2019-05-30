@@ -5,6 +5,7 @@ import Club from './club';
 import Section from './section';
 import Calendar from './calendar';
 import Restaurant from './restaurant';
+import NotificationPreference from './notificationPreference';
 declare namespace Response {
     interface PaginatedResponse {
         count: number;
@@ -36,6 +37,10 @@ declare namespace Response {
         admins: User.Model[];
         members: User.Model[];
         restaurants: Restaurant.Model[];
+    }
+    interface UserGroupResponse {
+        group: User.UserGroup;
+        notificationPreference?: NotificationPreference.Model;
     }
 }
 export default Response;
