@@ -38,10 +38,13 @@ declare namespace Response {
         members: User.Model[];
         restaurants: Restaurant.Model[];
     }
-    type UserGroupResponse = UserGroupInfo[];
+    interface UserGroupResponse {
+        global?: NotificationPreference.Model;
+        groupInfo: UserGroupInfo[];
+    }
     interface UserGroupInfo {
         group: User.UserGroup;
-        notificationPreference?: NotificationPreference.Model;
+        notificationPreference?: NotificationPreference.GroupModel;
     }
 }
 export default Response;
