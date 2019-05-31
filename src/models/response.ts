@@ -62,7 +62,7 @@ namespace Response {
 	 * If a Notification Preference isn't returned with the group,
 	 * then notifications to that group are allowed.
 	 */
-	export interface UserGroupResponse {
+	export interface NotificationPreferenceResponse {
 		global?: NotificationPreference.Model
 		groupInfo: UserGroupInfo[]
 	}

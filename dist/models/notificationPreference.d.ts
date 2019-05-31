@@ -10,7 +10,7 @@ declare namespace NotificationPreference {
         disableText?: boolean;
     }
     interface GroupModel extends Model {
-        userGroupID?: Types.ObjectId;
+        userGroupID: Types.ObjectId;
     }
 }
 export default NotificationPreference;

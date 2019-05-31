@@ -28,7 +28,7 @@ namespace NotificationPreference {
 	 * specific user group.
 	 */
 	export interface GroupModel extends Model {
-		userGroupID?: Types.ObjectId
+		userGroupID: Types.ObjectId
 	}
 }
 

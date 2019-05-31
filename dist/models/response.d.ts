@@ -38,7 +38,7 @@ declare namespace Response {
         members: User.Model[];
         restaurants: Restaurant.Model[];
     }
-    interface UserGroupResponse {
+    interface NotificationPreferenceResponse {
         global?: NotificationPreference.Model;
         groupInfo: UserGroupInfo[];
     }
