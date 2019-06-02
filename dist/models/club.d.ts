@@ -159,6 +159,8 @@ declare namespace Club {
         placeholderImage?: Image.Model;
     }
     interface QuickLink {
+        _id?: Types.ObjectId;
+        orderingIndex: number;
         title: string;
         link: string;
     }
