@@ -223,6 +223,8 @@ namespace Club {
 	}
 
 	export interface QuickLink {
+		_id?: Types.ObjectId
+		orderingIndex: number
 		title: string
 		link: string
 	}
