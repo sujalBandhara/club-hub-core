@@ -4,6 +4,10 @@ var Notification;
 (function (Notification) {
     var Status;
     (function (Status) {
+        Status["Opened"] = "OPENED";
+        Status["ClickedLink"] = "CLICKED_LINK";
+        Status["Sent"] = "SENT";
+        Status["Bounced"] = "BOUNCED";
         Status["Delivered"] = "DELIVERED";
         Status["Read"] = "READ";
         Status["Error"] = "ERROR";

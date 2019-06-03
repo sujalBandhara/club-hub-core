@@ -14,6 +14,10 @@ declare namespace Notification {
         status: Status;
     }
     enum Status {
+        Opened = "OPENED",
+        ClickedLink = "CLICKED_LINK",
+        Sent = "SENT",
+        Bounced = "BOUNCED",
         Delivered = "DELIVERED",
         Read = "READ",
         Error = "ERROR"
