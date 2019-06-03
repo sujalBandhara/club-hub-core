@@ -31,7 +31,7 @@ namespace Event {
 		categories?: string[]
 		location?: Location.Model
 		calendarID?: Types.ObjectId
-		image?: Image.Model
+		images?: Image.Model[]
 		clubID?: Types.ObjectId
 		groupID?: Types.ObjectId
 		price?: string
