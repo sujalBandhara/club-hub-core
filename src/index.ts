@@ -18,6 +18,7 @@ import QueryFilter from './models/queryFilter'
 import Statement from './models/statement'
 import Charge from './models/charge'
 import NotificationPreference from './models/notificationPreference'
+import Credential from './models/credential'
 
 // Client 
 import Service from './service'
@@ -53,6 +54,7 @@ export {
 	Statement,
 	Charge,
 	NotificationPreference,
+	Credential,
 	
 	// Sub Models.
 	SubModels,
