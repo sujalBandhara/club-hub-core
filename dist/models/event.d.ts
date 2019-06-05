@@ -19,6 +19,7 @@ declare namespace Event {
         location?: Location.Model;
         calendarID?: Types.ObjectId;
         images?: Image.Model[];
+        image?: Image.Model;
         clubID?: Types.ObjectId;
         groupID?: Types.ObjectId;
         price?: string;
