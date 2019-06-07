@@ -7,16 +7,16 @@ import IShared from './shared'
 import Image from './subModels/shared/image'
 
 namespace Section {
-    
+
     // --------------------------------
-	// Main Interface
+    // Main Interface
     // --------------------------------
-    
+
     export interface Model extends IShared.Timestamps {
         _id?: Types.ObjectId
         clubID: Types.ObjectId
         name: string
-        subtitle: string
+        subtitle?: string
         description?: string
         image?: Image.Model
         status: IShared.PublicationStatus
@@ -27,10 +27,10 @@ namespace Section {
         public?: boolean
     }
 
-	// --------------------------------
-	// Supporting Interfaces and Types
     // --------------------------------
-    
+    // Supporting Interfaces and Types
+    // --------------------------------
+
     export interface Page extends IShared.Timestamps {
         _id?: Types.ObjectId
         sectionID: Types.ObjectId

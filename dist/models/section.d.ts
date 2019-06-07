@@ -7,7 +7,7 @@ declare namespace Section {
         _id?: Types.ObjectId;
         clubID: Types.ObjectId;
         name: string;
-        subtitle: string;
+        subtitle?: string;
         description?: string;
         image?: Image.Model;
         status: IShared.PublicationStatus;
