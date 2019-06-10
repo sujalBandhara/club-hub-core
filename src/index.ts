@@ -19,6 +19,7 @@ import Statement from './models/statement'
 import Charge from './models/charge'
 import NotificationPreference from './models/notificationPreference'
 import Credential from './models/credential'
+import Product from './models/product'
 
 // Client 
 import Service from './service'
@@ -55,6 +56,7 @@ export {
 	Charge,
 	NotificationPreference,
 	Credential,
+	Product,
 	
 	// Sub Models.
 	SubModels,
