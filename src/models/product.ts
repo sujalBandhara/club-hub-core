@@ -11,6 +11,7 @@ namespace Product {
 	// ---------------------------------
 	
 	export interface Model {
+		_id?: Types.ObjectId
 		clubID?: Types.ObjectId
 		name?: string
 		active?: boolean
