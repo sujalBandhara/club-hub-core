@@ -2,6 +2,7 @@ import { Types } from 'mongoose';
 import Image from './subModels/shared/image';
 declare namespace Product {
     interface Model {
+        _id?: Types.ObjectId;
         clubID?: Types.ObjectId;
         name?: string;
         active?: boolean;
