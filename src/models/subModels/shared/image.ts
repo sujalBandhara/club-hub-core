@@ -1,3 +1,5 @@
+import { Types } from 'mongoose'
+
 export namespace Image {
 
     // --------------------------------
@@ -5,6 +7,7 @@ export namespace Image {
     // ---------------------------------
 
     export interface Model {
+        _id?: Types.ObjectId
         // Original Image
         original?: string
         // Max Width: 1200px
