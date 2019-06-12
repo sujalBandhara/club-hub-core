@@ -5,34 +5,6 @@ import { Types } from 'mongoose'
 import Location from './subModels/shared/location'
 import IShared from './shared'
 
-/** 
-	userID
-	clubID
-	status (ENUM) [draft, open, paid, uncollectible, or void]
-
-	statusTransitions: Copy this: https://stripe.com/docs/api/invoices/object#invoice_object-status_transitions
-
-	starting_balance: number
-
-	amount_due: number
-
-	amount_paid: number
-
-	amount_remaining: number
-
-	billing_method: Copy this: https://stripe.com/docs/api/invoices/object#invoice_object-billing
-
-	due_date: date
-
-	number: string ('the invoice number')
-
-	subtotal: number
-
-	tax: copy https://stripe.com/docs/api/invoices/object#invoice_object-tax
-
-	total: number
-*/
-
 namespace Statement {
 
 	// --------------------------------
