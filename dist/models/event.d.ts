@@ -17,8 +17,8 @@ declare namespace Event {
         rDate?: string[];
         categories?: string[];
         location?: Location.Model;
-        groupID?: Types.ObjectId[];
-        calendarID?: Types.ObjectId[];
+        groupID?: Types.ObjectId;
+        calendarID?: Types.ObjectId;
         calendarIDs?: Types.ObjectId[];
         images?: Image.Model[];
         image?: Image.Model;
