@@ -32,6 +32,25 @@ declare namespace Statement {
         bodySubMessage?: string;
         footerMessage?: string;
         details?: Detail[];
+        status?: Status;
+        statusTransitions?: StatusTransition;
+        startingBalance?: number;
+        amountDue?: number;
+        amountPaid?: number;
+        amountRemaining?: number;
+        billingMethod?: BillingMethod;
+        dueDate?: Date;
+        invoiceNumber?: number;
+        subtotal?: number;
+        tax?: number;
+        total?: number;
+    }
+    enum Status {
+        Draft = "Draft",
+        Open = "Open",
+        Paid = "Paid",
+        Uncollectible = "Uncollectible",
+        Void = "Void"
     }
     interface Detail {
         _id?: Types.ObjectId;
@@ -47,6 +66,16 @@ declare namespace Statement {
         extension?: number;
         isSuppressed?: boolean;
         billedFromEntityID?: boolean;
+    }
+    interface StatusTransition {
+        finalizedAt?: Date;
+        markedUncollectibleAt?: Date;
+        paidAt?: Date;
+        voidedAt?: Date;
+    }
+    enum BillingMethod {
+        ChargeAutomatically = "Charge Automatically",
+        SendInvoice = "Send Invoice"
     }
 }
 export default Statement;
