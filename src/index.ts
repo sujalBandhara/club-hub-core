@@ -21,6 +21,7 @@ import NotificationPreference from './models/notificationPreference'
 import Credential from './models/credential'
 import Product from './models/product'
 import Subscription from './models/subscription'
+import Card from './models/card'
 
 // Client 
 import Service from './service'
@@ -59,6 +60,7 @@ export {
 	Credential,
 	Product,
 	Subscription,
+	Card,
 	
 	// Sub Models.
 	SubModels,
