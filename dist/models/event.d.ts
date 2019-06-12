@@ -17,11 +17,12 @@ declare namespace Event {
         rDate?: string[];
         categories?: string[];
         location?: Location.Model;
-        calendarID?: Types.ObjectId;
+        groupID?: Types.ObjectId[];
+        calendarID?: Types.ObjectId[];
+        calendarIDs?: Types.ObjectId[];
         images?: Image.Model[];
         image?: Image.Model;
         clubID?: Types.ObjectId;
-        groupID?: Types.ObjectId;
         price?: string;
         shortLink?: string;
         reservations?: Reservation[];
