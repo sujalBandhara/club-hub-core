@@ -21,6 +21,7 @@ declare namespace Calendar {
         reservationSettings?: ReservationSetting[];
         live?: boolean;
         color?: string;
+        multipleEventsAtStartTime?: boolean;
     }
     enum GroupType {
         Recreation = "RECREATION",
