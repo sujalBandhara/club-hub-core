@@ -33,6 +33,7 @@ namespace Calendar {
 		reservationSettings?: ReservationSetting[]
 		live?: boolean
 		color?: string
+		multipleEventsAtStartTime?: boolean
 	}
 
 	// --------------------------------
