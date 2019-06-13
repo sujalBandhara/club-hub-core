@@ -68,6 +68,7 @@ namespace Event {
 		creator: Types.ObjectId | User.Model // The creator of the reservation (admin or member).
 		owner: Types.ObjectId | User.Model // The owner of the reservation (first participant in participant array).
 		participants: Participant[]
+		notes?: string
 		meta?: ReservationMeta
 	}
 
@@ -77,9 +78,11 @@ namespace Event {
 		name: string
 		checkedIn?: boolean
 		paid?: boolean
+		golfCart?: boolean // Golf reservations only.
+		holeCount?: number // Golf reservations only.
 	}
 
-	export type ReservationMeta = ReservationBaseMeta | CarReservationMeta | GolfReservationMeta // This will be extended to include golf reservation meta etc...
+	export type ReservationMeta = ReservationBaseMeta | CarReservationMeta | GolfReservationMeta
 
 	export interface ReservationBaseMeta {
 		notes: string
