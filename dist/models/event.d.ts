@@ -49,6 +49,7 @@ declare namespace Event {
         creator: Types.ObjectId | User.Model;
         owner: Types.ObjectId | User.Model;
         participants: Participant[];
+        notes?: string;
         meta?: ReservationMeta;
     }
     interface Participant {
@@ -57,6 +58,8 @@ declare namespace Event {
         name: string;
         checkedIn?: boolean;
         paid?: boolean;
+        golfCart?: boolean;
+        holeCount?: number;
     }
     type ReservationMeta = ReservationBaseMeta | CarReservationMeta | GolfReservationMeta;
     interface ReservationBaseMeta {
