@@ -1,8 +1,9 @@
 import Axios from 'axios'
+import { AxiosPromise, AxiosResponse } from 'axios'
 import * as axios from 'axios'
 
 // Services 
-import ClubService from '../service'
+import Logger from '../util/logger';
 
 /**
  * `ClubHubClient` is a thin wrapper around the Axios library. 
@@ -54,29 +55,53 @@ export default class ClubHubClient {
 	/**
 	 * Get Requests
 	 */
-	public get = (url: string, params?: any) => {
-		return this.axios.get(url)
+	public get = <T>(url: string, params?: any): AxiosPromise<T> => {
+		const methodName = `[Core Axios (get)] - `
+		return this.axios.get(url).then((res: AxiosResponse) => {
+			if (!process.env.LOGGER_DISABLED && res.status >= 300) {
+				Logger.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
+			}
+			return res
+		})
 	}
 
 	/**
 	 * Post Requests
 	 */
 	public post = (url: string, data?: any, config?: axios.AxiosRequestConfig) => {
-		return this.axios.post(url, data, config)
+		const methodName = `[Core Axios (post)] - `
+		return this.axios.post(url, data, config).then((res: AxiosResponse) => {
+			if (!process.env.LOGGER_DISABLED && res.status >= 300) {
+				Logger.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
+			}
+			return res
+		})
 	}
 
 	/**
 	 * Post Requests
 	 */
 	public put = (url: string, data?: any, config?: axios.AxiosRequestConfig) => {
-		return this.axios.put(url, data, config)
+		const methodName = `[Core Axios (put)] - `
+		return this.axios.put(url, data, config).then((res: AxiosResponse) => {
+			if (!process.env.LOGGER_DISABLED && res.status >= 300) {
+				Logger.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
+			}
+			return res
+		})
 	}
 
 	/**
 	 * Post Requests
 	 */
 	public delete = (url: string, config?: axios.AxiosRequestConfig) => {
-		return this.axios.delete(url, config)
+		const methodName = `[Core Axios (delete)] - `
+		return this.axios.delete(url, config).then((res: AxiosResponse) => {
+			if (!process.env.LOGGER_DISABLED && res.status >= 300) {
+				Logger.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
+			}
+			return res
+		})
 	}
 
 	/**
