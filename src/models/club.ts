@@ -29,7 +29,6 @@ namespace Club {
 		calendarCredentials?: Calendar.CalendarSyncData
 		userGroups?: User.UserGroup[]
 		calendarGroups?: Calendar.Group[]
-		clubInfo?: ClubInfo
 		navigationConfig?: Navigation
 		image?: Image.Model
 		icon?: Image.Model
@@ -76,45 +75,6 @@ namespace Club {
 	}
 
 	// --------------------------------
-	// General Club Info Interfaces
-	// --------------------------------
-
-	export interface ClubInfo {
-		data: ClubInfoSection[]
-	}
-	export interface ClubInfoSection {
-		title: string
-		sections: ClubInfoEntity[]
-	}
-
-	export interface ClubInfoEntity {
-		title: string
-		values: ClubInfoData[]
-	}
-
-	export interface ClubInfoData {
-		type: ClubInfoDataType
-		title: string
-		action?: ClubInfoDataAction
-		value: string | TableValue[]
-	}
-
-	export interface TableValue {
-		title: string
-		value: string
-	}
-
-	export enum ClubInfoDataType {
-		single = 'single',
-		table = 'table'
-	}
-
-	export enum ClubInfoDataAction {
-		call = 'call',
-		email = 'email'
-	}
-
-	// --------------------------------
 	// Resource interfaces specific to clubs.
 	// --------------------------------
 
@@ -142,6 +102,8 @@ namespace Club {
 		primaryColor?: string
 		secondaryColor?: string
 		font?: string
+		iosAppURL?: string
+		androidAppURL?: string
 	}
 
 	export interface ResourceType {
