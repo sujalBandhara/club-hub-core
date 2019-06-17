@@ -18,7 +18,6 @@ declare namespace Club {
         calendarCredentials?: Calendar.CalendarSyncData;
         userGroups?: User.UserGroup[];
         calendarGroups?: Calendar.Group[];
-        clubInfo?: ClubInfo;
         navigationConfig?: Navigation;
         image?: Image.Model;
         icon?: Image.Model;
@@ -48,35 +47,6 @@ declare namespace Club {
         Social = "Social",
         Yacht = "Yacht"
     }
-    interface ClubInfo {
-        data: ClubInfoSection[];
-    }
-    interface ClubInfoSection {
-        title: string;
-        sections: ClubInfoEntity[];
-    }
-    interface ClubInfoEntity {
-        title: string;
-        values: ClubInfoData[];
-    }
-    interface ClubInfoData {
-        type: ClubInfoDataType;
-        title: string;
-        action?: ClubInfoDataAction;
-        value: string | TableValue[];
-    }
-    interface TableValue {
-        title: string;
-        value: string;
-    }
-    enum ClubInfoDataType {
-        single = "single",
-        table = "table"
-    }
-    enum ClubInfoDataAction {
-        call = "call",
-        email = "email"
-    }
     interface Resources {
         events?: {
             types?: ResourceType[];
@@ -100,6 +70,8 @@ declare namespace Club {
         primaryColor?: string;
         secondaryColor?: string;
         font?: string;
+        iosAppURL?: string;
+        androidAppURL?: string;
     }
     interface ResourceType {
         _id?: Types.ObjectId;

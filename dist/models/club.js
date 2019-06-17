@@ -10,16 +10,6 @@ var Club;
         Type["Social"] = "Social";
         Type["Yacht"] = "Yacht";
     })(Type = Club.Type || (Club.Type = {}));
-    var ClubInfoDataType;
-    (function (ClubInfoDataType) {
-        ClubInfoDataType["single"] = "single";
-        ClubInfoDataType["table"] = "table";
-    })(ClubInfoDataType = Club.ClubInfoDataType || (Club.ClubInfoDataType = {}));
-    var ClubInfoDataAction;
-    (function (ClubInfoDataAction) {
-        ClubInfoDataAction["call"] = "call";
-        ClubInfoDataAction["email"] = "email";
-    })(ClubInfoDataAction = Club.ClubInfoDataAction || (Club.ClubInfoDataAction = {}));
     var MobileNavigationButtonName;
     (function (MobileNavigationButtonName) {
         MobileNavigationButtonName["MessageButton"] = "MessageButton";
