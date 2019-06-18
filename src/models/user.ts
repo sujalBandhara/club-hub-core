@@ -103,6 +103,7 @@ namespace User {
 	export interface DisplaySettings {
 		publicProfile: boolean
 		publicContact: boolean
+		canBookReservations: boolean
 	}
 }
 

@@ -78,6 +78,7 @@ declare namespace User {
     interface DisplaySettings {
         publicProfile: boolean;
         publicContact: boolean;
+        canBookReservations: boolean;
     }
 }
 export default User;
