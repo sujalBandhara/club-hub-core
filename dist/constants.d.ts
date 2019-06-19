@@ -13,7 +13,8 @@ export declare enum Clubs {
     EUGENE = "Eugene Country Club",
     TUALATIN = "Tualatin Country Club",
     THE_SHOP = "The Shop",
-    THE_COLLECTIVE = "The Collective"
+    THE_COLLECTIVE = "The Collective",
+    MCCORMICK_WOODS = "McCormick Woods Golf Club"
 }
 export declare enum Colors {
     BLUE = "#4780CF",

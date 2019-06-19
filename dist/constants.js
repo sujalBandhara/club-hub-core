@@ -17,6 +17,7 @@ var Clubs;
     Clubs["TUALATIN"] = "Tualatin Country Club";
     Clubs["THE_SHOP"] = "The Shop";
     Clubs["THE_COLLECTIVE"] = "The Collective";
+    Clubs["MCCORMICK_WOODS"] = "McCormick Woods Golf Club";
 })(Clubs = exports.Clubs || (exports.Clubs = {}));
 var Colors;
 (function (Colors) {
