@@ -12,7 +12,12 @@ export enum Clubs {
 	SEMIAHMOO = 'Semiahmoo Golf & Country Club',
 	STONE_WAY = 'Stone Way Car Club',
 	WAC = 'Washington Athletic Club',
-	WING_POINT = 'Wing Point Golf & Country Club'
+	WING_POINT = 'Wing Point Golf & Country Club',
+	APEX = 'APEX Motor Club',
+	EUGENE = 'Eugene Country Club',
+	TUALATIN = 'Tualatin Country Club',
+	THE_SHOP = 'The Shop',
+	THE_COLLECTIVE = 'The Collective'
 }
 
 // =======================================
