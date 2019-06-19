@@ -12,6 +12,11 @@ var Clubs;
     Clubs["STONE_WAY"] = "Stone Way Car Club";
     Clubs["WAC"] = "Washington Athletic Club";
     Clubs["WING_POINT"] = "Wing Point Golf & Country Club";
+    Clubs["APEX"] = "APEX Motor Club";
+    Clubs["EUGENE"] = "Eugene Country Club";
+    Clubs["TUALATIN"] = "Tualatin Country Club";
+    Clubs["THE_SHOP"] = "The Shop";
+    Clubs["THE_COLLECTIVE"] = "The Collective";
 })(Clubs = exports.Clubs || (exports.Clubs = {}));
 var Colors;
 (function (Colors) {
