@@ -21,7 +21,7 @@
 		"baseUrl": "./",
 		"paths": {
 			"@clubhub/*": ["./"]
-        },
+		},
 	},
 	"exclude": [
 		"node_modules",
@@ -29,10 +29,8 @@
 		".git",
 		"**/*.spec.ts",
 		"dist",
-		"test"
 	],
 	"include": [
 		"./",
-		"tests/"
 	]
 }

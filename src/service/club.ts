@@ -1,5 +1,6 @@
 // External Dependencies
 import * as axios from 'axios'
+import { AxiosPromise } from 'axios'
 
 // Client
 import ClubHubClient from '../client'
@@ -22,18 +23,14 @@ export default class ClubService {
     /**
      * Fetches all clubs. 
      */
-    public getClubs = async (): Promise<Club.UnprotectedModel[]> => {
-        return this.client.get('/clubs').then((response: axios.AxiosResponse) => {
-            return response.data
-        })
+    public getClubs = (): AxiosPromise<Club.UnprotectedModel[]> => {
+        return this.client.get('/clubs')
     }
 
     /**
      * Fetches all clubs. 
      */
-    public getPublicClubInfo = async (domain: string): Promise<Club.PublicClubInfo> => {
-        return this.client.get(`/clubs/${domain}`).then((response: axios.AxiosResponse) => {
-            return response.data
-        })
+    public getPublicClubInfo = (domain: string): AxiosPromise<Club.PublicClubInfo> => {
+        return this.client.get(`/clubs/${domain}`)
     }
 }
