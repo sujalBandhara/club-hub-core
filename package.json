@@ -6,7 +6,7 @@
 	"typings": "dist/index.d.ts",
 	"scripts": {
 		"start": "node",
-		"test": "npm run build && NODE_ENV=test ./node_modules/.bin/mocha --require isomorphic-fetch --bail --recursive --sort --full-trace ./dist/tests --exit",
+		"test": "npm run build && NODE_ENV=test ./node_modules/.bin/mocha --require isomorphic-fetch --bail --recursive --sort --full-trace ./dist/src/tests --exit",
 		"build": "rm -rf dist/* && ./node_modules/.bin/tsc"
 	},
 	"repository": {

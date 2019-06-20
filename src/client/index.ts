@@ -68,7 +68,7 @@ export default class ClubHubClient {
 	/**
 	 * Post Requests
 	 */
-	public post = (url: string, data?: any, config?: axios.AxiosRequestConfig) => {
+	public post = <T>(url: string, data?: any, config?: axios.AxiosRequestConfig): AxiosPromise<T> => {
 		const methodName = `[Core Axios (post)] - `
 		return this.axios.post(url, data, config).then((res: AxiosResponse) => {
 			if (!process.env.LOGGER_DISABLED && res.status >= 300) {
@@ -81,7 +81,7 @@ export default class ClubHubClient {
 	/**
 	 * Post Requests
 	 */
-	public put = (url: string, data?: any, config?: axios.AxiosRequestConfig) => {
+	public put = <T>(url: string, data?: any, config?: axios.AxiosRequestConfig): AxiosPromise<T> => {
 		const methodName = `[Core Axios (put)] - `
 		return this.axios.put(url, data, config).then((res: AxiosResponse) => {
 			if (!process.env.LOGGER_DISABLED && res.status >= 300) {
@@ -94,7 +94,7 @@ export default class ClubHubClient {
 	/**
 	 * Post Requests
 	 */
-	public delete = (url: string, config?: axios.AxiosRequestConfig) => {
+	public delete = <T>(url: string, config?: axios.AxiosRequestConfig): AxiosPromise<T> => {
 		const methodName = `[Core Axios (delete)] - `
 		return this.axios.delete(url, config).then((res: AxiosResponse) => {
 			if (!process.env.LOGGER_DISABLED && res.status >= 300) {
