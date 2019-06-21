@@ -2,9 +2,6 @@ import Axios from 'axios'
 import { AxiosPromise, AxiosResponse } from 'axios'
 import * as axios from 'axios'
 
-// Services 
-import Logger from '../util/logger';
-
 /**
  * `ClubHubClient` is a thin wrapper around the Axios library. 
  */
@@ -59,7 +56,7 @@ export default class ClubHubClient {
 		const methodName = `[Core Axios (get)] - `
 		return this.axios.get(url).then((res: AxiosResponse) => {
 			if (!process.env.LOGGER_DISABLED && res.status >= 300) {
-				Logger.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
+				console.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
 			}
 			return res
 		})
@@ -72,7 +69,7 @@ export default class ClubHubClient {
 		const methodName = `[Core Axios (post)] - `
 		return this.axios.post(url, data, config).then((res: AxiosResponse) => {
 			if (!process.env.LOGGER_DISABLED && res.status >= 300) {
-				Logger.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
+				console.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
 			}
 			return res
 		})
@@ -85,7 +82,7 @@ export default class ClubHubClient {
 		const methodName = `[Core Axios (put)] - `
 		return this.axios.put(url, data, config).then((res: AxiosResponse) => {
 			if (!process.env.LOGGER_DISABLED && res.status >= 300) {
-				Logger.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
+				console.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
 			}
 			return res
 		})
@@ -98,7 +95,7 @@ export default class ClubHubClient {
 		const methodName = `[Core Axios (delete)] - `
 		return this.axios.delete(url, config).then((res: AxiosResponse) => {
 			if (!process.env.LOGGER_DISABLED && res.status >= 300) {
-				Logger.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
+				console.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
 			}
 			return res
 		})
