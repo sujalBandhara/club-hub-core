@@ -104,6 +104,7 @@ namespace Club {
 		font?: string
 		iosAppURL?: string
 		androidAppURL?: string
+		customDomain?: string
 	}
 
 	export interface ResourceType {

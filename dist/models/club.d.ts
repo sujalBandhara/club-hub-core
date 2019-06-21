@@ -72,6 +72,7 @@ declare namespace Club {
         font?: string;
         iosAppURL?: string;
         androidAppURL?: string;
+        customDomain?: string;
     }
     interface ResourceType {
         _id?: Types.ObjectId;
