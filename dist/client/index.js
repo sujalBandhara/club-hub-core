@@ -36,7 +36,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var axios_1 = require("axios");
-var logger_1 = require("../util/logger");
 var ClubHubClient = (function () {
     function ClubHubClient(baseURL, token) {
         var _this = this;
@@ -48,7 +47,7 @@ var ClubHubClient = (function () {
             var methodName = "[Core Axios (get)] - ";
             return _this.axios.get(url).then(function (res) {
                 if (!process.env.LOGGER_DISABLED && res.status >= 300) {
-                    logger_1.default.info(methodName + " Request " + url + " returned with status: " + res.status + ".");
+                    console.info(methodName + " Request " + url + " returned with status: " + res.status + ".");
                 }
                 return res;
             });
@@ -57,7 +56,7 @@ var ClubHubClient = (function () {
             var methodName = "[Core Axios (post)] - ";
             return _this.axios.post(url, data, config).then(function (res) {
                 if (!process.env.LOGGER_DISABLED && res.status >= 300) {
-                    logger_1.default.info(methodName + " Request " + url + " returned with status: " + res.status + ".");
+                    console.info(methodName + " Request " + url + " returned with status: " + res.status + ".");
                 }
                 return res;
             });
@@ -66,7 +65,7 @@ var ClubHubClient = (function () {
             var methodName = "[Core Axios (put)] - ";
             return _this.axios.put(url, data, config).then(function (res) {
                 if (!process.env.LOGGER_DISABLED && res.status >= 300) {
-                    logger_1.default.info(methodName + " Request " + url + " returned with status: " + res.status + ".");
+                    console.info(methodName + " Request " + url + " returned with status: " + res.status + ".");
                 }
                 return res;
             });
@@ -75,7 +74,7 @@ var ClubHubClient = (function () {
             var methodName = "[Core Axios (delete)] - ";
             return _this.axios.delete(url, config).then(function (res) {
                 if (!process.env.LOGGER_DISABLED && res.status >= 300) {
-                    logger_1.default.info(methodName + " Request " + url + " returned with status: " + res.status + ".");
+                    console.info(methodName + " Request " + url + " returned with status: " + res.status + ".");
                 }
                 return res;
             });

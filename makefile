@@ -2,10 +2,17 @@ MOCHA := node_modules/.bin/mocha
 TSC := node_modules/.bin/tsc
 
 # Build dist
-build:
+build: clean node_modules
 	@echo "Transpiling project and building dist directory"
-	@npm i
-	@rm -rf ./dist/** && $(TSC)
+	@$(TSC)
+
+node_modules: package.json
+	@echo "Rebuilding the node modules..."
+	@npm install && touch node_modules
+
+clean:
+	@echo "Clearing Dist Folder..."
+	@rm -rf dist
 
 test: build
 	NODE_ENV=test TZ=UTC $(MOCHA) --exit --bail --recursive --sort --full-trace ./dist/test
