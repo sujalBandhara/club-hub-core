@@ -22,6 +22,7 @@ import Credential from './models/credential'
 import Product from './models/product'
 import Subscription from './models/subscription'
 import Card from './models/card'
+import Lottery from './models/lottery'
 
 // Client 
 import Service from './service'
@@ -51,8 +52,8 @@ export {
 	Restaurant,
 	Form,
 	Section,
-    Invitation,
-    Relation,
+	Invitation,
+	Relation,
 	QueryFilter,
 	Statement,
 	Charge,
@@ -61,7 +62,8 @@ export {
 	Product,
 	Subscription,
 	Card,
-	
+	Lottery,
+
 	// Sub Models.
 	SubModels,
 	Response,

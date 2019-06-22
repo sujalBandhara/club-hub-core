@@ -27,6 +27,7 @@ var Event;
         AvailableEventStatus["PublicNotJoinable"] = "public-not-joinable";
         AvailableEventStatus["PrivateNotJoinable"] = "private-not-joinable";
         AvailableEventStatus["Blocked"] = "blocked";
+        AvailableEventStatus["Lottery"] = "lottery";
     })(AvailableEventStatus = Event.AvailableEventStatus || (Event.AvailableEventStatus = {}));
 })(Event || (Event = {}));
 exports.default = Event;

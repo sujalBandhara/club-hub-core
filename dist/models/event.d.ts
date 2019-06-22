@@ -1,5 +1,6 @@
 import { Types } from 'mongoose';
 import User from './user';
+import Lottery from './lottery';
 import Location from './subModels/shared/location';
 import RichContent from './subModels/shared/richContent';
 import IShared from './shared';
@@ -35,6 +36,8 @@ declare namespace Event {
         requiresRSVP?: boolean;
         displayInFeed?: boolean;
         blockCalendar?: boolean;
+        lottery?: Lottery.Model;
+        lotteryID?: Types.ObjectId;
     }
     enum RecurringFrequency {
         YEARLY = 0,
@@ -93,7 +96,8 @@ declare namespace Event {
         PrivateJoinable = "private-joinable",
         PublicNotJoinable = "public-not-joinable",
         PrivateNotJoinable = "private-not-joinable",
-        Blocked = "blocked"
+        Blocked = "blocked",
+        Lottery = "lottery"
     }
     interface EventDataForCalendar {
         calendarID: Types.ObjectId;
