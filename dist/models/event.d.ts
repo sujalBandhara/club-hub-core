@@ -36,8 +36,6 @@ declare namespace Event {
         requiresRSVP?: boolean;
         displayInFeed?: boolean;
         blockCalendar?: boolean;
-        lottery?: Lottery.Model;
-        lotteryID?: Types.ObjectId;
     }
     enum RecurringFrequency {
         YEARLY = 0,
@@ -55,6 +53,7 @@ declare namespace Event {
         participants: Participant[];
         notes?: string;
         meta?: ReservationMeta;
+        lottery?: Types.ObjectId | Lottery.Model;
     }
     interface Participant {
         _id?: Types.ObjectId;
@@ -105,6 +104,8 @@ declare namespace Event {
         eventInfo: AvailableEvent[];
         public: boolean;
         joinable: boolean;
+        date?: Date;
+        lotteryDay: boolean;
     }
 }
 export default Event;

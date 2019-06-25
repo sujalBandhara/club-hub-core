@@ -4,8 +4,8 @@ declare namespace Lottery {
         _id?: Types.ObjectId;
         clubID: Types.ObjectId;
         userID: Types.ObjectId;
-        acceptableStart: Date;
-        acceptableEnd: Date;
+        acceptableStart?: Date;
+        acceptableEnd?: Date;
     }
 }
 export default Lottery;

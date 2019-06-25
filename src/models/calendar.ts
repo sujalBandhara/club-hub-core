@@ -91,6 +91,9 @@ namespace Calendar {
 		joinableBookings: boolean
 		hours: IShared.HoursOfOperation[]
 		privileges: Privilege[]
+		lotteryEnabled: boolean
+		lotteryStart: number
+		lotteryEnd: number
 	}
 
 	export interface Privilege {

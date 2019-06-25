@@ -49,8 +49,6 @@ namespace Event {
 		requiresRSVP?: boolean
 		displayInFeed?: boolean
 		blockCalendar?: boolean
-		lottery?: Lottery.Model
-		lotteryID?: Types.ObjectId
 	}
 
 	// --------------------------------
@@ -74,6 +72,7 @@ namespace Event {
 		participants: Participant[]
 		notes?: string
 		meta?: ReservationMeta
+		lottery?: Types.ObjectId | Lottery.Model
 	}
 
 	export interface Participant {
@@ -145,6 +144,8 @@ namespace Event {
 		eventInfo: AvailableEvent[],
 		public: boolean
 		joinable: boolean
+		date?: Date
+		lotteryDay: boolean
 	}
 }
 
