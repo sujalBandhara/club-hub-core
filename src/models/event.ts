@@ -3,6 +3,7 @@ import { Types } from 'mongoose'
 
 // Models.
 import User from './user'
+import Lottery from './lottery'
 
 // Sub Models.
 import Location from './subModels/shared/location'
@@ -46,7 +47,7 @@ namespace Event {
 		maxParticipants?: number // The max number of people that can attend an event.
 		recurring?: number
 		requiresRSVP?: boolean
-        displayInFeed?: boolean
+		displayInFeed?: boolean
 		blockCalendar?: boolean
 	}
 
@@ -71,6 +72,7 @@ namespace Event {
 		participants: Participant[]
 		notes?: string
 		meta?: ReservationMeta
+		lottery?: Types.ObjectId | Lottery.Model
 	}
 
 	export interface Participant {
@@ -132,7 +134,8 @@ namespace Event {
 		PrivateJoinable = 'private-joinable', // Private booking & joinable.
 		PublicNotJoinable = 'public-not-joinable', // Public booking but not joinable.
 		PrivateNotJoinable = 'private-not-joinable', // Private booking & not joinable.
-		Blocked = 'blocked' // Block this Event from bookings
+		Blocked = 'blocked', // Block this Event from bookings
+		Lottery = 'lottery' // Event is a lottery event.
 	}
 
 	export interface EventDataForCalendar {
@@ -141,6 +144,8 @@ namespace Event {
 		eventInfo: AvailableEvent[],
 		public: boolean
 		joinable: boolean
+		date?: Date
+		lotteryDay: boolean
 	}
 }
 

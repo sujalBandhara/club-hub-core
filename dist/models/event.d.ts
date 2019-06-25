@@ -1,5 +1,6 @@
 import { Types } from 'mongoose';
 import User from './user';
+import Lottery from './lottery';
 import Location from './subModels/shared/location';
 import RichContent from './subModels/shared/richContent';
 import IShared from './shared';
@@ -52,6 +53,7 @@ declare namespace Event {
         participants: Participant[];
         notes?: string;
         meta?: ReservationMeta;
+        lottery?: Types.ObjectId | Lottery.Model;
     }
     interface Participant {
         _id?: Types.ObjectId;
@@ -93,7 +95,8 @@ declare namespace Event {
         PrivateJoinable = "private-joinable",
         PublicNotJoinable = "public-not-joinable",
         PrivateNotJoinable = "private-not-joinable",
-        Blocked = "blocked"
+        Blocked = "blocked",
+        Lottery = "lottery"
     }
     interface EventDataForCalendar {
         calendarID: Types.ObjectId;
@@ -101,6 +104,8 @@ declare namespace Event {
         eventInfo: AvailableEvent[];
         public: boolean;
         joinable: boolean;
+        date?: Date;
+        lotteryDay: boolean;
     }
 }
 export default Event;

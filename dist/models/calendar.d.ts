@@ -70,6 +70,9 @@ declare namespace Calendar {
         joinableBookings: boolean;
         hours: IShared.HoursOfOperation[];
         privileges: Privilege[];
+        lotteryEnabled: boolean;
+        lotteryStart: number;
+        lotteryEnd: number;
     }
     interface Privilege {
         memberType: Types.ObjectId;
