@@ -16,7 +16,15 @@ namespace Lottery {
         userID: Types.ObjectId
         acceptableStart?: Date
         acceptableEnd?: Date
+        status: Status
     }
+
+    export enum Status {
+        Pending = 'pending',
+        Approved = 'approved',
+        Moved = 'moved',
+		Rejected = 'rejected'
+	}
 }
 
 export default Lottery
