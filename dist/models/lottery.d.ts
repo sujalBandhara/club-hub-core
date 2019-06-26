@@ -6,7 +6,7 @@ declare namespace Lottery {
         userID: Types.ObjectId;
         acceptableStart?: Date;
         acceptableEnd?: Date;
-        status: Status;
+        status?: Status;
     }
     enum Status {
         Pending = "pending",

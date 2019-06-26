@@ -16,7 +16,7 @@ namespace Lottery {
         userID: Types.ObjectId
         acceptableStart?: Date
         acceptableEnd?: Date
-        status: Status
+        status?: Status
     }
 
     export enum Status {
