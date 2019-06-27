@@ -73,6 +73,10 @@ declare namespace Club {
         iosAppURL?: string;
         androidAppURL?: string;
         customDomain?: string;
+        eventSettings: EventSettings;
+    }
+    interface EventSettings {
+        canInviteGuests?: boolean;
     }
     interface ResourceType {
         _id?: Types.ObjectId;
