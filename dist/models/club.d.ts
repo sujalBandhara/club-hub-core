@@ -73,7 +73,7 @@ declare namespace Club {
         iosAppURL?: string;
         androidAppURL?: string;
         customDomain?: string;
-        eventSettings: EventSettings;
+        eventSettings?: EventSettings;
     }
     interface EventSettings {
         canInviteMembers?: boolean;
