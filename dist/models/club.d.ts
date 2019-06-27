@@ -76,7 +76,7 @@ declare namespace Club {
         eventSettings: EventSettings;
     }
     interface EventSettings {
-        canInviteGuests?: boolean;
+        canInviteMembers?: boolean;
     }
     interface ResourceType {
         _id?: Types.ObjectId;
