@@ -109,7 +109,7 @@ namespace Club {
 	}
 
 	export interface EventSettings {
-		canInviteGuests?: boolean
+		canInviteMembers?: boolean
 	}
 
 	export interface ResourceType {
