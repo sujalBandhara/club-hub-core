@@ -7,6 +7,7 @@ import Section from './section'
 import Calendar from './calendar'
 import Restaurant from './restaurant'
 import NotificationPreference from './notificationPreference'
+import { Types } from 'mongoose';
 
 namespace Response {
 
@@ -64,13 +65,8 @@ namespace Response {
 	 */
 	export interface NotificationPreferenceResponse {
 		global?: NotificationPreference.Model
-		groupInfo: UserGroupInfo[]
+		groups?: NotificationPreference.Group[]
 	}
-
-	export interface UserGroupInfo {
-		group: User.UserGroup
-		notificationPreference?: NotificationPreference.GroupModel
-	} 
 }
 
 export default Response
