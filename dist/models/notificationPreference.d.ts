@@ -4,13 +4,13 @@ declare namespace NotificationPreference {
         _id?: Types.ObjectId;
         userID?: Types.ObjectId;
         clubID?: Types.ObjectId;
-        disableAll?: boolean;
-        disablePush?: boolean;
-        disableEmail?: boolean;
-        disableText?: boolean;
+        enableAll?: boolean;
+        enablePush?: boolean;
+        enableEmail?: boolean;
+        enableText?: boolean;
     }
-    interface GroupModel extends Model {
-        userGroupID: Types.ObjectId;
+    interface Group extends Model {
+        groupID: Types.ObjectId;
     }
 }
 export default NotificationPreference;
