@@ -35,6 +35,8 @@ declare namespace Club {
         zip: string;
         image?: Image.Model;
         domain: string;
+        clubSettings?: ClubSettings;
+        website?: Website;
     }
     interface PublicClubInfo {
         club: Model;

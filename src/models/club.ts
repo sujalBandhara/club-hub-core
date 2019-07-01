@@ -52,6 +52,8 @@ namespace Club {
 		zip: string
 		image?: Image.Model
 		domain: string
+		clubSettings?: ClubSettings
+		website?: Website
 	}
 
 	/**
@@ -97,7 +99,7 @@ namespace Club {
 	}
 
 	export interface ClubSettings {
-        _id?: Types.ObjectId
+		_id?: Types.ObjectId
 		displaysMemberNumber?: boolean
 		primaryColor?: string
 		secondaryColor?: string
