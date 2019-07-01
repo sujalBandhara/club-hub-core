@@ -17,10 +17,10 @@ namespace NotificationPreference {
 		_id?: Types.ObjectId
 		userID?: Types.ObjectId
 		clubID?: Types.ObjectId
-		disableAll?: boolean
-		disablePush?: boolean
-		disableEmail?: boolean
-		disableText?: boolean
+		disableAll?: boolean;
+		disablePush?: boolean;
+		disableEmail?: boolean;
+		disableText?: boolean;
 	}
 
 	/**
