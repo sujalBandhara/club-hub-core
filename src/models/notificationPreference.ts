@@ -17,18 +17,18 @@ namespace NotificationPreference {
 		_id?: Types.ObjectId
 		userID?: Types.ObjectId
 		clubID?: Types.ObjectId
-		enableAll?: boolean
-		enablePush?: boolean
-		enableEmail?: boolean
-		enableText?: boolean
+		disableAll?: boolean
+		disablePush?: boolean
+		disableEmail?: boolean
+		disableText?: boolean
 	}
 
 	/**
 	 * A notification preference object for a
 	 * specific user group.
 	 */
-	export interface Group extends Model {
-		groupID: Types.ObjectId
+	export interface GroupModel extends Model {
+		userGroupID: Types.ObjectId
 	}
 }
 
