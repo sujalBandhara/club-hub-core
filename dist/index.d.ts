@@ -27,5 +27,5 @@ import * as Constants from './constants';
 import * as SubModels from './models/subModels';
 import IShared from './models/shared';
 import Response from './models/response';
-import { MongoObject } from './baseInterfaces';
-export { User, Club, Calendar, Device, Event, Message, Action, Notification, Order, Post, Restaurant, Form, Section, Invitation, Relation, QueryFilter, Statement, Charge, NotificationPreference, Credential, Product, Subscription, Card, Lottery, MongoObject, SubModels, Response, IShared, Constants, Service };
+import { MongoObject, CoreModelID } from './baseInterfaces';
+export { User, Club, Calendar, Device, Event, Message, Action, Notification, Order, Post, Restaurant, Form, Section, Invitation, Relation, QueryFilter, Statement, Charge, NotificationPreference, Credential, Product, Subscription, Card, Lottery, MongoObject, CoreModelID, SubModels, Response, IShared, Constants, Service };

@@ -1,5 +1,7 @@
 import { Types } from 'mongoose'
 
+export type CoreModelID = Types.ObjectId
+
 /**
  * Base interface for all model objects
  */
