@@ -27,5 +27,11 @@ import * as Constants from './constants';
 import * as SubModels from './models/subModels';
 import IShared from './models/shared';
 import Response from './models/response';
+<<<<<<< HEAD
 import { MongoObject } from './baseInterfaces';
 export { User, Club, Calendar, Device, Event, Message, Action, Notification, Order, Post, Restaurant, Form, Section, Invitation, Relation, QueryFilter, Statement, Charge, NotificationPreference, Credential, Product, Subscription, Card, Lottery, MongoObject, SubModels, Response, IShared, Constants, Service };
+=======
+import { Types } from 'mongoose';
+declare type CoreModelID = Types.ObjectId;
+export { User, Club, Calendar, Device, Event, Message, Action, Notification, Order, Post, Restaurant, Form, Section, Invitation, Relation, QueryFilter, Statement, Charge, NotificationPreference, Credential, Product, Subscription, Card, Lottery, CoreModelID, SubModels, Response, IShared, Constants, Service };
+>>>>>>> added type
