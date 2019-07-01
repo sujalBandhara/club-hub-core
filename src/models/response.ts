@@ -65,7 +65,12 @@ namespace Response {
 	 */
 	export interface NotificationPreferenceResponse {
 		global?: NotificationPreference.Model
-		groups?: NotificationPreference.GroupModel[]
+		groupInfo: UserGroupInfo[]
+	}
+
+	export interface UserGroupInfo {
+		group: User.UserGroup
+		notificationPreference?: NotificationPreference.GroupModel
 	}
 }
 
