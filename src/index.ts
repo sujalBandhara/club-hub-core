@@ -36,6 +36,7 @@ import * as SubModels from './models/subModels'
 // Shared Interfaces.
 import IShared from './models/shared'
 import Response from './models/response'
+import { MongoObject } from './baseInterfaces'
 
 export {
 	// First Class Models.
@@ -63,6 +64,9 @@ export {
 	Subscription,
 	Card,
 	Lottery,
+
+	// General
+	MongoObject,
 
 	// Sub Models.
 	SubModels,
