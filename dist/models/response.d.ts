@@ -40,7 +40,11 @@ declare namespace Response {
     }
     interface NotificationPreferenceResponse {
         global?: NotificationPreference.Model;
-        groups?: NotificationPreference.GroupModel[];
+        groupInfo: UserGroupInfo[];
+    }
+    interface UserGroupInfo {
+        group: User.UserGroup;
+        notificationPreference?: NotificationPreference.GroupModel;
     }
 }
 export default Response;
