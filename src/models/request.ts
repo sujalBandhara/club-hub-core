@@ -25,7 +25,7 @@ namespace Request {
   export interface LoginPost {
     email: string
     password: string
-    club: string
+    domain: string
   }
 
   export interface ReservationPost {

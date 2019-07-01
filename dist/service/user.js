@@ -38,14 +38,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var UserService = (function () {
     function UserService(client) {
         var _this = this;
-        this.login = function (email, password, clubName) { return __awaiter(_this, void 0, void 0, function () {
+        this.login = function (email, password, domain) { return __awaiter(_this, void 0, void 0, function () {
             var request;
             return __generator(this, function (_a) {
                 request = {
                     email: email,
                     password: password,
-                    club: clubName
+                    domain: domain
                 };
+                console.log("Req", request);
                 return [2, this.client.post('login', request).then(function (response) {
                         return response.data;
                     })];

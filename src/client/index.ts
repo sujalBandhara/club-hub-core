@@ -28,7 +28,6 @@ export default class ClubHubClient {
 	public baseURL: string
 
 	constructor(baseURL: string, token: string) {
-		this.token = token
 		this.shouldRetry = true
 
 		const headers = {
@@ -39,6 +38,8 @@ export default class ClubHubClient {
 		}
 		this.axios = Axios.create({ baseURL: baseURL, headers: headers })
 		this.axios.interceptors.response.use(this.responseHandler, this.errorHandler)
+
+		if (token) { this.setToken(token) }
 	}
 
 	/**
@@ -54,7 +55,7 @@ export default class ClubHubClient {
 	 */
 	public get = <T>(url: string, params?: any): AxiosPromise<T> => {
 		const methodName = `[Core Axios (get)] - `
-		return this.axios.get(url).then((res: AxiosResponse) => {
+		return this.axios.get(url, params).then((res: AxiosResponse) => {
 			if (!process.env.LOGGER_DISABLED && res.status >= 300) {
 				console.info(`${methodName} Request ${url} returned with status: ${res.status}.`)
 			}

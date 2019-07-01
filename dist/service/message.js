@@ -70,6 +70,25 @@ var MessageService = (function () {
                     })];
             });
         }); };
+        this.getNotifications = function (type) { return __awaiter(_this, void 0, void 0, function () {
+            var query;
+            return __generator(this, function (_a) {
+                query = {
+                    params: { method: type }
+                };
+                return [2, this.client.get('notifications', query)];
+            });
+        }); };
+        this.createNotification = function (notif) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.post('notifications', notif)];
+            });
+        }); };
+        this.deleteNotification = function (notificationID) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2, this.client.delete("notifications/" + notificationID)];
+            });
+        }); };
         this.client = client;
     }
     return MessageService;

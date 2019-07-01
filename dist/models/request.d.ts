@@ -19,7 +19,7 @@ declare namespace Request {
     interface LoginPost {
         email: string;
         password: string;
-        club: string;
+        domain: string;
     }
     interface ReservationPost {
         calendarID: string;

@@ -6,6 +6,7 @@ import EventService from './event';
 import MenuService from './menu';
 import PostService from './post';
 import MemberService from './member';
+import MessageService from './message';
 export default class ClubHubService {
     client: ClubHubClient;
     users: UserService;
@@ -14,6 +15,7 @@ export default class ClubHubService {
     calendars: CalendarService;
     events: EventService;
     menus: MenuService;
+    messages: MessageService;
     post: PostService;
     constructor(baseURL: string, token: string);
 }

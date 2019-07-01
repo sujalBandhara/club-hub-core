@@ -45,7 +45,7 @@ var ClubHubClient = (function () {
         };
         this.get = function (url, params) {
             var methodName = "[Core Axios (get)] - ";
-            return _this.axios.get(url).then(function (res) {
+            return _this.axios.get(url, params).then(function (res) {
                 if (!process.env.LOGGER_DISABLED && res.status >= 300) {
                     console.info(methodName + " Request " + url + " returned with status: " + res.status + ".");
                 }
@@ -87,7 +87,6 @@ var ClubHubClient = (function () {
                 return [2, error];
             });
         }); };
-        this.token = token;
         this.shouldRetry = true;
         var headers = {
             withCredentials: true,
@@ -97,6 +96,9 @@ var ClubHubClient = (function () {
         };
         this.axios = axios_1.default.create({ baseURL: baseURL, headers: headers });
         this.axios.interceptors.response.use(this.responseHandler, this.errorHandler);
+        if (token) {
+            this.setToken(token);
+        }
     }
     return ClubHubClient;
 }());

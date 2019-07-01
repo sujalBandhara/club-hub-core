@@ -8,6 +8,7 @@ var event_1 = require("./event");
 var menu_1 = require("./menu");
 var post_1 = require("./post");
 var member_1 = require("./member");
+var message_1 = require("./message");
 var ClubHubService = (function () {
     function ClubHubService(baseURL, token) {
         this.client = new client_1.default(baseURL, token);
@@ -18,6 +19,7 @@ var ClubHubService = (function () {
         this.events = new event_1.default(this.client);
         this.menus = new menu_1.default(this.client);
         this.post = new post_1.default(this.client);
+        this.messages = new message_1.default(this.client);
     }
     return ClubHubService;
 }());

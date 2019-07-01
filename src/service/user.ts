@@ -29,12 +29,13 @@ export default class UserService {
 	 * @param {string} email
 	 * @param {string} password
 	 */
-	public login = async (email: string, password: string, clubName: string): Promise<Session.Login> => {
+	public login = async (email: string, password: string, domain: string): Promise<Session.Login> => {
 		const request: Request.LoginPost = {
 			email: email,
 			password: password,
-			club: clubName
+			domain: domain
 		}
+		console.log("Req", request)
 		return this.client.post('login', request).then((response: axios.AxiosResponse) => {
 			return response.data
 		})
