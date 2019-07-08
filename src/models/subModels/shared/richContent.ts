@@ -10,6 +10,7 @@ export namespace RichContent {
 	export interface Model {
 		text?: string
 		html?: string
+		publishedHtml?: string
 		status?: IShared.PublicationStatus
 		slateJSON?: string
 	}
