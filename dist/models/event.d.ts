@@ -32,8 +32,8 @@ declare namespace Event {
         richContent?: RichContent.Model;
         maxGuests?: number;
         maxParticipants?: number;
-        recurrence?: number;
-        recurrenceEnd?: Date;
+        recurring?: number;
+        recurringEnd?: Date;
         requiresRSVP?: boolean;
         displayInFeed?: boolean;
         blockCalendar?: boolean;
