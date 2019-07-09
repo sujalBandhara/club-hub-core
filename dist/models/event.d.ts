@@ -33,6 +33,7 @@ declare namespace Event {
         maxGuests?: number;
         maxParticipants?: number;
         recurring?: number;
+        recurringEnd?: Date;
         requiresRSVP?: boolean;
         displayInFeed?: boolean;
         blockCalendar?: boolean;
