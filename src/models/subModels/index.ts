@@ -5,6 +5,7 @@ import Location from './shared/location'
 import Image from './shared/image'
 import RichContent from './shared/richContent'
 import PhoneNumber from './shared/phoneNumber'
+import ContentLink from './shared/contentLink'
 
 export {
 	GolfMeta,
@@ -12,5 +13,6 @@ export {
 	Location,
 	RichContent,
     Image,
-    PhoneNumber,
+	PhoneNumber,
+	ContentLink
 }
