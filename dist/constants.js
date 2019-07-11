@@ -7,7 +7,7 @@ var Clubs;
     Clubs["DRIVERS_CLUB"] = "Drivers Club";
     Clubs["MILL_CREEK"] = "Mill Creek Country Club";
     Clubs["OTTO"] = "OTTO";
-    Clubs["PINE_CREEK"] = "Pine Creek Golf & Country Club";
+    Clubs["CEDAR_CREEK"] = "Cedar Creek Golf & Country Club";
     Clubs["SEMIAHMOO"] = "Semiahmoo Golf & Country Club";
     Clubs["STONE_WAY"] = "Stone Way Car Club";
     Clubs["WAC"] = "Washington Athletic Club";
