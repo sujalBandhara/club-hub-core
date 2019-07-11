@@ -4,7 +4,7 @@ export declare enum Clubs {
     DRIVERS_CLUB = "Drivers Club",
     MILL_CREEK = "Mill Creek Country Club",
     OTTO = "OTTO",
-    PINE_CREEK = "Pine Creek Golf & Country Club",
+    CEDAR_CREEK = "Cedar Creek Golf & Country Club",
     SEMIAHMOO = "Semiahmoo Golf & Country Club",
     STONE_WAY = "Stone Way Car Club",
     WAC = "Washington Athletic Club",
