@@ -47,9 +47,14 @@ namespace Club {
 	export interface UnprotectedModel {
 		_id: string
 		name: string
+		primaryName: string
+		secondaryName: string
+		address1: string
+		address2: string
 		city: string
 		state: string
 		zip: string
+		phone: string
 		image?: Image.Model
 		domain: string
 		clubSettings?: ClubSettings
@@ -60,7 +65,7 @@ namespace Club {
 	 * PublicClubInfo contains the content for a public ClubHub website.
 	 */
 	export interface PublicClubInfo {
-		club: Model
+		club: UnprotectedModel
 		sections: Section.Model[]
 	}
 

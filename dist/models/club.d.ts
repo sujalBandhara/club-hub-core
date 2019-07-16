@@ -30,16 +30,21 @@ declare namespace Club {
     interface UnprotectedModel {
         _id: string;
         name: string;
+        primaryName: string;
+        secondaryName: string;
+        address1: string;
+        address2: string;
         city: string;
         state: string;
         zip: string;
+        phone: string;
         image?: Image.Model;
         domain: string;
         clubSettings?: ClubSettings;
         website?: Website;
     }
     interface PublicClubInfo {
-        club: Model;
+        club: UnprotectedModel;
         sections: Section.Model[];
     }
     enum Type {
