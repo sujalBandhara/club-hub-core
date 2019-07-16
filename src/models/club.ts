@@ -50,6 +50,7 @@ namespace Club {
 		city: string
 		state: string
 		zip: string
+		phone: string
 		image?: Image.Model
 		domain: string
 		clubSettings?: ClubSettings
@@ -60,7 +61,7 @@ namespace Club {
 	 * PublicClubInfo contains the content for a public ClubHub website.
 	 */
 	export interface PublicClubInfo {
-		club: Model
+		club: UnprotectedModel
 		sections: Section.Model[]
 	}
 

@@ -33,13 +33,14 @@ declare namespace Club {
         city: string;
         state: string;
         zip: string;
+        phone: string;
         image?: Image.Model;
         domain: string;
         clubSettings?: ClubSettings;
         website?: Website;
     }
     interface PublicClubInfo {
-        club: Model;
+        club: UnprotectedModel;
         sections: Section.Model[];
     }
     enum Type {
