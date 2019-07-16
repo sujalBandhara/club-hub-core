@@ -18,6 +18,7 @@ namespace Section {
         name: string
         subtitle?: string
         description?: string
+        icon?: string
         image?: Image.Model
         status: IShared.PublicationStatus
         pages: Page[]
