@@ -47,6 +47,10 @@ namespace Club {
 	export interface UnprotectedModel {
 		_id: string
 		name: string
+		primaryName: string
+		secondaryName: string
+		address1: string
+		address2: string
 		city: string
 		state: string
 		zip: string
