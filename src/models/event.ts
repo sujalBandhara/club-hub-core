@@ -72,6 +72,7 @@ namespace Event {
 		owner: Types.ObjectId | User.Model // The owner of the reservation (first participant in participant array).
 		participants: Participant[]
 		notes?: string
+		comp?: boolean // Is the reservation comp'ed or not.
 		meta?: ReservationMeta
 		lottery?: Types.ObjectId | Lottery.Model
 	}
