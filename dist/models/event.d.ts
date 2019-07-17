@@ -53,6 +53,7 @@ declare namespace Event {
         owner: Types.ObjectId | User.Model;
         participants: Participant[];
         notes?: string;
+        comp?: boolean;
         meta?: ReservationMeta;
         lottery?: Types.ObjectId | Lottery.Model;
     }
