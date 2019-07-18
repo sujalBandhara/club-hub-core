@@ -144,8 +144,7 @@ namespace Club {
 		title: string,
 		fontAwesomeIcon?: string,
 		featherIcon?: string,
-		path: string,
-		url: string
+		path: string
 	}
 
 	// --------------------------------
@@ -155,6 +154,7 @@ namespace Club {
 	export interface MobileNavigationSection {
 		title: TabNames
 		icon: string
+		url?: string
 		props?: MobileNavigationSectionProps
 	}
 
