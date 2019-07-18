@@ -104,11 +104,11 @@ declare namespace Club {
         fontAwesomeIcon?: string;
         featherIcon?: string;
         path: string;
-        url: string;
     }
     interface MobileNavigationSection {
         title: TabNames;
         icon: string;
+        url?: string;
         props?: MobileNavigationSectionProps;
     }
     interface MobileNavigationSectionProps {
