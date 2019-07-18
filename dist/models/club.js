@@ -30,7 +30,7 @@ var Club;
         TabNames["Services"] = "Services";
         TabNames["Reservation"] = "Reservations";
         TabNames["TeeTimes"] = "Tee Times";
-        TabNames["TeeSnap"] = "Tee Times";
+        TabNames["TeeSnap"] = "Tee Snap";
     })(TabNames = Club.TabNames || (Club.TabNames = {}));
 })(Club || (Club = {}));
 exports.default = Club;

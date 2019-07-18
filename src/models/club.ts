@@ -184,7 +184,7 @@ namespace Club {
 		Services = 'Services',
 		Reservation = 'Reservations',
 		TeeTimes = 'Tee Times',
-		TeeSnap = 'Tee Times'
+		TeeSnap = 'Tee Snap'
 	}
 
 	// --------------------------------
