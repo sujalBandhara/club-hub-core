@@ -134,7 +134,8 @@ declare namespace Club {
         Club = "Club",
         Services = "Services",
         Reservation = "Reservations",
-        TeeTimes = "Tee Times"
+        TeeTimes = "Tee Times",
+        TeeSnap = "Tee Times"
     }
     interface Website {
         _id?: Types.ObjectId;
