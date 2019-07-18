@@ -182,7 +182,7 @@ namespace Club {
 		Calendar = 'Calendar',
 		Club = 'Club',
 		Services = 'Services',
-		Reservations = 'Reservations',
+		Reservation = 'Reservations',
 		TeeTimes = 'Tee Times'
 	}
 

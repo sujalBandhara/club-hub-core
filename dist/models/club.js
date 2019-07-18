@@ -28,7 +28,7 @@ var Club;
         TabNames["Calendar"] = "Calendar";
         TabNames["Club"] = "Club";
         TabNames["Services"] = "Services";
-        TabNames["Reservations"] = "Reservations";
+        TabNames["Reservation"] = "Reservations";
         TabNames["TeeTimes"] = "Tee Times";
     })(TabNames = Club.TabNames || (Club.TabNames = {}));
 })(Club || (Club = {}));
