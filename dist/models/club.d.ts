@@ -104,6 +104,7 @@ declare namespace Club {
         fontAwesomeIcon?: string;
         featherIcon?: string;
         path: string;
+        url: string;
     }
     interface MobileNavigationSection {
         title: TabNames;
@@ -132,7 +133,8 @@ declare namespace Club {
         Calendar = "Calendar",
         Club = "Club",
         Services = "Services",
-        Reservation = "Reservation"
+        Reservations = "Reservations",
+        TeeTimes = "Tee Times"
     }
     interface Website {
         _id?: Types.ObjectId;

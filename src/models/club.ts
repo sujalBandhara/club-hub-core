@@ -145,6 +145,7 @@ namespace Club {
 		fontAwesomeIcon?: string,
 		featherIcon?: string,
 		path: string,
+		url: string
 	}
 
 	// --------------------------------
@@ -181,7 +182,8 @@ namespace Club {
 		Calendar = 'Calendar',
 		Club = 'Club',
 		Services = 'Services',
-		Reservation = 'Reservation'
+		Reservations = 'Reservations',
+		TeeTimes = 'Tee Times'
 	}
 
 	// --------------------------------
