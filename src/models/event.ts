@@ -1,5 +1,6 @@
 // External Dependencies.
 import { Types } from 'mongoose'
+import * as RRule from 'rrule'
 
 // Models.
 import User from './user'
@@ -26,7 +27,7 @@ namespace Event {
 		start?: Date
 		end?: Date
 		creator?: Types.ObjectId | User.Model,
-		rRule?: IShared.GeneralMap<any>
+		rRuleSet?: RRule.RRuleSet
 		rDuration?: number
 		rDate?: string[]
 		categories?: string[]
