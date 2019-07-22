@@ -1,9 +1,9 @@
 import { Types } from 'mongoose';
+import * as RRule from 'rrule';
 import User from './user';
 import Lottery from './lottery';
 import Location from './subModels/shared/location';
 import RichContent from './subModels/shared/richContent';
-import IShared from './shared';
 import Image from './subModels/shared/image';
 declare namespace Event {
     interface Model {
@@ -13,7 +13,7 @@ declare namespace Event {
         start?: Date;
         end?: Date;
         creator?: Types.ObjectId | User.Model;
-        rRule?: IShared.GeneralMap<any>;
+        rRuleSet?: RRule.RRuleSet;
         rDuration?: number;
         rDate?: string[];
         categories?: string[];
