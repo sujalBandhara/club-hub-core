@@ -27,7 +27,8 @@ namespace Event {
 		start?: Date
 		end?: Date
 		creator?: Types.ObjectId | User.Model,
-		rRuleSet?: RRule.RRuleSet
+		rRule?: IShared.GeneralMap<any>
+		exDates?: Date[]
 		rDuration?: number
 		rDate?: string[]
 		categories?: string[]
