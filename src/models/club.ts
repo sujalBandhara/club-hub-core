@@ -37,6 +37,7 @@ namespace Club {
 		clubSettings?: ClubSettings
 		website?: Website
 		shortName?: string
+		baseURL?: string
 	}
 
 	/**
