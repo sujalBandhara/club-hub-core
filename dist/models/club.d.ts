@@ -26,6 +26,7 @@ declare namespace Club {
         clubSettings?: ClubSettings;
         website?: Website;
         shortName?: string;
+        baseURL?: string;
     }
     interface UnprotectedModel {
         _id: string;
