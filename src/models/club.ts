@@ -38,6 +38,7 @@ namespace Club {
 		website?: Website
 		shortName?: string
 		baseURL?: string
+		agentLastHeartbeat?: Date
 	}
 
 	/**
