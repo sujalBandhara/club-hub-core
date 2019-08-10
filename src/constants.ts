@@ -21,6 +21,16 @@ export enum Clubs {
 	MCCORMICK_WOODS = 'McCormick Woods Golf Club'
 }
 
+export enum Domains {
+	ALDARRA = 'aldarra',
+	BROADMOOR = 'broadmoor',
+	DRIVERS_CLUB = 'driversclub',
+	OTTO = 'otto',
+	WING_POINT = 'wingpoint',
+	CEDAR_CREEK = 'cedar',
+	SEMIAHMOO = 'semiahmoo',
+}
+
 // =======================================
 // COLORS
 // =======================================
