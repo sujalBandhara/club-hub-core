@@ -16,6 +16,15 @@ export declare enum Clubs {
     THE_COLLECTIVE = "The Collective",
     MCCORMICK_WOODS = "McCormick Woods Golf Club"
 }
+export declare enum Domains {
+    ALDARRA = "aldarra",
+    BROADMOOR = "broadmoor",
+    DRIVERS_CLUB = "driversclub",
+    OTTO = "otto",
+    WING_POINT = "wingpoint",
+    CEDAR_CREEK = "cedar",
+    SEMIAHMOO = "semiahmoo"
+}
 export declare enum Colors {
     BLUE = "#4780CF",
     AZURE = "#45aaf2",

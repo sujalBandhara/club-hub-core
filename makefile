@@ -16,3 +16,5 @@ clean:
 
 test: build
 	NODE_ENV=test TZ=UTC $(MOCHA) --exit --bail --recursive --sort --full-trace ./dist/test
+
+	

@@ -19,6 +19,16 @@ var Clubs;
     Clubs["THE_COLLECTIVE"] = "The Collective";
     Clubs["MCCORMICK_WOODS"] = "McCormick Woods Golf Club";
 })(Clubs = exports.Clubs || (exports.Clubs = {}));
+var Domains;
+(function (Domains) {
+    Domains["ALDARRA"] = "aldarra";
+    Domains["BROADMOOR"] = "broadmoor";
+    Domains["DRIVERS_CLUB"] = "driversclub";
+    Domains["OTTO"] = "otto";
+    Domains["WING_POINT"] = "wingpoint";
+    Domains["CEDAR_CREEK"] = "cedar";
+    Domains["SEMIAHMOO"] = "semiahmoo";
+})(Domains = exports.Domains || (exports.Domains = {}));
 var Colors;
 (function (Colors) {
     Colors["BLUE"] = "#4780CF";
