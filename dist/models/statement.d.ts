@@ -57,6 +57,7 @@ declare namespace Statement {
         _id?: Types.ObjectId;
         ticket?: Ticket.Model;
         remoteID?: string;
+        ticketID?: Types.ObjectId;
         statementHeaderID?: number;
         statementMainID?: number;
         transDate?: Date;
