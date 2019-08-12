@@ -29,5 +29,11 @@ var Event;
         AvailableEventStatus["Blocked"] = "blocked";
         AvailableEventStatus["Lottery"] = "lottery";
     })(AvailableEventStatus = Event.AvailableEventStatus || (Event.AvailableEventStatus = {}));
+    var UpdateType;
+    (function (UpdateType) {
+        UpdateType["All"] = "all";
+        UpdateType["Single"] = "single";
+        UpdateType["Future"] = "future";
+    })(UpdateType = Event.UpdateType || (Event.UpdateType = {}));
 })(Event || (Event = {}));
 exports.default = Event;

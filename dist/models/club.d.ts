@@ -152,6 +152,7 @@ declare namespace Club {
         orderingIndex: number;
         title: string;
         link: string;
+        image?: Image.Model;
     }
 }
 export default Club;

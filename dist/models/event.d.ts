@@ -110,5 +110,10 @@ declare namespace Event {
         date?: Date;
         lotteryDay: boolean;
     }
+    enum UpdateType {
+        All = "all",
+        Single = "single",
+        Future = "future"
+    }
 }
 export default Event;
