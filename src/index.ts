@@ -23,6 +23,7 @@ import Product from './models/product'
 import Subscription from './models/subscription'
 import Card from './models/card'
 import Lottery from './models/lottery'
+import Ticket from './models/ticket'
 
 // Client 
 import Service from './service'
@@ -65,6 +66,7 @@ export {
 	Subscription,
 	Card,
 	Lottery,
+	Ticket,
 
 	// General
 	MongoObject,
