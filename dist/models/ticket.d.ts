@@ -60,7 +60,7 @@ declare namespace Ticket {
         voidReason: string;
         itemTypeId: number;
         itemTypeDescription: string;
-        deleted: false;
+        deleted: boolean;
         modifierText: string;
         revCode: string;
         discountRevCode: string;
@@ -68,7 +68,7 @@ declare namespace Ticket {
         revenueCodeDesc: string;
         ticketDetailId: number;
         voidedBy: number;
-        wasVoided: false;
+        wasVoided: boolean;
         sectionHeaderId: number;
         lastUpdate: Date;
         updateBy: number;
