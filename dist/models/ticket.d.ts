@@ -4,6 +4,7 @@ declare namespace Ticket {
         _id?: Types.ObjectId;
         userID?: Types.ObjectId;
         clubID?: Types.ObjectId;
+        statementDetailID?: Types.ObjectId;
         remoteID?: string;
         memberId: number;
         memberNumber: string;
