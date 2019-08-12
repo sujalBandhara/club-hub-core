@@ -1,5 +1,6 @@
 import { Types } from 'mongoose';
 import Location from './subModels/shared/location';
+import Ticket from './ticket';
 declare namespace Statement {
     interface Model {
         _id?: Types.ObjectId;
@@ -54,6 +55,7 @@ declare namespace Statement {
     }
     interface Detail {
         _id?: Types.ObjectId;
+        ticket?: Ticket.Model;
         remoteID?: string;
         statementHeaderID?: number;
         statementMainID?: number;
@@ -66,79 +68,6 @@ declare namespace Statement {
         extension?: number;
         isSuppressed?: boolean;
         billedFromEntityID?: boolean;
-    }
-    interface Ticket {
-        _id: Types.ObjectId;
-        remoteID?: string;
-        memberId: number;
-        memberNumber: string;
-        ticketDate: Date;
-        employeeId: number;
-        ticketStatusId: number;
-        locationId: number;
-        stationId: number;
-        periodId: number;
-        tableId: number;
-        voidReasonId: number;
-        recipMemberName: string;
-        recipMemberNumber: string;
-        recipMemberLastName: string;
-        exportStatus: number;
-        ticketNumber: string;
-        wasVoided: boolean;
-        voidedBy: number;
-        taxExempt: boolean;
-        serviceChargeExempt: boolean;
-        wasReopened: boolean;
-        reopenedBy: number;
-        wasRetendered: boolean;
-        retenderedBy: number;
-        voidReason: string;
-        closedTime: Date;
-        voidedTime: Date;
-        reopenedTime: Date;
-        retenderedTime: Date;
-        lastUpdate: Date;
-        updateBy: number;
-        memberFirstName: string;
-        memberLastName: string;
-        memberName: string;
-        number: string;
-        numberSuffix: string;
-        ticketHeaderId: number;
-    }
-    interface TicketDetail {
-        _id: Types.ObjectId;
-        remoteId?: string;
-        ticketHeaderId: number;
-        lineNumber: number;
-        itemId: number;
-        itemDesc: string;
-        quantity: number;
-        price: number;
-        cost: number;
-        seatNumber: number;
-        note: string;
-        gratuityTotal: number;
-        taxTotal: number;
-        voidReason: string;
-        itemTypeId: number;
-        itemTypeDescription: string;
-        deleted: false;
-        modifierText: string;
-        revCode: string;
-        discountRevCode: string;
-        revenueCodeId: number;
-        revenueCodeDesc: string;
-        ticketDetailId: number;
-        voidedBy: number;
-        wasVoided: false;
-        sectionHeaderId: number;
-        lastUpdate: Date;
-        updateBy: number;
-        firedTime: Date;
-        itemAddedBy: number;
-        gratuityDiscountTotal10: number;
     }
     interface StatusTransition {
         finalizedAt?: Date;
