@@ -45,6 +45,9 @@ declare namespace Statement {
         subtotal?: number;
         tax?: number;
         total?: number;
+        arPeriodDesc?: string;
+        statementDate?: Date;
+        paymentDue?: string;
     }
     enum Status {
         Draft = "Draft",
