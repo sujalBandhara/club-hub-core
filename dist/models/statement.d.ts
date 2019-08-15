@@ -58,9 +58,8 @@ declare namespace Statement {
     }
     interface Detail {
         _id?: Types.ObjectId;
-        ticket?: Ticket.Model;
         remoteID?: string;
-        ticketID?: Types.ObjectId;
+        ticket?: Types.ObjectId | Ticket.Model;
         statementHeaderID?: number;
         statementMainID?: number;
         transDate?: Date;
