@@ -31,7 +31,8 @@ declare namespace Calendar {
         Service = "SERVICE",
         Golf = "GOLF",
         Tennis = "TENNIS",
-        Simulator = "SIMULATOR"
+        Simulator = "SIMULATOR",
+        Generic = "GENERIC"
     }
     interface Group {
         _id?: Types.ObjectId;
@@ -53,6 +54,8 @@ declare namespace Calendar {
         Golf = "Golf",
         TeeTimes = "Tee Time",
         Tennis = "Tennis",
+        GuestRequest = "Guest Request",
+        Generic = "Generic",
         Simulator = "Simulator",
         Dining = "Dining",
         Service = "Service"

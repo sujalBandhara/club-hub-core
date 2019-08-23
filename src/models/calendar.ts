@@ -48,7 +48,8 @@ namespace Calendar {
 		Service = 'SERVICE',
 		Golf = 'GOLF',
 		Tennis = 'TENNIS',
-		Simulator = 'SIMULATOR'
+		Simulator = 'SIMULATOR',
+		Generic = 'GENERIC'
 	}
 
 	export interface Group {
@@ -73,6 +74,8 @@ namespace Calendar {
 		Golf = 'Golf',
 		TeeTimes = 'Tee Time',
 		Tennis = 'Tennis',
+		GuestRequest = 'Guest Request',
+		Generic = 'Generic',
 		Simulator = 'Simulator',
 		Dining = 'Dining',
 		Service = 'Service',
@@ -83,8 +86,8 @@ namespace Calendar {
 		name: string
 		isDefault: boolean
 		dateRangeStart: Date
-        dateRangeEnd: Date
-        bookingDuration: number
+		dateRangeEnd: Date
+		bookingDuration: number
 		maxGuestsAdmin: number
 		maxGuestsMember: number
 		publicBookings: boolean

@@ -12,6 +12,7 @@ var Calendar;
         GroupType["Golf"] = "GOLF";
         GroupType["Tennis"] = "TENNIS";
         GroupType["Simulator"] = "SIMULATOR";
+        GroupType["Generic"] = "GENERIC";
     })(GroupType = Calendar.GroupType || (Calendar.GroupType = {}));
     var GroupName;
     (function (GroupName) {
@@ -19,6 +20,8 @@ var Calendar;
         GroupName["Golf"] = "Golf";
         GroupName["TeeTimes"] = "Tee Time";
         GroupName["Tennis"] = "Tennis";
+        GroupName["GuestRequest"] = "Guest Request";
+        GroupName["Generic"] = "Generic";
         GroupName["Simulator"] = "Simulator";
         GroupName["Dining"] = "Dining";
         GroupName["Service"] = "Service";
