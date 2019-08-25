@@ -31,7 +31,8 @@ declare namespace Calendar {
         Service = "SERVICE",
         Golf = "GOLF",
         Tennis = "TENNIS",
-        Simulator = "SIMULATOR"
+        Simulator = "SIMULATOR",
+        GuestGolfer = "GUEST_GOLFER"
     }
     interface Group {
         _id?: Types.ObjectId;
@@ -40,6 +41,7 @@ declare namespace Calendar {
         type?: GroupType;
         reservationSettings?: ReservationSetting[];
         image: Image.Model;
+        calendarAlias?: string;
     }
     interface CalendarSyncData {
         google?: {
@@ -53,6 +55,8 @@ declare namespace Calendar {
         Golf = "Golf",
         TeeTimes = "Tee Time",
         Tennis = "Tennis",
+        GuestGolfer = "Guest Golfer",
+        Generic = "Generic",
         Simulator = "Simulator",
         Dining = "Dining",
         Service = "Service"

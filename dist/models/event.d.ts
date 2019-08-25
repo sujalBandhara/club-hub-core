@@ -67,7 +67,7 @@ declare namespace Event {
         golfCart?: boolean;
         holeCount?: number;
     }
-    type ReservationMeta = ReservationBaseMeta | CarReservationMeta | GolfReservationMeta;
+    type ReservationMeta = ReservationBaseMeta | CarReservationMeta | GolfReservationMeta | GuestReservationMeta;
     interface ReservationBaseMeta {
         notes: string;
     }
@@ -78,6 +78,12 @@ declare namespace Event {
     interface GolfReservationMeta extends ReservationBaseMeta {
         golfCartCount?: number;
         holeCount?: number;
+    }
+    interface GuestReservationMeta extends ReservationBaseMeta {
+        golfCartCount?: number;
+        rentalClubCount?: number;
+        holeCount?: number;
+        guestPaying?: boolean;
     }
     enum TimeFieldType {
         Start = "start",

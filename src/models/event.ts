@@ -89,7 +89,7 @@ namespace Event {
 		holeCount?: number // Golf reservations only.
 	}
 
-	export type ReservationMeta = ReservationBaseMeta | CarReservationMeta | GolfReservationMeta
+	export type ReservationMeta = ReservationBaseMeta | CarReservationMeta | GolfReservationMeta | GuestReservationMeta
 
 	export interface ReservationBaseMeta {
 		notes: string
@@ -103,6 +103,13 @@ namespace Event {
 	export interface GolfReservationMeta extends ReservationBaseMeta {
 		golfCartCount?: number
 		holeCount?: number
+	}
+
+	export interface GuestReservationMeta extends ReservationBaseMeta {
+		golfCartCount?: number
+		rentalClubCount?: number
+		holeCount?: number
+		guestPaying?: boolean
 	}
 
 	/**
