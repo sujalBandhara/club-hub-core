@@ -49,7 +49,7 @@ namespace Calendar {
 		Golf = 'GOLF',
 		Tennis = 'TENNIS',
 		Simulator = 'SIMULATOR',
-		Generic = 'GENERIC'
+		GuestGolfer = 'GUEST_GOLFER'
 	}
 
 	export interface Group {
@@ -58,7 +58,8 @@ namespace Calendar {
 		rRule?: string
 		type?: GroupType
 		reservationSettings?: ReservationSetting[],
-		image: Image.Model
+		image: Image.Model,
+		calendarAlias?: string
 	}
 
 	export interface CalendarSyncData {
@@ -74,7 +75,7 @@ namespace Calendar {
 		Golf = 'Golf',
 		TeeTimes = 'Tee Time',
 		Tennis = 'Tennis',
-		GuestRequest = 'Guest Request',
+		GuestGolfer = 'Guest Golfer',
 		Generic = 'Generic',
 		Simulator = 'Simulator',
 		Dining = 'Dining',
