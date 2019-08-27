@@ -4,12 +4,12 @@ import Restaurant from './restaurant';
 import { Types } from 'mongoose';
 declare namespace Session {
     interface Model {
-        _id: Types.ObjectId;
+        _id?: Types.ObjectId;
         user: User.Model | Types.ObjectId;
         lastTouch: Date;
         platform: string;
-        createdAt: Date;
-        updatedAt: Date;
+        createdAt?: Date;
+        updatedAt?: Date;
     }
     interface Login {
         club: Club.Model;
