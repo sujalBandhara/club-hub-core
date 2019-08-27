@@ -24,6 +24,7 @@ import Subscription from './models/subscription'
 import Card from './models/card'
 import Lottery from './models/lottery'
 import Ticket from './models/ticket'
+import Session from './models/session'
 
 // Client 
 import Service from './service'
@@ -66,6 +67,7 @@ export {
 	Subscription,
 	Card,
 	Lottery,
+	Session,
 	Ticket,
 
 	// General
