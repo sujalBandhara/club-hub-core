@@ -2,8 +2,18 @@
 import User from './user'
 import Club from './club'
 import Restaurant from './restaurant'
+import { Types } from 'mongoose';
 
 namespace Session {
+
+  export interface Model {
+    _id: Types.ObjectId
+		user: User.Model | Types.ObjectId
+		lastTouch: Date
+		platform: string
+		createdAt: Date
+		updatedAt: Date
+  }
 
   // --------------------------------
 	// Login Response
