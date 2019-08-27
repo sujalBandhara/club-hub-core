@@ -7,12 +7,12 @@ import { Types } from 'mongoose';
 namespace Session {
 
   export interface Model {
-    _id: Types.ObjectId
+    _id?: Types.ObjectId
 		user: User.Model | Types.ObjectId
 		lastTouch: Date
 		platform: string
-		createdAt: Date
-		updatedAt: Date
+		createdAt?: Date
+		updatedAt?: Date
   }
 
   // --------------------------------
