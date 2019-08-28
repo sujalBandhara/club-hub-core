@@ -12,7 +12,7 @@ namespace Session {
 		lastTouch: Date
     platform: string
     os?: string
-    verison?: string
+    version?: string
 		createdAt?: Date
 		updatedAt?: Date
   }
