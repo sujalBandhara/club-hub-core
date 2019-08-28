@@ -11,6 +11,28 @@ declare namespace Session {
         createdAt?: Date;
         updatedAt?: Date;
     }
+    enum PlatformTypes {
+        Chrome = "Chrome",
+        Edge = "Edge",
+        IE = "IE",
+        Safari = "Safari",
+        Firefox = "Firefox",
+        Opera = "Opera",
+        NativeIos = "iOS",
+        AndroidAndroid = "Android",
+        OtherWeb = "OtherWeb",
+        OtherMobile = "OtherMobile",
+        Other = "Other"
+    }
+    enum DeviceTypes {
+        Desktop = "Desktop",
+        iPhone = "iPhone",
+        Android = "Android",
+        iOSTablet = "iOSTablet",
+        androidTablet = "androidTablet",
+        otherPhone = "otherPhone",
+        otherTablet = "otherTablet"
+    }
     interface Login {
         club: Club.Model;
         token: string;
