@@ -10,34 +10,12 @@ namespace Session {
     _id?: Types.ObjectId
 		user: User.Model | Types.ObjectId
 		lastTouch: Date
-		platform: string
+    platform: string
+    os?: string
+    verison?: string
 		createdAt?: Date
 		updatedAt?: Date
   }
-
-  export enum PlatformTypes {
-    Chrome = 'Chrome',
-    Edge = 'Edge',
-    IE = 'IE',
-    Safari = 'Safari',
-    Firefox = 'Firefox',
-    Opera = 'Opera',
-    NativeIos = 'iOS',
-    AndroidAndroid = 'Android',
-    OtherWeb = 'OtherWeb',
-    OtherMobile = 'OtherMobile',
-    Other = 'Other'
-  }
-  
-  export enum DeviceTypes {
-    Desktop = 'Desktop',
-    iPhone = 'iPhone',
-    Android = 'Android',
-    iOSTablet = 'iOSTablet',
-    androidTablet = 'androidTablet',
-    otherPhone = 'otherPhone',
-    otherTablet = 'otherTablet'
-  }  
 
   // --------------------------------
 	// Login Response
