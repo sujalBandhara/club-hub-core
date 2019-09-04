@@ -106,15 +106,17 @@ namespace Club {
 	}
 
 	export interface ClubSettings {
-		_id?: Types.ObjectId
-		displaysMemberNumber?: boolean
-		primaryColor?: string
-		secondaryColor?: string
-		font?: string
-		iosAppURL?: string
-		androidAppURL?: string
-		customDomain?: string
-		eventSettings?: EventSettings
+		_id?: Types.ObjectId;
+		displaysMemberNumber?: boolean;
+		primaryColor?: string;
+		secondaryColor?: string;
+		font?: string;
+		iosAppURL?: string;
+		iosAppURLScheme?: string;
+		androidAppURL?: string;
+		androidAppURLScheme?: string;
+		customDomain?: string;
+		eventSettings?: EventSettings;
 	}
 
 	export interface EventSettings {
