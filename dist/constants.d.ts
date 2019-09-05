@@ -1,5 +1,6 @@
 export declare enum Clubs {
     ALDARRA = "Aldarra Golf Club",
+    ASTORIA = "Astoria Golf & Country Club",
     BROADMOOR = "Broadmoor",
     DRIVERS_CLUB = "Drivers Club",
     MILL_CREEK = "Mill Creek Country Club",
@@ -18,6 +19,7 @@ export declare enum Clubs {
 }
 export declare enum Domains {
     ALDARRA = "aldarra",
+    ASTORIA = "astoria",
     BROADMOOR = "broadmoor",
     DRIVERS_CLUB = "driversclub",
     OTTO = "otto",

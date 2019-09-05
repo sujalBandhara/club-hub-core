@@ -4,6 +4,7 @@
 
 export enum Clubs {
 	ALDARRA = 'Aldarra Golf Club',
+	ASTORIA = 'Astoria Golf & Country Club',
 	BROADMOOR = 'Broadmoor',
 	DRIVERS_CLUB = 'Drivers Club',
 	MILL_CREEK = 'Mill Creek Country Club',
@@ -18,11 +19,12 @@ export enum Clubs {
 	TUALATIN = 'Tualatin Country Club',
 	THE_SHOP = 'The Shop',
 	THE_COLLECTIVE = 'The Collective',
-	MCCORMICK_WOODS = 'McCormick Woods Golf Club'
+	MCCORMICK_WOODS = 'McCormick Woods Golf Club',
 }
 
 export enum Domains {
 	ALDARRA = 'aldarra',
+	ASTORIA = 'astoria',
 	BROADMOOR = 'broadmoor',
 	DRIVERS_CLUB = 'driversclub',
 	OTTO = 'otto',
