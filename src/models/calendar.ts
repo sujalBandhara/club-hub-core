@@ -59,7 +59,7 @@ namespace Calendar {
 		type?: GroupType
 		reservationSettings?: ReservationSetting[],
 		image: Image.Model,
-		calendarAlias?: string
+		calendarAlias?: string,
 	}
 
 	export interface CalendarSyncData {

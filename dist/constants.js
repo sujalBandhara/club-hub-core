@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Clubs;
 (function (Clubs) {
     Clubs["ALDARRA"] = "Aldarra Golf Club";
+    Clubs["ASTORIA"] = "Astoria Golf & Country Club";
     Clubs["BROADMOOR"] = "Broadmoor";
     Clubs["DRIVERS_CLUB"] = "Drivers Club";
     Clubs["MILL_CREEK"] = "Mill Creek Country Club";
@@ -22,6 +23,7 @@ var Clubs;
 var Domains;
 (function (Domains) {
     Domains["ALDARRA"] = "aldarra";
+    Domains["ASTORIA"] = "astoria";
     Domains["BROADMOOR"] = "broadmoor";
     Domains["DRIVERS_CLUB"] = "driversclub";
     Domains["OTTO"] = "otto";
