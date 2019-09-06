@@ -80,7 +80,9 @@ declare namespace Club {
         secondaryColor?: string;
         font?: string;
         iosAppURL?: string;
+        iosAppURLScheme?: string;
         androidAppURL?: string;
+        androidAppURLScheme?: string;
         customDomain?: string;
         eventSettings?: EventSettings;
     }
