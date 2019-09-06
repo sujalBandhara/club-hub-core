@@ -6,6 +6,7 @@ declare namespace Session {
     interface Model {
         _id?: Types.ObjectId;
         user: User.Model | Types.ObjectId;
+        club: Club.Model | Types.ObjectId;
         lastTouch: Date;
         platform: string;
         os?: string;
