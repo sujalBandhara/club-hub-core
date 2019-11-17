@@ -25,6 +25,7 @@ import Card from './models/card'
 import Lottery from './models/lottery'
 import Ticket from './models/ticket'
 import Session from './models/session'
+import Room from './models/room'
 
 // Client 
 import Service from './service'
@@ -69,6 +70,7 @@ export {
 	Lottery,
 	Session,
 	Ticket,
+	Room,
 
 	// General
 	MongoObject,
