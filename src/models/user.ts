@@ -51,6 +51,7 @@ namespace User {
 		memberStatus?: MemberStatus
 		meta?: UserMeta
 		displaySettings?: DisplaySettings
+		chatSettings?: ChatSettings
 		hostIDs?: Types.ObjectId[]
 		primaryAccountHolder?: boolean
 		gender?: string
@@ -101,9 +102,13 @@ namespace User {
 	}
 
 	export interface DisplaySettings {
-		publicProfile: boolean
-		publicContact: boolean
-		canBookReservations: boolean
+		publicProfile?: boolean
+		publicContact?: boolean
+		canBookReservations?: boolean
+	}
+	
+	export interface ChatSettings {
+		preventDMs?: boolean
 	}
 }
 

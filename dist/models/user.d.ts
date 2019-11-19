@@ -37,6 +37,7 @@ declare namespace User {
         memberStatus?: MemberStatus;
         meta?: UserMeta;
         displaySettings?: DisplaySettings;
+        chatSettings?: ChatSettings;
         hostIDs?: Types.ObjectId[];
         primaryAccountHolder?: boolean;
         gender?: string;
@@ -76,9 +77,12 @@ declare namespace User {
         Guest = "GUEST"
     }
     interface DisplaySettings {
-        publicProfile: boolean;
-        publicContact: boolean;
-        canBookReservations: boolean;
+        publicProfile?: boolean;
+        publicContact?: boolean;
+        canBookReservations?: boolean;
+    }
+    interface ChatSettings {
+        preventDMs?: boolean;
     }
 }
 export default User;
