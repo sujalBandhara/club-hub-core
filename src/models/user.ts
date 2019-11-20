@@ -55,6 +55,7 @@ namespace User {
 		hostIDs?: Types.ObjectId[]
 		primaryAccountHolder?: boolean
 		gender?: string
+		pusherID?: string
 	}
 
 	// --------------------------------
