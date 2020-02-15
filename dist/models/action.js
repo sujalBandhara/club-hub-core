@@ -12,6 +12,7 @@ var Action;
         Type["MembershipInquiryRes"] = "Membership Inquiry Response";
         Type["PublicRsvp"] = "Public Event RSVP";
         Type["NewProviderRequest"] = "Service Provider Request";
+        Type["InvalidCredentialsAdminNotification"] = "Invalid Credentials Admin Notification";
     })(Type = Action.Type || (Action.Type = {}));
 })(Action || (Action = {}));
 exports.default = Action;
