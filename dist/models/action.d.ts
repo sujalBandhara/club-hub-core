@@ -11,6 +11,7 @@ declare namespace Action {
         invitationID?: Types.ObjectId;
         form?: any;
         password?: string;
+        email?: string;
     }
     enum Type {
         Reservation = "Reservation",
@@ -20,7 +21,8 @@ declare namespace Action {
         MembershipInquiry = "Membership Inquiry",
         MembershipInquiryRes = "Membership Inquiry Response",
         PublicRsvp = "Public Event RSVP",
-        NewProviderRequest = "Service Provider Request"
+        NewProviderRequest = "Service Provider Request",
+        InvalidCredentialsAdminNotification = "Invalid Credentials Admin Notification"
     }
 }
 export default Action;

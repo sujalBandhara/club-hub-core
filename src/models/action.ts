@@ -36,7 +36,10 @@ namespace Action {
         form?: any
 
         // We need to get rid of this.
-        password?: string
+		password?: string
+		
+		// Email for an invalid email action
+		email?: string;
     }
 
     	/** 
@@ -56,6 +59,7 @@ namespace Action {
 		MembershipInquiryRes = "Membership Inquiry Response",
 		PublicRsvp = "Public Event RSVP",
 		NewProviderRequest = "Service Provider Request",
+		InvalidCredentialsAdminNotification = "Invalid Credentials Admin Notification",
 	}
 }
 
