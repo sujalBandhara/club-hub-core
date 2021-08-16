@@ -22,6 +22,7 @@ namespace Event {
 
 	export interface Model {
 		_id?: Types.ObjectId
+		isDraft?: boolean
 		remoteID?: string
 		name?: string
 		start?: Date
@@ -36,6 +37,7 @@ namespace Event {
 		groupID?: Types.ObjectId
 		calendarID?: Types.ObjectId
 		calendarIDs?: Types.ObjectId[]
+		calendarEventID?: string
 		images?: Image.Model[]
 		image?: Image.Model
 		clubID?: Types.ObjectId

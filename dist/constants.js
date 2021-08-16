@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.StateSelection = exports.ColorSelection = exports.Colors = exports.Domains = exports.Clubs = void 0;
 var Clubs;
 (function (Clubs) {
     Clubs["ALDARRA"] = "Aldarra Golf Club";

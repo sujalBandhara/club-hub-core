@@ -10,19 +10,19 @@ declare namespace Response {
     interface PaginatedResponse {
         count: number;
     }
-    interface Event extends PaginatedResponse {
+    export interface Event extends PaginatedResponse {
         events: Event.Model[];
     }
-    interface User extends PaginatedResponse {
+    export interface User extends PaginatedResponse {
         users: User.Model[];
     }
-    interface Post extends PaginatedResponse {
+    export interface Post extends PaginatedResponse {
         posts: Post.Model[];
     }
-    interface Calendar extends PaginatedResponse {
+    export interface Calendar extends PaginatedResponse {
         calendars: Calendar.Model[];
     }
-    interface NonAdminStateResponse {
+    export interface NonAdminStateResponse {
         club: Club.Model;
         user: User.Model;
         users: User.Model[];
@@ -30,7 +30,7 @@ declare namespace Response {
         calendars: Calendar.Model[];
         sections: Section.Model[];
     }
-    interface AdminStateResponse {
+    export interface AdminStateResponse {
         user: User.Model;
         club: Club.Model;
         calendars: Calendar.Model[];
@@ -38,13 +38,14 @@ declare namespace Response {
         members: User.Model[];
         restaurants: Restaurant.Model[];
     }
-    interface NotificationPreferenceResponse {
+    export interface NotificationPreferenceResponse {
         global?: NotificationPreference.Model;
         groupInfo: UserGroupInfo[];
     }
-    interface UserGroupInfo {
+    export interface UserGroupInfo {
         group: User.UserGroup;
         notificationPreference?: NotificationPreference.GroupModel;
     }
+    export {};
 }
 export default Response;

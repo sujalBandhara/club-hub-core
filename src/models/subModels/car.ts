@@ -37,6 +37,7 @@ namespace CarMeta {
 		vehicleNumber?: string
 		vin?: string
 		keySpots?: string
+		bay?: string
 	}
 }
 
