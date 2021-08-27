@@ -1,4 +1,5 @@
 import { Types } from 'mongoose';
+import Image from './shared/image';
 declare namespace CarMeta {
     interface Model {
         _id?: Types.ObjectId;
@@ -13,6 +14,7 @@ declare namespace CarMeta {
         _id?: Types.ObjectId;
         userID?: Types.ObjectId;
         clubID?: Types.ObjectId;
+        image?: Image.Model;
         make?: string;
         model?: string;
         year?: string;

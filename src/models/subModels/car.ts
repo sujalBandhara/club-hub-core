@@ -1,5 +1,6 @@
 // External Dependencies
 import { Types } from 'mongoose'
+import Image from './shared/image'
 
 // --------------------------------------------
 // Sub documents for the CarMeta sub model.
@@ -29,6 +30,7 @@ namespace CarMeta {
 		_id?: Types.ObjectId
 		userID?: Types.ObjectId
 		clubID?: Types.ObjectId
+		image?: Image.Model
 		make?: string
 		model?: string
 		year?: string
