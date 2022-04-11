@@ -29,6 +29,7 @@ declare namespace Calendar {
         Social = "SOCIAL",
         Dining = "DINING",
         Service = "SERVICE",
+        Location = "LOCATION",
         Golf = "GOLF",
         Tennis = "TENNIS",
         Simulator = "SIMULATOR",

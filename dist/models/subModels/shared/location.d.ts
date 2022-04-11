@@ -13,6 +13,10 @@ export declare namespace Location {
         email?: string;
         website?: string;
         primary?: boolean;
+        country?: string;
+        note?:string;
+        latitude?:number,
+        longitude?:number
     }
 }
 export default Location;
