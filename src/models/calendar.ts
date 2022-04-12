@@ -30,6 +30,7 @@ namespace Calendar {
 		userGroupID?: Types.ObjectId,
 		maxParticipants?: number | null
 		location?: Location.Model
+		endLocation?: Location.Model
 		reservationSettings?: ReservationSetting[]
 		live?: boolean
 		color?: string
