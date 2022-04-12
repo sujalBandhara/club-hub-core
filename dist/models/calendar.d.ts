@@ -33,7 +33,9 @@ declare namespace Calendar {
         Golf = "GOLF",
         Tennis = "TENNIS",
         Simulator = "SIMULATOR",
-        GuestGolfer = "GUEST_GOLFER"
+        GuestGolfer = "GUEST_GOLFER",
+        Attraction = "ATTRACTION",
+		DrivingView = "DRIVING_VIEW"
     }
     interface Group {
         _id?: Types.ObjectId;

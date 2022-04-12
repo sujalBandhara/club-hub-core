@@ -50,7 +50,9 @@ namespace Calendar {
 		Golf = 'GOLF',
 		Tennis = 'TENNIS',
 		Simulator = 'SIMULATOR',
-		GuestGolfer = 'GUEST_GOLFER'
+		GuestGolfer = 'GUEST_GOLFER',
+		Attraction = "ATTRACTION",
+		DrivingView = "DRIVING_VIEW"
 	}
 
 	export interface Group {
